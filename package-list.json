@@ -1,0 +1,13 @@
+{
+ "package-id" : "hl7.fhir.uv.fhir4fair",
+ "title" : "FHIR for FAIR Implementation ", 
+ "canonical" : "http://hl7.org/fhir/uv/fhir4fair", 
+ "introduction" : "This implementaion guide aims to provide guidance on supporting health data FAIRness by using HL7 FHIR",
+ "list" : [{
+  "version" : "current",
+  "desc" : "Continuous Integration Build (latest in version control)",
+  "path" : "http://build.fhir.org/ig/HL7/fhir-forfair",
+  "status" : "ci-build",
+  "current" : true
+ }]
+}
