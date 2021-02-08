@@ -1,38 +1,77 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li><a href="index.html">IG Home</a></li>
-  <li><a href="toc.html">Table of Contents</a></li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">MyIg Background<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="background.html">Background</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="spec.html">Detailed Specification</a>
-      </li>
-    </ul>
-  </li>
-  <li><a href="artifacts.html">Artifact Index</a></li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a target="_blank" href="{{site.data.fhir.path}}index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/></a>
-      </li>
-      <li>
-        <a href="downloads.html">Downloads</a>
-      </li>
-    </ul>
-  </li>
-</ul>      
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="FAIR.html">FAIR Principles</a>
+			</li>
+			<li>
+				<a href="FHIRandFAIR.html">HL7 FHIR and FAIR principles</a>
+			</li>
+			<li>
+				<a href="RDAMetrics.html">RDA Indicators / EOSC recommendations</a>
+			</li>
+			<li>
+				<a href="FHIRandRDAMetrics.html">HL7 FHIR and RDA Indicators</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a href="metadata.html">HL7 FHIR metadata</a>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Scenarios<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="scenarios.html">Use cases and scenarios</a>
+			</li>
+			<li>
+				<a href="scenarioHC.html">Healthcare datasets</a>
+			</li>
+			<li>
+				<a href="scenarioCitation.html">Citations</a>
+			</li>
+			<li>
+				<a href="scenarioResearch.html">Research study</a>
+			</li>
+			<li>
+				<a href="scenarioTerminology.html">Terminologies</a>
+			</li>
+		</ul>
+	</li>
+	<!-- Background -->
+	<!-- What is FAIR and RDA indicators -->
+	<!-- How FHIR can satisfy FAIR principles -->
+	<!-- How FHIR can support the RDA indicators / EOSC recommendation -->
+	<!-- FHIR metadata -->
+	<!-- Use cases / scenarios -->
+	<!-- Explain how FHIR can support the selected scenarios -->
+	<!-- Artefact Index: conformance resources and examples -->
+	<li>
+		<a href="artifacts.html">Artifact Index</a>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a target="_blank" href="{{site.data.fhir.path}}index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/>
+				</a>
+			</li>
+			<li>
+				<a href="downloads.html">Downloads</a>
+			</li>
+		</ul>
+	</li>
+</ul>

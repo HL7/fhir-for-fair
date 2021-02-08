@@ -1,0 +1,36 @@
+# ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
+# │  ACTION REQUIRED: REVIEW AND EDIT THIS FILE TO ENSURE IT ACCURATELY REFLECTS YOUR PROJECT!     │
+# │                                                                                                │
+# │  This file was generated from your existing project files and will be used for SUSHI           │
+# │  configuration from now on. You may delete your package.json as it is no longer needed.        │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# ╭──────────────────────────────ImplementationGuide-gatekeeper.json───────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: fhir4fair
+canonical: http://hl7.org/fhir/uv/fhir4fair
+version: 0.0.1
+name: Fhir4FairIG
+title: FHIR for FAIR Implementation Guide
+status: active
+publisher: HL7 SOA WG
+contact:
+  - name: HL7 SOA WG
+    telecom:
+      - system: url
+        value: http://www.hl7.org/special/committees/soa
+description: FHIR for FAIR (F4F) FHIR Implementation Guide
+license: CC0-1.0
+fhirVersion: 4.5.0
+# dependencies:
+  # hl7.fhir.uv.ips: current
+parameters:
+  show-inherited-invariants: false
+copyrightYear: 2020+
+releaseLabel: CI Build
+
+
+FSHOnly: true
