@@ -60,7 +60,8 @@ To achieve these objectives this guide has been structured in two main
 components:
 
 1)  An informative guidance providing general guidelines on the
-    cooperative usage of FHIR and FAIR
+    cooperative usage of FHIR and FAIR, specifically best practices
+    for satisfying the FAIR principles when publishing FHIR resources
 
 2)  A “true” FHIR IG providing set of FHIR conformance resources and
     examples that provide, for selected case(s), a practical example of
@@ -95,9 +96,9 @@ components:
 </tr>
 <tr class="even">
 <td>Author</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Kees van Bochove</td>
+<td>The Hyve</td>
+<td>https://orcid.org/0000-0002-8589-0609</td>
 </tr>
 <tr class="odd">
 <td></td>
