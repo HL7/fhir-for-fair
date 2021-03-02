@@ -27,7 +27,7 @@ interoperate and re-use research data.
 The FAIR principles are well received in international community and
 rapidly adopted by researchers.
 
-More details about FAIR in the dedicated page.
+More details about FAIR in the [dedicated page](FAIR.html).
 
 ### Goals
 
@@ -60,10 +60,10 @@ To achieve these objectives this guide has been structured in two main
 components:
 
 1)  An informative guidance providing general guidelines on the
-    cooperative usage of FHIR and FAIR, specifically best practices
-    for satisfying the FAIR principles when publishing FHIR resources
+    cooperative usage of FHIR and FAIR, specifically best practices for
+    satisfying the FAIR principles when publishing FHIR resources
 
-2)  A “true” FHIR IG providing set of FHIR conformance resources and
+2)  “true” FHIR IG providing set of FHIR conformance resources and
     examples that provide, for selected case(s), a practical example of
     how FAIRness can be realized and assessed by using HL7 FHIR.
 
@@ -98,7 +98,7 @@ components:
 <td>Author</td>
 <td>Kees van Bochove</td>
 <td>The Hyve</td>
-<td>https://orcid.org/0000-0002-8589-0609</td>
+<td><a href="https://orcid.org/0000-0002-8589-060">https://orcid.org/0000-0002-8589-060</a></td>
 </tr>
 <tr class="odd">
 <td></td>
