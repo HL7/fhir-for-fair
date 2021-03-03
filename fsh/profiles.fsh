@@ -33,7 +33,7 @@ Description: "This profile defines how to use the Attachment data type to convey
 // * data 0..0 => to be checked
 * url 1..1 MS
 
-//========== BEGIN COMMENT
+/*========== BEGIN COMMENT
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  CitationF4F
@@ -43,6 +43,6 @@ Title:    "Citation (FHIR for FAIR)"
 Description: "This profile defines how to use the Citation resource to convey metadata information for a FAIR dataset realized by using HL7 FHIR"
 //-------------------------------------------------------------------------------------------
 // * url MS
-// * identifier MS
+* identifier MS
 
-  // END COMMENT  ====*/
+END COMMENT  ====*/

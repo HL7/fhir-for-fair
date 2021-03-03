@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
-<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
+<ImplementationGuide xmlns="http://hl7.org/fhir"
+                   	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   	xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
 	<id value="ig-uv-fhir4fair"/>
 	<url value="http://hl7.org/fhir/uv/fhir4fair/ImplementationGuide/ig-uv-fhir4fair"/>
 	<!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
@@ -37,32 +39,28 @@
 	<definition>
 		<!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
-		<!-- 		<resource>
+		<resource>
+			<extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+				<valueString value="Library"/>
+			</extension>
 			<reference>
-				<reference value="StructureDefinition/mypatient"/>
+				<reference value="Library/ninfea-1"/>
 			</reference>
-			<description value="Overriding description because we can"/>
-		</resource> -->
-		<!--<resource>
-<reference>
-<reference value="MyLogicalModel/AS"/>
-</reference>
-</resource> -->
-		<!-- 		<resource>
+			<name value="NInFEA: metadata as Library"/>
+			<description value="A simple example showing how the Library resouce can be used to document metadata about the NInFEA collection of data"/>
+			<exampleCanonical value="http://hl7.org/fhir/uv/fhir4fair/StructureDefinition/Library-uv-f4f"/>
+		</resource>
+		<resource>
+			<extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+				<valueString value="Library"/>
+			</extension>
 			<reference>
-				<reference value="Patient/example"/>
+				<reference value="Library/26dc407a-9b03-4a25-9dad-7e53ce6b4bbb"/>
 			</reference>
-			<name value="Simple patient example"/>
-			<description value="A simple example showing how examples are defined and referenced"/>
-			<exampleCanonical value="http://hl7.org/fhir/uv/fhir4fair/StructureDefinition/mypatient"/>
-		</resource> -->
-		<!--    <resource>
-      <reference>
-        <reference value="Library/example"/>
-      </reference>
-      <name value="Simple library example"/>
-      <description value="A simple example showing how library is pre-loaded"/>
-    </resource> -->
+			<name value="Frail Survey: metadata as Library"/>
+			<description value="A simple example showing how the Library resouce can be used to document metadata about the Frail Survey collection of data"/>
+			<exampleCanonical value="http://hl7.org/fhir/uv/fhir4fair/StructureDefinition/Library-uv-f4f"/>
+		</resource>
 		<page>
 			<!-- The root will always be toc.html - the template will force it if you don't do it -->
 			<nameUrl value="toc.html"/>
