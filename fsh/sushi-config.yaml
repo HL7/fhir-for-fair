@@ -1,5 +1,5 @@
 canonical: http://hl7.org/fhir/uv/fhir4fair
-fhirVersion: 4.5.0
+fhirVersion: current
 FSHOnly: true
 applyExtensionMetadataToRoot: false
 id: hl7.fhir.uv.fhir4fair

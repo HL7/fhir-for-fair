@@ -3,12 +3,12 @@
   "id": "Library-uv-f4f",
   "extension": [
     {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Base.Management"
-    },
-    {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
       "valueCode": "anonymous"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Base.Management"
     }
   ],
   "url": "http://hl7.org/fhir/uv/fhir4fair/StructureDefinition/Library-uv-f4f",
@@ -25,14 +25,14 @@
       "name": "RIM Mapping"
     },
     {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
       "identity": "w5",
       "uri": "http://hl7.org/fhir/fivews",
       "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
     },
     {
       "identity": "objimpl",
