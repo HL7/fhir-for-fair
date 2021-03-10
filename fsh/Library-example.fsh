@@ -1,5 +1,5 @@
 
-/* === BEGIN
+/* === BEGIN === 
 Instance: 10.1038-s41597-021-00811-3
 InstanceOf: Citation
 Usage: #example
@@ -8,8 +8,10 @@ Usage: #example
 * name = "NInFEA"
 * title = "A non-invasive multimodal foetal ECG-doppler dataset for antenatal cardiology research"
 * status = #active
-====== END === */
+=== END === */
 
+
+// ----------------------------------------------------------
 
 Instance: ninfea-1
 InstanceOf: Library

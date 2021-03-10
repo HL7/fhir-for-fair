@@ -33,7 +33,7 @@ Description: "This profile defines how to use the Attachment data type to convey
 // * data 0..0 => to be checked
 * url 1..1 MS
 
-/*========== BEGIN COMMENT
+/*========== BEGIN COMMENT END COMMENT  ====*/
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  CitationF4F
@@ -45,4 +45,3 @@ Description: "This profile defines how to use the Citation resource to convey me
 // * url MS
 * identifier MS
 
-END COMMENT  ====*/
