@@ -22,6 +22,9 @@
 			<li>
 				<a href="FHIRandRDAMetrics.html">HL7 FHIR and RDA Indicators</a>
 			</li>
+					<li>
+				<a href="deployment.html">Deployments</a>
+			</li>
 		</ul>
 	</li>
 	<li>
