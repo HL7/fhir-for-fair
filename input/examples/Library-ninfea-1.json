@@ -1,6 +1,10 @@
 {
   "resourceType": "Library",
   "id": "ninfea-1",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div><h3>Abstract</h3><p>Non-invasive foetal electrocardiography (fECG) continues to be an open topic for research.</p><p>The development of standard algorithms for the extraction of the fECG from the maternal electrophysiological interference is limited by the lack of publicly available reference datasets that could be used to benchmark different algorithms while providing a ground truth for foetal heart activity when an invasive scalp lead is unavailable.</p><p>In this work, we present the Non-Invasive Multimodal Foetal ECG-Doppler Dataset for Antenatal Cardiology Research (NInFEA), the first open-access multimodal early-pregnancy dataset in the field that features simultaneous non-invasive electrophysiological recordings and foetal pulsed-wave Doppler (PWD).</p><p>The dataset is mainly conceived for researchers working on fECG signal processing algorithms.</p><p>The dataset includes <strong>60 entries</strong> from <strong>39 pregnant women</strong>, between the <strong>21<sup>st</sup>and 27<sup>th</sup>week of gestation</strong>.</p><p>Each dataset entry comprises 27 electrophysiological channels (2048 Hz, 22 bits), a maternal respiration signal, synchronised foetal trans-abdominal PWD and clinical annotations provided by expert clinicians during signal acquisition. MATLAB snippets for data processing are also provided.</p></div><div><table><tbody><tr><td>Measurement(s)</td><td>electrocardiogram (maternal) - abdominal electrocardiogram (fetal) - Respiratory Rate - pulsed-wave Doppler (fetal heart) - heart function measurement - heart electrical impulse conduction trait</td></tr><tr><td>Technology Type(s)</td><td>electrocardiography - piezoresistive belt - pulsed doppler echocardiography</td></tr><tr><td>Factor Type(s)</td><td>gestational age</td></tr><tr><td>Sample Characteristic - Organism</td><td>Homo sapiens</td></tr></tbody></table></div></div>"
+  },
   "identifier": [
     {
       "system": "https://doi.org",
@@ -77,11 +81,88 @@
       }
     }
   ],
+  "copyright": "Data Descriptor License: CC-BY-4.0 - CreativeWork",
+  "topic": [
+    {
+      "coding": [
+        {
+          "code": "FMA_63919",
+          "system": "http://purl.obolibrary.org/obo",
+          "display": "foetus"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "75444003",
+          "system": "http://snomed.info/sct",
+          "display": "Fetal electrocardiogram (procedure)"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "314204000",
+          "system": "http://snomed.info/sct",
+          "display": "Early stage of pregnancy (finding)"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "394579002",
+          "system": "http://snomed.info/sct",
+          "display": "Cardiology (qualifier value)"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "EFO_0004327",
+          "system": "http://www.ebi.ac.uk/efo",
+          "display": "electrocardiography"
+        }
+      ]
+    },
+    {
+      "text": "fecg"
+    },
+    {
+      "text": "pwd"
+    },
+    {
+      "text": "pwd envelope"
+    },
+    {
+      "text": "non-invasive"
+    },
+    {
+      "text": "doppler"
+    },
+    {
+      "text": "antenatal"
+    }
+  ],
   "relatedArtifact": [
     {
       "type": "citation",
-      "citation": "Pani, D., Sulas, E., Urru, M., Sameni, R., Raffo, L., & Tumbarello, R. (2020). NInFEA: Non-Invasive Multimodal Foetal ECG-Doppler Dataset for Antenatal Cardiology Research (version 1.0.0).",
-      "url": "https://doi.org/10.13026/c4n5-3b04"
+      "citation": "Sulas, E., Urru, M., Tumbarello, R. et al. A non-invasive multimodal foetal ECG–Doppler dataset for antenatal cardiology research. Sci Data 8, 30 (2021).",
+      "url": "https://doi.org/10.1038/s41597-021-00811-3"
+    },
+    {
+      "type": "citation",
+      "citation": "Sulas, E., Urru, M., Tumbarello, R. et al. A non-invasive multimodal foetal ECG–Doppler dataset for antenatal cardiology research. Sci Data 8, 30 (2021).",
+      "url": "https://doi.org/10.1038/s41597-021-00811-3"
+    },
+    {
+      "type": "depends-on",
+      "label": "ontology",
+      "display": "Experimental Factor Ontology",
+      "url": "http://data.bioontology.org/ontologies/EFO"
     }
   ],
   "content": [

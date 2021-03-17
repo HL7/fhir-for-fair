@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Tue, Mar 16, 2021 03:10+0000 for FHIR v4.5.0 
+  Generated on Tue, Mar 16, 2021 18:24+0000 for FHIR v4.5.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.5.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -11215,12 +11215,12 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="code" minOccurs="1" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="relationshipType" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">SEE COMMENTS.</xs:documentation>
+              <xs:documentation xml:lang="en">(See comments for the codes).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="classifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+          <xs:element name="targetClassifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The clasification of the related artifact.</xs:documentation>
            </xs:annotation>
@@ -11257,42 +11257,47 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="dateAccessed" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
-              <xs:documentation xml:lang="en">When the citation was cited.</xs:documentation>
+              <xs:documentation xml:lang="en">When the cited artifact was accessed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="version" type="Citation.Version" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">An alternative variant of the citation.</xs:documentation>
+              <xs:documentation xml:lang="en">The defined version of the cited artifact.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="currentState" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Placeholder.</xs:documentation>
+              <xs:documentation xml:lang="en">The status of the cited artifact.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="statusDate" type="Citation.StatusDate1" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Placeholder.</xs:documentation>
+              <xs:documentation xml:lang="en">An effective date or period for a status of the cited artifact.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="title" type="Citation.Title" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The title of the article or artifact.</xs:documentation>
+              <xs:documentation xml:lang="en">The title details of the article or artifact.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="abstract" type="Citation.Abstract" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Publisher-provided summary of the article.</xs:documentation>
+              <xs:documentation xml:lang="en">Summary of the article or artifact.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="copyright" minOccurs="0" maxOccurs="1" type="markdown">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Copyright notice for the full article or artifact.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="part" type="Citation.Part" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">An alternative variant of the citation.</xs:documentation>
+              <xs:documentation xml:lang="en">The component of the article or artifact.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="relatesTo" type="Citation.RelatesTo1" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Artifact related to the Citation Resource.</xs:documentation>
+              <xs:documentation xml:lang="en">The artifact related to the cited artifact.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="publicationForm" type="Citation.PublicationForm" minOccurs="0" maxOccurs="unbounded">
@@ -11302,12 +11307,12 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="webLocation" type="Citation.WebLocation" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Used for any URL for the article cited.</xs:documentation>
+              <xs:documentation xml:lang="en">Used for any URL for the article or artifact cited.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="classification" type="Citation.Classification1" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Placeholder.</xs:documentation>
+              <xs:documentation xml:lang="en">The assignment to an organizing scheme.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="contributorship" type="Citation.Contributorship" minOccurs="0" maxOccurs="1">
@@ -11317,7 +11322,7 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Placeholder.</xs:documentation>
+              <xs:documentation xml:lang="en">Any additional information or content for the article or artifact.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -11333,12 +11338,12 @@ into another (possibly the same) biological entity.</xs:documentation>
         <xs:sequence>
           <xs:element name="value" minOccurs="1" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Used to describe the specific variation, such as version number or subpart specification.</xs:documentation>
+              <xs:documentation xml:lang="en">The version number or other version identifier.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="baseCitation" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Base citation layer.</xs:documentation>
+              <xs:documentation xml:lang="en">Citation for the main version of the cited artifact.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -11354,17 +11359,17 @@ into another (possibly the same) biological entity.</xs:documentation>
         <xs:sequence>
           <xs:element name="activity" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Placeholder.</xs:documentation>
+              <xs:documentation xml:lang="en">Classification of the status.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="actual" minOccurs="0" maxOccurs="1" type="boolean">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Placeholder.</xs:documentation>
+              <xs:documentation xml:lang="en">Either occurred or expected.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="period" minOccurs="1" maxOccurs="1" type="Period">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Placeholder.</xs:documentation>
+              <xs:documentation xml:lang="en">When the status started and/or ended.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -11380,7 +11385,7 @@ into another (possibly the same) biological entity.</xs:documentation>
         <xs:sequence>
           <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Used to express the reason and specific aspect for any variant title, such as language and specific language.</xs:documentation>
+              <xs:documentation xml:lang="en">Used to express the reason or specific aspect for the title.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="language" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -11390,7 +11395,7 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="text" minOccurs="1" maxOccurs="1" type="markdown">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Full title of the article.</xs:documentation>
+              <xs:documentation xml:lang="en">The title of the article or artifact.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -11406,7 +11411,7 @@ into another (possibly the same) biological entity.</xs:documentation>
         <xs:sequence>
           <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Used to express the reason for an additional or variant abstract, such as language.</xs:documentation>
+              <xs:documentation xml:lang="en">Used to express the reason or specific aspect for the abstract.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="language" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -11421,7 +11426,7 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="copyright" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Copyright information for the abstract text.</xs:documentation>
+              <xs:documentation xml:lang="en">Copyright notice for the abstract.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -11437,17 +11442,17 @@ into another (possibly the same) biological entity.</xs:documentation>
         <xs:sequence>
           <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Used to describe the reason for the variant citation, such as version or subpart specification.</xs:documentation>
+              <xs:documentation xml:lang="en">The kind of component.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="value" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Used to describe the specific variation, such as version number or subpart specification.</xs:documentation>
+              <xs:documentation xml:lang="en">The specification of the component.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="baseCitation" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Base citation layer.</xs:documentation>
+              <xs:documentation xml:lang="en">The citation for the full article or artifact.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -11461,12 +11466,12 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="code" minOccurs="1" maxOccurs="1" type="code">
+          <xs:element name="relationshipType" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">SEE COMMENTS.</xs:documentation>
+              <xs:documentation xml:lang="en">(See comments for the codes).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="classifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+          <xs:element name="targetClassifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The clasification of the related artifact.</xs:documentation>
            </xs:annotation>
@@ -11493,7 +11498,7 @@ into another (possibly the same) biological entity.</xs:documentation>
         <xs:sequence>
           <xs:element name="publishedIn" type="Citation.PublishedIn" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The collection the cited article is published in.</xs:documentation>
+              <xs:documentation xml:lang="en">The collection the cited article or artifact is published in.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="periodicRelease" type="Citation.PeriodicRelease" minOccurs="0" maxOccurs="1">
@@ -11518,7 +11523,7 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="accessionNumber" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Placeholder.</xs:documentation>
+              <xs:documentation xml:lang="en">Entry number or identifier for inclusion in a database.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="pageString" minOccurs="0" maxOccurs="1" type="string">
@@ -11554,7 +11559,7 @@ into another (possibly the same) biological entity.</xs:documentation>
         <xs:sequence>
           <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Periodical, database, or book.</xs:documentation>
+              <xs:documentation xml:lang="en">Kind of container (e.g. Periodical, database, or book).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
@@ -11595,7 +11600,7 @@ into another (possibly the same) biological entity.</xs:documentation>
         <xs:sequence>
           <xs:element name="citedMedium" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Describes the form of the medium cited. Common codes are &quot;Internet&quot; or &quot;Print.&quot;.</xs:documentation>
+              <xs:documentation xml:lang="en">Describes the form of the medium cited. Common codes are &quot;Internet&quot; or &quot;Print&quot;.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="volume" minOccurs="0" maxOccurs="1" type="string">
@@ -11688,12 +11693,12 @@ into another (possibly the same) biological entity.</xs:documentation>
         <xs:sequence>
           <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Placeholder.</xs:documentation>
+              <xs:documentation xml:lang="en">The kind of classifier (e.g. publication type, keyword).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="classifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Used for many classifiers including PublicationType, CitationSubset, MeshHeading, Chemical.</xs:documentation>
+              <xs:documentation xml:lang="en">The specific classification value.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -11775,17 +11780,17 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="role" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">False, missing, or empty elements implies authorship.</xs:documentation>
+              <xs:documentation xml:lang="en">The role of the contributor (e.g. author, editor, reviewer).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="contributionInstance" type="Citation.ContributionInstance" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Placeholder.</xs:documentation>
+              <xs:documentation xml:lang="en">Contributions with accounting for time or number.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="correspondingContact" minOccurs="0" maxOccurs="1" type="boolean">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Indication of which author is the corresponding author for the article cited.</xs:documentation>
+              <xs:documentation xml:lang="en">Indication of which contributor is the corresponding contributor for the role.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="listOrder" minOccurs="0" maxOccurs="1" type="positiveInt">
@@ -11832,12 +11837,12 @@ into another (possibly the same) biological entity.</xs:documentation>
         <xs:sequence>
           <xs:element name="type" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Placeholder.</xs:documentation>
+              <xs:documentation xml:lang="en">The specific contribution.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="time" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Placeholder.</xs:documentation>
+              <xs:documentation xml:lang="en">The time that the contribution was made.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -15468,7 +15473,7 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">Business identifiers assigned to this condition by the performer or other systems which remain constant as the resource is updated and propagates from server to server.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="clinicalStatus" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="clinicalStatus" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The clinical status of the condition.</xs:documentation>
            </xs:annotation>
@@ -15545,7 +15550,7 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="stage" type="Condition.Stage" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Clinical stage or grade of a condition. May include formal severity assessments.</xs:documentation>
+              <xs:documentation xml:lang="en">A simple summary of the stage such as &quot;Stage 3&quot; or &quot;Early Onset&quot;. The determination of the stage is disease-specific, such as cancer, retinopathy of prematurity, kidney diseases, Alzheimer's, or Parkinson disease.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="evidence" type="Condition.Evidence" minOccurs="0" maxOccurs="unbounded">
