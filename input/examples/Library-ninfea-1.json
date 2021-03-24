@@ -12,7 +12,7 @@
     }
   ],
   "name": "NInFEA",
-  "title": "A non-invasive multimodal foetal ECG-doppler dataset for antenatal cardiology research",
+  "title": "Metadata record for: A non-invasive multimodal foetal ECG-doppler dataset for antenatal cardiology research",
   "status": "active",
   "type": {
     "coding": [
@@ -52,8 +52,9 @@
     },
     {
       "code": {
-        "code": "technologyType",
-        "system": "http://tobeDetermined.foo/CodeSystem"
+        "code": "EFO_0005521",
+        "system": "http://www.ebi.ac.uk/efo",
+        "display": "technologyType"
       },
       "valueCodeableConcept": {
         "coding": [
@@ -76,6 +77,38 @@
             "code": "VT_2000017",
             "system": "http://purl.obolibrary.org/obo",
             "display": "heart electrical impulse conduction trait"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "code": "EFO_0005521",
+        "system": "http://www.ebi.ac.uk/efo",
+        "display": "technologyType"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "EFO_0004327",
+            "system": "http://www.ebi.ac.uk/efo",
+            "display": "electrocardiography"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "code": "EFO_0005521",
+        "system": "http://www.ebi.ac.uk/efo",
+        "display": "technologyType"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "EFO_0003962",
+            "system": "http://www.ebi.ac.uk/efo",
+            "display": "pulsed doppler echocardiography"
           }
         ]
       }

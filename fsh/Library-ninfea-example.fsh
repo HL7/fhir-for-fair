@@ -35,21 +35,30 @@ Usage: #example
 
 * identifier[0].system = "https://doi.org"
 * identifier[0].value = "10.13026/c4n5-3b04"
+
 * name = "NInFEA"
-* title = "A non-invasive multimodal foetal ECG-doppler dataset for antenatal cardiology research"
+* title = "Metadata record for: A non-invasive multimodal foetal ECG-doppler dataset for antenatal cardiology research"
 * status = #active
 * type = $library-type#asset-collection
 * subjectCodeableConcept = $NCBITAXON#9606 "Homo sapiens"
 * date = "2020-11-20"
 * publisher = "PhysioNet"
 * description = "The Non-Invasive Multimodal Foetal ECG-Doppler Dataset for Antenatal Cardiology Research (NInFEA) is the first open-access dataset featuring simultaneous non-invasive electrophysiological recordings, fetal pulsed-wave Doppler (PWD) and maternal respiration signals. The dataset includes 60 entries from 39 voluntary pregnant women, between the 21st and the 27th week of gestation. Every entry is composed of 27 electrophysiological channels (2048 Hz, 22 bits, acquired by means of the TMSi Porti7 system), maternal respiration signal (through a resistive thoracic belt), synchronised foetal trans-abdominal PWD and clinical annotations provided by expert clinicians at the time of the signal collection."
+
 * useContext[0].code = $usage-context-type#age
 * useContext[0].valueCodeableConcept = $efo#EFO_0005112 "gestational age"
-* useContext[1].code = $CodeSystem#technologyType
+
+* useContext[1].code = $efo#EFO_0005521 "technologyType"
 * useContext[1].valueCodeableConcept = $efo#EFO_0004327 "electrocardiography"
 * useContext[2].code = $CodeSystem#measurementType
 * useContext[2].valueCodeableConcept = $obo#VT_2000017 "heart electrical impulse conduction trait"
 
+* useContext[3].code = $efo#EFO_0005521 "technologyType"
+* useContext[3].valueCodeableConcept = $efo#EFO_0004327 "electrocardiography"
+* useContext[4].code = $CodeSystem#measurementType
+
+* useContext[4].code = $efo#EFO_0005521 "technologyType"
+* useContext[4].valueCodeableConcept = $efo#EFO_0003962 "pulsed doppler echocardiography"
 * copyright = "Data Descriptor License: CC-BY-4.0 - CreativeWork"
 
 /* ---------------
@@ -82,11 +91,13 @@ pwd - doppler -  maternal ecg - pwd envelope - non-invasive - antenatal - fecg
 * topic[10].text = "antenatal"
 
 
-
-
 * relatedArtifact[0].type = #citation
 * relatedArtifact[0].citation = "Sulas, E., Urru, M., Tumbarello, R. et al. A non-invasive multimodal foetal ECG–Doppler dataset for antenatal cardiology research. Sci Data 8, 30 (2021)."
 * relatedArtifact[0].url = "https://doi.org/10.1038/s41597-021-00811-3"
+
+
+
+  
 
 /*  -- HOW TO MAP THIS ?
  "name": "PhysioNet",
