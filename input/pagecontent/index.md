@@ -1,9 +1,9 @@
 ### Scope
 
 This guide aims to provide guidance on how HL7 FHIR can be used for
-supporting **FAIR health data** implementation and assessment. This
-project is intended to be the result of an active collaboration between
-the RDA and HL7 communities.
+supporting **FAIR health data** implementation and assessment. Other
+kinds of health-related artefacts, as clinical guidelines, algorithms,
+software, models are out of scope.
 
 ### What does FAIR mean?
 
@@ -19,62 +19,116 @@ the RDA and HL7 communities.
 </tbody>
 </table>
 
-The [**FAIR principles**](https://www.go-fair.org/fair-principles) are
-**a minimal set of community-agreed guiding principles** and
-**practices** that allow both machines and humans to find, access,
-interoperate and re-use research data.
+The [FAIR principles](https://www.go-fair.org/fair-principles) are **a
+minimal set of community-agreed guiding principles** and **practices**
+that allow both machines and humans to find, access, interoperate and
+re-use research data. The FAIR principles are well received in
+international community and rapidly adopted by researchers.
 
-The FAIR principles are well received in international community and
-rapidly adopted by researchers.
+We give a more detailed [**introduction to the FAIR data
+principles**](https://confluence.hl7.org/display/SOA/FAIR+Principles) as
+well as the [**relationship to the HL7 FHIR
+standard**](https://confluence.hl7.org/display/SOA/HL7+FHIR+and+FAIR+principles)
+in later sections.
 
-More details about FAIR in the [dedicated page](FAIR.html).
+There are [**existing concepts for operationalization and indicator for
+assessment of
+FAIRness**](https://confluence.hl7.org/pages/viewpage.action?pageId=104570028),
+for example Research Data Alliance or EOSC recommendations. We discuss
+their implications in a special section [**HL7 FHIR and RDA
+Indicators**](https://confluence.hl7.org/display/SOA/HL7+FHIR+and+RDA+Indicators).
 
-### Goals
+### What this project is aiming to?
 
-This project intends to contribute to the achievement of two main goal
-by realizing a set of identified actions as summarized by the following
-figure.
+The FAIRness for FHIR project, this Implementation Guide is part of, is
+intended to be the result of an active collaboration between the RDA and
+HL7 communities.
+
+This project has as main goals to:
+
+  - Facilitate the **collaboration** between the **FAIR** and the
+    **FHIR** **communities**
+
+  - Enable a **cooperative usage** of the **FHIR** standard and **FAIR**
+    principles.
+
+  - Support the **assessment and implementation of FAIR health data** by
+    using HL7 FHIR
+
+### Which kind of problems FAIR and this guide is trying to address?
 
 <table>
+<thead>
+<tr class="header">
+<th><img src="home-2.png" style="width:3.81613in;height:1.7551in" /></th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td><p><img src="home-2.png" style="width:5.72049in;height:3.38778in" /></p>
-<p>Figure 2 - Intended goals</p></td>
+<td>Allow researchers to make available under specified conditions of use set of data, derived from a data source, that have been collected and consolidated for a specific purpose.</td>
+</tr>
+<tr class="even">
+<td><img src="home-3.png" style="width:4.37755in;height:2.05676in" /></td>
+</tr>
+<tr class="odd">
+<td>Allow researchers and data scientists to look for and access previously collected data sets to answer specific questions</td>
 </tr>
 </tbody>
 </table>
 
-### IG Structure
+### Structure of this guide
 
-Within the scope described above, this guide is attempting to also
-satisfy these objectives:
-
-1)  Facilitate the mutual understanding between the FAIR and the FHIR
-    communities and enable a cooperative usage of the FHIR and FAIR
-    paradigms, by providing cross-models mapping.
-
-2)  Support the health data FAIRness assessment by using FHIR
-    conformance resources.
-
-To achieve these objectives this guide has been structured in two main
-components:
+To achieve the defined goals this guide has been structured in two main
+parts:
 
 1)  An informative guidance providing general guidelines on the
     cooperative usage of FHIR and FAIR, specifically best practices for
-    satisfying the FAIR principles when publishing FHIR resources
+    satisfying the FAIR principles when publishing FHIR resources.
 
-2)  “true” FHIR IG providing set of FHIR conformance resources and
-    examples that provide, for selected case(s), a practical example of
-    how FAIRness can be realized and assessed by using HL7 FHIR.
+2)  A set of FHIR conformance resources and examples that provide, for
+    selected case(s), practical examples of how FAIR principles can be
+    realized and assessed by using HL7 FHIR.
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><img src="home-3.png" style="width:6.18686in;height:2.81128in" /></p>
-<p>Figure 3 – Structure of this guide</p></td>
-</tr>
-</tbody>
-</table>
+The **methodology** page describes the approach followed for realizing
+this guide.
+
+### Audience
+
+The audience for this Implementation Guide includes:
+
+**Researchers**
+
+  - People who generate, process or use research health data
+
+**Health Data Providers**
+
+  - Healthcare providers that populate clinical data warehouses
+
+  - Clinical study groups, operators of registries or epidemiological
+    cohorts, surveillance or Public Health
+
+**Technical Implementers**
+
+  - Vendors of EHR systems
+
+  - Vendors of data repositories
+
+  - Vendors of EDC systems
+
+**Government agencies**
+
+  - Funding institutions that want to ensure the sustainable usability
+    of their projects
+
+  - Legislators issuing guidelines for the use of personal data (GDPR,
+    Data Governance Act)
+
+  - Regulatory bodies providing best practice guidelines
+
+**Public**
+
+  - Citizens who want to use their data for their own purposes or donate
+    data for research purposes
 
 ### Authors and Contributors
 
@@ -89,31 +143,31 @@ components:
 </thead>
 <tbody>
 <tr class="odd">
-<td>Author</td>
+<td></td>
 <td>Giorgio Cangioli</td>
 <td>HL7 Europe</td>
 <td>giorgio.cangioli_at_hl7europe.org</td>
 </tr>
 <tr class="even">
-<td>Author</td>
+<td></td>
 <td>Kees van Bochove</td>
 <td>The Hyve</td>
 <td><a href="https://orcid.org/0000-0002-8589-060">https://orcid.org/0000-0002-8589-060</a></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Matthias Löbe</td>
+<td>IMISE University of Leipzig</td>
+<td>m@lö.be</td>
 </tr>
 <tr class="even">
-<td>Contributor</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>Contributor</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>

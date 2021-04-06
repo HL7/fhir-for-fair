@@ -1,4 +1,5 @@
-<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+<ul xmlns="http://www.w3.org/1999/xhtml"
+  	class="nav navbar-nav">
 	<li>
 		<a href="index.html">IG Home</a>
 	</li>
@@ -6,10 +7,15 @@
 		<a href="toc.html">Table of Contents</a>
 	</li>
 	<li class="dropdown">
-		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret">
+		<a data-toggle="dropdown"
+ 			href="#"
+ 			class="dropdown-toggle">Background<b class="caret">
 			</b>
 		</a>
 		<ul class="dropdown-menu">
+			<li>
+				<a href="methodology.html">Methodology</a>
+			</li>
 			<li>
 				<a href="FAIR.html">FAIR Principles</a>
 			</li>
@@ -22,7 +28,7 @@
 			<li>
 				<a href="FHIRandRDAMetrics.html">HL7 FHIR and RDA Indicators</a>
 			</li>
-					<li>
+			<li>
 				<a href="deployment.html">Deployments</a>
 			</li>
 		</ul>
@@ -31,7 +37,9 @@
 		<a href="metadata.html">HL7 FHIR metadata</a>
 	</li>
 	<li class="dropdown">
-		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Scenarios<b class="caret">
+		<a data-toggle="dropdown"
+ 			href="#"
+ 			class="dropdown-toggle">Scenarios<b class="caret">
 			</b>
 		</a>
 		<ul class="dropdown-menu">
@@ -42,10 +50,10 @@
 				<a href="scenarioHC.html">Healthcare datasets</a>
 			</li>
 			<li>
-				<a href="scenarioCitation.html">Citations</a>
+				<a href="scenarioCitation.html">Publications</a>
 			</li>
 			<li>
-				<a href="scenarioResearch.html">Research study</a>
+				<a href="scenarioResearch.html">Research studies</a>
 			</li>
 			<li>
 				<a href="scenarioTerminology.html">Terminologies</a>
@@ -64,12 +72,16 @@
 		<a href="artifacts.html">Artifact Index</a>
 	</li>
 	<li class="dropdown">
-		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+		<a data-toggle="dropdown"
+ 			href="#"
+ 			class="dropdown-toggle">Support<b class="caret">
 			</b>
 		</a>
 		<ul class="dropdown-menu">
 			<li>
-				<a target="_blank" href="{{site.data.fhir.path}}index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/>
+				<a target="_blank"
+ 					href="{{site.data.fhir.path}}index.html">FHIR Spec<img src="external.png"
+   						style="text-align: baseline"/>
 				</a>
 			</li>
 			<li>

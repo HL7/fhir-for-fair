@@ -1,8 +1,9 @@
 canonical: http://hl7.org/fhir/uv/fhir4fair
 fhirVersion: current
-FSHOnly: true
 applyExtensionMetadataToRoot: false
 id: hl7.fhir.uv.fhir4fair
-name: UvFhir4fair
+name: Fhir4FairIG
 status: active
 version: 0.0.1
+
+FSHOnly: true
