@@ -1,48 +1,92 @@
-### WARNING
+This guide has been designed following an **incremental, iterative** and
+**meet-in-the -middle** approach.
 
-This is just a very preliminary draft
+In this sense authors **do not pretend to cover** in this version of the
+guide **all the aspects** related to the data FAIRification (e.g.,
+security and privacy) or all the possible kind of data.
 
-This page should describe how we’d like to approach the problem in this
-guide
+The intent of this guide is to promote as possible the **reuse of
+existing artefacts**, in this sense no new FHIR profiles have been
+specified when covered by existing guides (e.g. genomic, lab results,
+vital sign).
 
-This guide has been developed taking account the complexity of trying to
-represent issues related ot the considering a set of design assumptions
-and principles summarized hereafter:
+This guide **is not about FAIR in general**, but on how FHIR should be
+used to better support the FAIR principles. The design choices will be
+therefore based on how FHIR is designed: this may imply that some FAIR
+expectations might not be fully accomplished. A list of possible
+shortages, including those related to the FAIR digital object to FHIR
+resource mapping, are summarized hereafter.
 
-### Known Issues
+The following figure shows how the incremental, iterative and
+meet-in-the -middle approach has been realized.
+
+A set of possible domains have been identified and a set real-world
+scenarios selected.
+
+For each selected scenario (iteratively):
+
+1)  The scenario has been specified and refined (e.g. creating several
+    sub-scenarios, considering different architectures) when needed.
+
+2)  It has been analyzed how it could be realized using the FHIR
+    standard.
+
+3)  When needed, FHIR conformance resources have been specified.
+
+4)  Finally, it has been checked how the proposed solution fulfills the
+    FAIR RDA indicators
+
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="methodology-1.png" style="width:6.36951in;height:2.77538in" /></td>
+</tr>
+</tbody>
+</table>
+
+This has been done considering different possible [deployment
+architectures](deployment.html), and evaluating how the adoption of FHIR
+may improve the FAIRness, assessing this by using the RDA indicators.
+
+### FAIR digital object to FHIR resource mapping: shortages
 
 #### FAIR digital object to FHIR resource mapping
 
-The concept of FAIR digital object is quite wide and can vary either in
-term of granularity: it can be a single atomic information (e.g. a coded
-diagnosis) up to a collection of data (e.g. a data set); either in term
-of type of data represented (e.g. a signal, an image, a condition, a
-medication and so on..).
+The concept of FAIR digital object is quite wide and can vary in term of
+granularity and type of data that should be represented.
 
-This makes not straightforward the mapping between FAIR data objects and
-the FHIR resources (see figure below).
+In fact, a FAIR digital object can be a single atomic information (e.g.
+a coded diagnosis) up to a collection of data (e.g. a data set). Data,
+moreover, can represent quite different kinds of information: it might
+be for example a waveform, an image, a condition, a medication, or other
+kinds of data.
 
-<table>
-<tbody>
-<tr class="odd">
-<td><img src="methodology-1.png" style="width:4.61429in;height:2.06242in" /></td>
-</tr>
-</tbody>
-</table>
-
-Similar considerations can be done for the metadata, where, depending on
-what the metadata is, metadata elements can be represented within the
-same resource documenting the data or by a set of linked resources.
+This variety makes not so straightforward the mapping between FAIR data
+objects and the FHIR resources covering a large range of resources and
+elements (see figure below).
 
 <table>
 <tbody>
 <tr class="odd">
-<td><img src="methodology-2.png" style="width:3.88571in;height:2.14757in" /></td>
+<td><img src="methodology-2.png" style="width:4.61429in;height:2.06242in" /></td>
 </tr>
 </tbody>
 </table>
 
-#### FAIR digital object: data vs metadata
+Similar considerations can be done also for the metadata, where,
+depending on what the metadata is, the metadata elements can be
+represented within the same resource documenting the data, or by a set
+of linked resources.
+
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="methodology-3.png" style="width:3.88571in;height:2.14757in" /></td>
+</tr>
+</tbody>
+</table>
+
+#### Data vs metadata
 
 In addition to the issue reported above, depending on what a "FAIR
 object" is the boundary between data and metadata may change. That means
@@ -57,48 +101,23 @@ elements are represented in the same FHIR resource.
 <table>
 <tbody>
 <tr class="odd">
-<td><img src="methodology-3.png" style="width:4.18163in;height:2.39734in" /></td>
+<td><img src="methodology-4.png" style="width:4.18163in;height:2.39734in" /></td>
 </tr>
 </tbody>
 </table>
 
-#### FAIR digital object: metadata identification
+#### Metadata identification
 
 In consideration of the previous arguments, the expectation of having a
 persistent and unique ID that identifies the metadata FAIR data object,
-distinct from the data FHIR data object, cannot be always satisfied in
-the FHIR space, with the exception of specific contexts.
+distinct from the data FAIR data object, cannot be always satisfied in
+the FHIR space, except for specific contexts.
 
 ***\<\< add others \>\>***
 
-### Approach
+***\<\< move to a separate page ? \>\>***
 
-1.  Do not pretend to cover everything.
-
-2.  Let’s accept this and identify a minimal set of objectives for our
-    1st version (that we can revise)
-
-3.  Proceed Iterative / Incremental
-
-4.  Maximize reuse, most topics are covered by existing WG activities
-    and guides, we should try to refer other guides when possible (e.g.
-    genomic, lab results, vital sign )
-
-5.  Focused on FHIR, the guide is not about FAIR in general, this guide
-    should be designed based on how FHIR is designed.
-
-6.  out of scope for this version technical specifications for the
-    security and privacy layer
-
-<table>
-<tbody>
-<tr class="odd">
-<td><img src="methodology-4.png" style="width:5.76149in;height:2.23392in" /></td>
-</tr>
-</tbody>
-</table>
-
-### Mathias’ comment
+### Mathias’ comment on the old home page
 
 select one of them as reference case and focus on that kind of object
 

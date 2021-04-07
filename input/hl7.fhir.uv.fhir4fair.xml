@@ -94,12 +94,12 @@
 			</page>
 			<page>
 				<nameUrl value="scenarioCitation.html"/>
-				<title value="Citations"/>
+				<title value="Publictions"/>
 				<generation value="markdown"/>
 			</page>
 			<page>
 				<nameUrl value="scenarioResearch.html"/>
-				<title value="Research study"/>
+				<title value="Research studies"/>
 				<generation value="markdown"/>
 			</page>
 			<page>

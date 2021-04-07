@@ -26,17 +26,15 @@ re-use research data. The FAIR principles are well received in
 international community and rapidly adopted by researchers.
 
 We give a more detailed [**introduction to the FAIR data
-principles**](https://confluence.hl7.org/display/SOA/FAIR+Principles) as
-well as the [**relationship to the HL7 FHIR
-standard**](https://confluence.hl7.org/display/SOA/HL7+FHIR+and+FAIR+principles)
-in later sections.
+principles**](FAIR.html) as well as the [**relationship to the HL7 FHIR
+standard**](FHIRandFAIR.html) in later sections.
 
 There are [**existing concepts for operationalization and indicator for
 assessment of
 FAIRness**](https://confluence.hl7.org/pages/viewpage.action?pageId=104570028),
 for example Research Data Alliance or EOSC recommendations. We discuss
 their implications in a special section [**HL7 FHIR and RDA
-Indicators**](https://confluence.hl7.org/display/SOA/HL7+FHIR+and+RDA+Indicators).
+Indicators**](FHIRandRDAMetrics.html).
 
 ### What this project is aiming to?
 
@@ -89,8 +87,8 @@ parts:
     selected case(s), practical examples of how FAIR principles can be
     realized and assessed by using HL7 FHIR.
 
-The **methodology** page describes the approach followed for realizing
-this guide.
+The [**methodology**](methodology.html) page describes the approach
+followed for realizing this guide.
 
 ### Audience
 
