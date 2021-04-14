@@ -160,9 +160,9 @@ The audience for this Implementation Guide includes:
 </tr>
 <tr class="even">
 <td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Ian Harrow</td>
+<td>Pistoia Alliance</td>
+<td><a href="http://orcid.org/0000-0003-0109-0522">http://orcid.org/0000-0003-0109-0522</a></td>
 </tr>
 <tr class="odd">
 <td></td>

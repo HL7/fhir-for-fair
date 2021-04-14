@@ -5,10 +5,6 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
       "valueCode": "anonymous"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Base.Management"
     }
   ],
   "url": "http://hl7.org/fhir/uv/fhir4fair/StructureDefinition/Library-uv-f4f",
@@ -17,27 +13,27 @@
   "title": "Library (FHIR for FAIR)",
   "status": "active",
   "description": "This profile defines how to use the Library resource to convey metadata information for a FAIR dataset realized by using HL7 FHIR",
-  "fhirVersion": "4.5.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
+      "name": "RIM Mapping",
+      "uri": "http://hl7.org/v3"
     },
     {
       "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
+      "name": "FiveWs Pattern Mapping",
+      "uri": "http://hl7.org/fhir/fivews"
     },
     {
       "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
+      "name": "Workflow Pattern",
+      "uri": "http://hl7.org/fhir/workflow"
     },
     {
       "identity": "objimpl",
-      "uri": "http://hl7.org/fhir/object-implementation",
-      "name": "Object Implementation Information"
+      "name": "Object Implementation Information",
+      "uri": "http://hl7.org/fhir/object-implementation"
     }
   ],
   "kind": "resource",
