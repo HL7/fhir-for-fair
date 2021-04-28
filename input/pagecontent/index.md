@@ -19,21 +19,35 @@ software, models are out of scope.
 </tbody>
 </table>
 
-The [FAIR principles](https://www.go-fair.org/fair-principles) are **a
-minimal set of community-agreed guiding principles** and **practices**
-that allow both machines and humans to find, access, interoperate and
-re-use research data. The FAIR principles are well received in
-international community and rapidly adopted by researchers.
+The [FAIR principles](https://www.go-fair.org/fair-principles) - **a
+minimal set of community-agreed guiding principles and practices**
+- were first introduced by Wilkinson et al (2016) in their seminal
+paper
+([doi.org/10.1038/sdata.2016.18](http://doi.org/10.1038/sdata.2016.18)).
+The authors intent was to provide guidelines to improve
+the **Findability**, **Accessibility**, **Interoperability**,
+and **Reuse** (FAIR) of scientific data. Since their first introduction
+in 2016, FAIR principles were well received in international community
+and rapidly adopted by researchers.
 
-We give a more detailed [**introduction to the FAIR data
+The FAIR principles put specific emphasis on improving the ability of
+machines to automatically find and make use of the  research (and other)
+data, as well as to support its reuse by the human researches. 
+
+Therefore, acting as a guideline for those wishing to gain much greater
+value from the future reuse of their scientific data and relevant
+metadata.
+
+We provide more detailed [**introduction to the FAIR data
 principles**](FAIR.html) as well as the [**relationship to the HL7 FHIR
-standard**](FHIRandFAIR.html) in later sections.
+standard**](FHIRandFAIR.html) in later sections of this IG.
 
 There are [**existing concepts for operationalization and indicator for
 assessment of
 FAIRness**](https://confluence.hl7.org/pages/viewpage.action?pageId=104570028),
-for example Research Data Alliance or EOSC recommendations. We discuss
-their implications in a special section [**HL7 FHIR and RDA
+for example Research Data Alliance or EOSC recommendations.
+
+We discuss their implications in a special section [**HL7 FHIR and RDA
 Indicators**](FHIRandRDAMetrics.html).
 
 ### What this project is aiming to?
@@ -116,12 +130,12 @@ The audience for this Implementation Guide includes:
 **Government agencies**
 
   - Funding institutions that want to ensure the sustainable usability
-    of their projects
+    of their projects.
 
   - Legislators issuing guidelines for the use of personal data (GDPR,
     Data Governance Act)
 
-  - Regulatory bodies providing best practice guidelines
+  - Regulatory bodies providing best practice guidelines.
 
 **Public**
 
@@ -166,8 +180,26 @@ The audience for this Implementation Guide includes:
 </tr>
 <tr class="odd">
 <td></td>
+<td>Olga Vovk</td>
+<td>Samvit Solutions</td>
 <td></td>
+</tr>
+<tr class="even">
 <td></td>
+<td>Alicia Martinez-Garcia </td>
+<td>Andalusian Health Service</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Catherine Chronaki</td>
+<td>HL7 Europe</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Brian S. Alper</td>
+<td>Computable Publishing</td>
 <td></td>
 </tr>
 </tbody>
