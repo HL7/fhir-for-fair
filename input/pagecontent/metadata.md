@@ -74,7 +74,7 @@ distinguish two main levels:
 
 <table style="border-color: #000000; width:80 1px solid gray;">
 <thead>
-<tr style="border: 1px solid gray; background-color: #E5E4E2;">
+<tr style="border: 1px solid gray;">
 <th><img src="metadata-4.png" style="width:5.76548in;height:1.72832in" /></th>
 </tr>
 </thead>
@@ -90,7 +90,7 @@ collection (study level)
 
 <table style="border-color: #000000; width:80 1px solid gray;">
 <thead>
-<tr style="border: 1px solid gray; background-color: #E5E4E2;">
+<tr style="border: 1px solid gray;">
 <th><img src="metadata-5.png" style="width:6.57528in;height:2.58118in" /></th>
 </tr>
 </thead>
@@ -107,7 +107,7 @@ considered metadata for the signals, but also patient level data.
 
 <table style="border-color: #000000; width:80 1px solid gray;">
 <thead>
-<tr style="border: 1px solid gray; background-color: #E5E4E2;">
+<tr style="border: 1px solid gray;">
 <th><img src="metadata-6.png" style="width:6.5007in;height:2.85657in" /></th>
 </tr>
 </thead>
@@ -139,7 +139,7 @@ The choice of the resource depends on the usage context.
 
 <table style="border-color: #000000; width:80 1px solid gray;">
 <thead>
-<tr style="border: 1px solid gray; background-color: #E5E4E2;">
+<tr style="border: 1px solid gray;">
 <th><img src="metadata-7.png" style="width:6.7147in;height:3.00251in" /></th>
 </tr>
 </thead>
