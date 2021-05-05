@@ -11,7 +11,7 @@ Description: "FRAILSURVEY is an app that collects data from elderly communally. 
 // * url MS
 * name = "F4hfrailSurvey"
 * title = "Frail Survey"
-* status = http://hl7.org/fhir/ValueSet/publication-status#active
+* status = http://hl7.org/fhir/publication-status#active
 * type = http://terminology.hl7.org/CodeSystem/library-type#asset-collection
 * subjectCodeableConcept = http://hl7.org/fhir/resource-types#Patient
 * date = "2021"

@@ -13,26 +13,18 @@ This variety makes not so straightforward the mapping between FAIR data
 objects and the FHIR resources covering a large range of resources and
 elements (see figure below).
 
-<table style="border-color: #000000; width:80 1px solid gray;">
-<tbody>
-<tr style="border: 1px solid gray; ">
-<td><img src="metadata-1.png" style="width:5.40031in;height:2.4133in" /></td>
-</tr>
-</tbody>
-</table>
+<div><img src="metadata-1.png" style="width:55%"/></div>
+
+**Figure** **1 – FAIR Digital Object representation**
 
 Similar considerations can be done also for the metadata, where,
 depending on what the metadata is, the metadata elements can be
 represented within the same resource documenting the data, or by a set
 of linked resources.
 
-<table style="border-color: #000000; width:80 1px solid gray;">
-<tbody>
-<tr style="border: 1px solid gray; ">
-<td><img src="metadata-2.png" style="width:3.88571in;height:2.14757in" /></td>
-</tr>
-</tbody>
-</table>
+<div><img src="metadata-2.png" style="width:55%"/></div>
+
+**Figure** **2 – Mapping FAIR data and metadata**
 
 #### Data vs metadata
 
@@ -46,13 +38,9 @@ The figure below shows how information that were part of the metadata in
 the previous example are now part of the data; and how metadata and data
 elements are represented in the same FHIR resource.
 
-<table style="border-color: #000000; width:80 1px solid gray;">
-<tbody>
-<tr style="border: 1px solid gray; ">
-<td><img src="metadata-3.png" style="width:4.18163in;height:2.39734in" /></td>
-</tr>
-</tbody>
-</table>
+<div><img src="metadata-3.png" style="width:55%"/></div>
+
+**Figure** **3 – Mapping FAIR data and metadata**
 
 #### Metadata identification
 
@@ -69,54 +57,28 @@ distinguish two main levels:
 1.  The **study level**: describing the collection of data referring to
     a specific study, publication, usage context.
 
-2.  **Instance** (or patient) **Level**: providing the metadata/data
-    information associated to a single subject.
+2.  The **subject Level**: providing the metadata/data information
+    associated to a single subject.
 
-<table style="border-color: #000000; width:80 1px solid gray;">
-<thead>
-<tr style="border: 1px solid gray;">
-<th><img src="metadata-4.png" style="width:5.76548in;height:1.72832in" /></th>
-</tr>
-</thead>
-<tbody>
-<tr style="border: 1px solid gray; ">
-<td><strong>Figure</strong> <strong>1 - Level of data objects granularity considered in this guide.</strong></td>
-</tr>
-</tbody>
-</table>
+<div><img src="metadata-4.png" style="width:55%"/></div>
+
+**Figure** **4 - Level of data objects granularity considered in this
+guide**
 
 If the boundary between metadata and data is quite clear for the
 collection (study level)
 
-<table style="border-color: #000000; width:80 1px solid gray;">
-<thead>
-<tr style="border: 1px solid gray;">
-<th><img src="metadata-5.png" style="width:6.57528in;height:2.58118in" /></th>
-</tr>
-</thead>
-<tbody>
-<tr style="border: 1px solid gray; ">
-<td><strong>Figure</strong> <strong>2 – Metadata and data for a data collection.</strong></td>
-</tr>
-</tbody>
-</table>
+<div><img src="metadata-5.png" style="width:55%"/></div>
+
+**Figure** **2 – Metadata and data for a data collection.**
 
 This might be not so true for the instance level, where information as
 the gestational week or the mother height and weight, might be
 considered metadata for the signals, but also patient level data.
 
-<table style="border-color: #000000; width:80 1px solid gray;">
-<thead>
-<tr style="border: 1px solid gray;">
-<th><img src="metadata-6.png" style="width:6.5007in;height:2.85657in" /></th>
-</tr>
-</thead>
-<tbody>
-<tr style="border: 1px solid gray; ">
-<td><strong>Figure</strong> <strong>3 – Metadata and data for the instance level data.</strong></td>
-</tr>
-</tbody>
-</table>
+<div><img src="metadata-6.png" style="width:55%"/></div>
+
+**Figure** **3 – Metadata and data at the subject level.**
 
 ### Metadata Representation in FHIR
 
@@ -137,32 +99,23 @@ Collection metadata:
 
 The choice of the resource depends on the usage context.
 
-<table style="border-color: #000000; width:80 1px solid gray;">
-<thead>
-<tr style="border: 1px solid gray;">
-<th><img src="metadata-7.png" style="width:6.7147in;height:3.00251in" /></th>
-</tr>
-</thead>
-<tbody>
-<tr style="border: 1px solid gray; ">
-<td><strong>Figure</strong> <strong>4 – Data Collection Metadata representation</strong></td>
-</tr>
-</tbody>
-</table>
+<div><img src="metadata-7.png" style="width:55%"/></div>
 
-The figure highlight the version of FHIR from which this resource is
+**Figure** **4 – Data Collection Metadata representation**
+
+The figure highlights the version of FHIR from which this resource is
 available and how the linkage between metadata and data is realized
 (with the FHIR version where this is derived from).
 
-Considering three kinds of possible data objects:
+Considering three possible kinds of data objects:
 
-1.  Non-FHIR object
+1.  Non-FHIR objects
 
 2.  FHIR and non-FHIR objects
 
 3.  FHIR-only objects
 
-The following table highlight how this linkage could be realized.
+The following table highlights how this linkage could be realized.
 
 <table style="border-color: #000000; width:80 1px solid gray;">
 <thead>
@@ -203,11 +156,66 @@ The following table highlight how this linkage could be realized.
 </tbody>
 </table>
 
+#### Subject Level (e.g. Patient)
+
+As describe above, at the subject level, the boundary between metadata
+and data is not always so sharp, since the classification can depend on
+the perspective: for example, the gestational age of a EGC measurement
+subject, is a measure metadata, but also a subject data.
+
+This guide will not therefore to attempt to **prescribe any tight
+separation of metadata/data at the subject level.**
+
+Concerning three possible kinds of data objects that have been mentioned
+above:
+
+1.  Non-FHIR objects
+
+2.  FHIR and non-FHIR objects
+
+3.  FHIR-only objects
+
+In case of non-FHIR objects it should be evaluated feasibility and
+cost/benefit of transforming these objects (completely or partially) in
+FHIR; or having them referred by a subject level FHIR resource (see the
+group resource case)
+
+For what concern the intermediate case (FHIR and non-FHIR objects) this
+should be evaluated case by case depending on where and how FHIR
+resources are used and the possibility to FHIRify the non-FHIR objects.
+Depending on this the solutions proposed for the other two cases should
+be assessed
+
+In case of all the data represented by using FHIR resources, two main
+possible approaches for FAIR subject level data/metadata can be
+considered, leaving then to the implementers the choice about the most
+appropriate solution in a specific context:
+
+1.  Direct references: the collection refers directly the resources
+    describing the (main) subject level data, relying on the existing
+    FHIR resource relationships to describe the entire subject level set
+    of data/metadata. For example, a study refers a Condition resource,
+    using the *subject*, the *encounter* and the *evidence* references
+    to document the patient, encounter and other information used as
+    evidences.
+
+2.  Group resources. The second approach is to group all the subject
+    level data, by using appropriate FHIR resources (EvidenceReport,
+    Bundle\[collection\], Composition, List; DocumentManifest). This
+    grouping resource may play a metadata role.
+
+> Open questions:
+> 
+> Should we leave all these options open or suggest one or few specific
+> solutions?
+
+*\< expand this part explain pros and contra of the different options\>*
+
 *\< to be continued\>*
 
 ### Conclusions
 
-*\< move to another page ?\>*
+*\< move to another page?\>*
 
   - Do not pretend to address all the identified issues and realize all
     the FAIR recommendations since the beginning: **FAIRness is a
