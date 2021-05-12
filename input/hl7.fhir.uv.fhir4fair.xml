@@ -88,17 +88,42 @@
 				<generation value="markdown"/>
 			</page>
 			<page>
-				<nameUrl value="scenarioHC.html"/>
+				<nameUrl value="immPort.html"/>
+				<title value="Immunology Database and Analysis Portal"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="fitbir.html"/>
+				<title value="FITBIR datasets"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="personalGeneticLocker.html"/>
+				<title value="Personal Genetic Locker"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="germany.html"/>
+				<title value="FHIR based integrated data center Germany"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="leipzigHealthAtlas.html"/>
+				<title value="Leipzig Health Atlas (LHA)"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+				<nameUrl value="healthCare.html"/>
 				<title value="Healthcare datasets"/>
 				<generation value="markdown"/>
 			</page>
 			<page>
-				<nameUrl value="scenarioCitation.html"/>
+				<nameUrl value="publication.html"/>
 				<title value="Publictions"/>
 				<generation value="markdown"/>
 			</page>
 			<page>
-				<nameUrl value="scenarioResearch.html"/>
+				<nameUrl value="research.html"/>
 				<title value="Research studies"/>
 				<generation value="markdown"/>
 			</page>

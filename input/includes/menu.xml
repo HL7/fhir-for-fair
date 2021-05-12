@@ -56,6 +56,21 @@
 				<a href="research.html">Research studies</a>
 			</li>
 			<li>
+				<a href="immPort.html">Immunology Database and Analysis Portal</a>
+			</li>
+			<li>
+				<a href="fitbir.html">FITBIR datasets</a>
+			</li>
+			<li>
+				<a href="germany.html">FHIR based integrated data center Germany</a>
+			</li>
+			<li>
+				<a href="leipzigHealthAtlas.html">Leipzig Health Atlas (LHA)</a>
+			</li>
+			<li>
+				<a href="personalGeneticLocker.html">Personal Genetic Locker</a>
+			</li>
+			<li>
 				<a href="scenarioTerminology.html">Terminologies</a>
 			</li>
 		</ul>

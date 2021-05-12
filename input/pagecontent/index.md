@@ -13,7 +13,7 @@ software, models are out of scope.
 <table>
 <tbody>
 <tr class="odd">
-<td><p><img src="home-1.png" style="width:2.98265in;height:1.01225in" alt="FAIR data - Wikipedia" /></p>
+<td><p><img src="index-1.png" style="width:2.98265in;height:1.01225in" alt="FAIR data - Wikipedia" /></p>
 <p>Figure 1 – FAIR [SangyaPundir / <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA</a>]</p></td>
 </tr>
 </tbody>
@@ -72,7 +72,7 @@ This project has as main goals to:
 <table>
 <thead>
 <tr class="header">
-<th><img src="home-2.png" style="width:3.81613in;height:1.7551in" /></th>
+<th><img src="index-2.png" style="width:3.81613in;height:1.7551in" /></th>
 </tr>
 </thead>
 <tbody>
@@ -80,7 +80,7 @@ This project has as main goals to:
 <td>Allow researchers to make available under specified conditions of use set of data, derived from a data source, that have been collected and consolidated for a specific purpose.</td>
 </tr>
 <tr class="even">
-<td><img src="home-3.png" style="width:4.37755in;height:2.05676in" /></td>
+<td><img src="index-3.png" style="width:4.37755in;height:2.05676in" /></td>
 </tr>
 <tr class="odd">
 <td>Allow researchers and data scientists to look for and access previously collected data sets to answer specific questions</td>
