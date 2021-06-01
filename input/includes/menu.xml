@@ -33,13 +33,10 @@
 			</li>
 		</ul>
 	</li>
-	<li>
-		<a href="metadata.html">HL7 FHIR metadata</a>
-	</li>
 	<li class="dropdown">
 		<a data-toggle="dropdown"
  			href="#"
- 			class="dropdown-toggle">Scenarios<b class="caret">
+ 			class="dropdown-toggle">Real World Cases<b class="caret">
 			</b>
 		</a>
 		<ul class="dropdown-menu">
@@ -72,6 +69,21 @@
 			</li>
 			<li>
 				<a href="scenarioTerminology.html">Terminologies</a>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown"
+ 			href="#"
+ 			class="dropdown-toggle">How To...<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="recommendations.html">Recommendations</a>
+			</li>
+			<li>
+				<a href="metadata.html">Metadata</a>
 			</li>
 		</ul>
 	</li>
