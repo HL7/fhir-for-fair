@@ -113,9 +113,8 @@ innovation programme under Grant Agreement number 824666.*
 
 ### REFERENCE PROFILES
 
-*[Anil Sinaci](https://d.docs.live.net/display/~anilsinaci), please, to
-develop this subsection, could you give me some details of the F4H
-profile we uses in the DCT and DPT?*
+*please, to develop this subsection, could you give me some details of
+the F4H profile we uses in the DCT and DPT?*
 
   - *Is it one profile (shared for both tools), two profiles (one by
     tool), or several profiles (one by FHIR Resource used by both
