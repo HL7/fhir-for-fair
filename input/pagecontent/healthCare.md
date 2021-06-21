@@ -98,7 +98,7 @@ Resources) are proposed to use to cover metadata information:
 In the 'Healthcare datasets' subpages, you could find the following
 practical uses of the real word scenario regarding Healthcare:
 
-1.  FAIR4Health project
+1.  [FAIR4Health project](FAIR4Health.html)
 
 2.  [FHIR based integrated data
     center](https://confluence.hl7.org/display/SOA/FHIR+based+integrated+data+center+Germany?src=contextnavpagetreemode)
