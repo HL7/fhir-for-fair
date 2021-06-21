@@ -98,6 +98,11 @@
 				<generation value="markdown"/>
 			</page>
 			<page>
+				<nameUrl value="FAIR4Health.html"/>
+				<title value="FAIR4Health Project"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
 				<nameUrl value="fitbir.html"/>
 				<title value="FITBIR datasets"/>
 				<generation value="markdown"/>
