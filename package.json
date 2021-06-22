@@ -6,8 +6,7 @@
  "title" : "FHIR for FAIR Implementation Guide",
  "description": "An example of how FSH can be used to create an IG about fish",
  "dependencies": {
-    "hl7.fhir.r5.core": "4.5.0"
-    
+    "hl7.fhir.r4b.core": "4.1.0"    
  },
  "keywords": [
    "FAIR",
@@ -15,12 +14,8 @@
 	"FHIR4FAIR"
  ],
  "language": "en",
- "author": "Giorio Cangioli",
- "maintainers": [
-   {
-     "name": "Bill Cod",
-     "email": "cod@reef.gov"
-   }
+ "author": "Giorio Cangioli"
+
  ],
  "license": "CC0-1.0"
 }

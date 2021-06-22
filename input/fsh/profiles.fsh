@@ -33,7 +33,7 @@ Description: "This profile defines how to use the Attachment data type to convey
 // * data 0..0 => to be checked
 * url 1..1 MS
 
-/*========== BEGIN COMMENT END COMMENT  ====*/
+/*========== BEGIN COMMENT END COMMENT  
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  CitationF4F
@@ -74,6 +74,9 @@ Description: "This profile defines how to use the ResearchStudy resource to conv
 * keyword MS
 * descriptionSummary MS
 * result 1.. MS
+
+
+====*/
 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

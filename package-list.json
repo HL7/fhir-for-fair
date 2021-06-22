@@ -4,7 +4,7 @@
  "canonical" : "http://hl7.org/fhir/uv/fhir4fair", 
  "introduction" : "This implementaion guide aims to provide guidance on supporting health data FAIRness by using HL7 FHIR",
  "list" : [{
-  "version" : "current",
+  "version" : "4.1.0",
   "desc" : "Continuous Integration Build (latest in version control)",
   "path" : "http://build.fhir.org/ig/HL7/fhir-forfair",
   "status" : "ci-build",
