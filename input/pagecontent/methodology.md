@@ -39,7 +39,7 @@ For each selected scenario (iteratively):
 <table>
 <tbody>
 <tr class="odd">
-<td><img src="methodology-1.png" style="width:6.36951in;height:2.77538in" /></td>
+<td><img src="methodology-1.png" style="width:6.50963in;height:2.50866in" /></td>
 </tr>
 </tbody>
 </table>
@@ -47,30 +47,3 @@ For each selected scenario (iteratively):
 This has been done considering different possible [deployment
 architectures](deployment.html), and evaluating how the adoption of FHIR
 may improve the FAIRness, assessing this by using the RDA indicators.
-
-### Mathias’ comment on the old home page
-
-select one of them as reference case and focus on that kind of object
-
-identify a minimal set of information that are relevant in real life for
-the components of that FAIR object.
-
-proceed incrementally starting from few essential information, in order
-to excursive also the development process (i.e. not to try to cover
-everything from the beginning)
-
-a) FAIRification of FHIR resources in general, but with a focus on
-data-holding entities like observations.
-
-b) FAIRification of FHIR datasets (resource connection still unclear),
-but with the intention of describing compounds of related data instances
-like a database that can be queried or a snapshot used in a publication.
-
-c) FAIRification of Research projects such as studies, cohorts,
-registers, survelliance, quality assurance.
-
-d) Other research data management entities such as publications,
-researchers, projects.
-
-e) I could image the usefulness of describing services, making them FAIR
-and promote use. That would go inline with the SOA group intentions.

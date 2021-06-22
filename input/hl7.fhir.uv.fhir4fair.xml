@@ -82,6 +82,13 @@
 				<title value="FHIR for FAIR Home Page"/>
 				<generation value="markdown"/>
 			</page>
+			
+					<page>
+				<nameUrl value="aboutThisVersion.html"/>
+				<title value="About this version"/>
+				<generation value="markdown"/>
+			</page>
+			
 						<page>
 				<nameUrl value="scenarios.html"/>
 				<title value="Use cases and scenarios"/>
@@ -149,7 +156,7 @@
 			</page>
 			<page>
 				<nameUrl value="RDAMetrics.html"/>
-				<title value="RDA Indicators / EOSC recommendations"/>
+				<title value="RDA Indicators"/>
 				<generation value="markdown"/>
 			</page>
 			<page>
