@@ -14,22 +14,28 @@
 		</a>
 		<ul class="dropdown-menu">
 			<li>
+				<a href="aboutThisVersion.html">About this version</a>
+			</li>
+			<li>
 				<a href="methodology.html">Methodology</a>
 			</li>
 			<li>
 				<a href="FAIR.html">FAIR Guiding Principles</a>
 			</li>
 			<li>
-				<a href="FHIRandFAIR.html">HL7 FHIR and FAIR principles</a>
+				<a href="RDAMetrics.html">RDA Indicators</a>
 			</li>
 			<li>
-				<a href="RDAMetrics.html">RDA Indicators / EOSC recommendations</a>
+				<a href="FHIRandFAIR.html">HL7 FHIR and FAIR principles</a>
 			</li>
 			<li>
 				<a href="FHIRandRDAMetrics.html">HL7 FHIR and RDA Indicators</a>
 			</li>
 			<li>
-				<a href="deployment.html">Deployments</a>
+				<a href="metadata.html">Metadata</a>
+			</li>
+			<li>
+				<a href="deployment.html">Deployment</a>
 			</li>
 		</ul>
 	</li>
@@ -58,7 +64,7 @@
 			<li>
 				<a href="FAIR4Health.html">FAIR4Health Project</a>
 			</li>
-						<li>
+			<li>
 				<a href="fitbir.html">FITBIR datasets</a>
 			</li>
 			<li>
@@ -75,20 +81,8 @@
 			</li>
 		</ul>
 	</li>
-	<li class="dropdown">
-		<a data-toggle="dropdown"
- 			href="#"
- 			class="dropdown-toggle">How To...<b class="caret">
-			</b>
-		</a>
-		<ul class="dropdown-menu">
-			<li>
-				<a href="recommendations.html">Recommendations</a>
-			</li>
-			<li>
-				<a href="metadata.html">Metadata</a>
-			</li>
-		</ul>
+	<li>
+		<a href="recommendations.html">Recommendations</a>
 	</li>
 	<!-- Background -->
 	<!-- What is FAIR and RDA indicators -->
