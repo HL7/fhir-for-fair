@@ -33,7 +33,7 @@ Description: "This profile defines how to use the Attachment data type to convey
 // * data 0..0 => to be checked
 * url 1..1 MS
 
-/*========== BEGIN COMMENT END COMMENT  
+
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  CitationF4F
@@ -47,14 +47,17 @@ Description: "This profile defines how to use the Citation resource to convey me
 * title MS
 * status MS
 * date MS
+* summary MS
 * publisher MS
-* author MS
-* relatesTo MS
-* citedArtifact MS
-* citedArtifact.identifier MS
-* citedArtifact.relatesTo MS
-* citedArtifact.relatesTo.relationshipType MS
-* citedArtifact.relatesTo.targetAttachment 0..
+* webLocation MS
+* contributorship MS
+* keywordList MS
+* relatedArtifact MS
+
+
+/*========== BEGIN COMMENT END COMMENT  
+
+====*/
 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -64,19 +67,17 @@ Id:       ResearchStudy-uv-f4f
 Title:    "ResearchStudy (Study Level Medatata)"
 Description: "This profile defines how to use the ResearchStudy resource to convey metadata information for a FAIR collection of data at the study level realized by using HL7 FHIR"
 //-------------------------------------------------------------------------------------------
-* url MS
+
 * identifier MS
 * title MS
 * status MS
-* date MS
-* focus MS
-* condition MS
+* primaryPurposeType MS
+* relatedArtifact MS
 * keyword MS
-* descriptionSummary MS
-* result 1.. MS
+* note MS
 
 
-====*/
+
 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
