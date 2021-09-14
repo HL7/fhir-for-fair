@@ -4,10 +4,10 @@
                    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    	xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
 	<id value="hl7.fhir.uv.fhir4fair"/>
-	<url value="http://hl7.org/fhir/uv/fhir4fair/ImplementationGuide/hl7.fhir.uv.fhir4fair"/>
+	<url value="http://hl7.org/fhir/uv/fhir-for-fair/ImplementationGuide/hl7.fhir.uv.fhir-for-fair"/>
 	<!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
 	<version value="0.0.1"/>
-	<name value="Fhir4FairIG"/>
+	<name value="FhirForFairIG"/>
 	<title value="FHIR for FAIR Implementation Guide"/>
 	<status value="active"/>
 	<experimental value="false"/>
@@ -25,7 +25,7 @@
 			<code value="001"/>
 		</coding>
 	</jurisdiction>
-	<packageId value="hl7.fhir.uv.fhir4fair"/>
+	<packageId value="hl7.fhir.uv.fhir-for-fair"/>
 	<!-- This should be changed to 'not-open-source' or another license if appropriate for non-HL7-published content -->
 	<license value="CC0-1.0"/>
 	<!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
@@ -48,7 +48,7 @@
 			</reference>
 			<name value="NInFEA: metadata as Library"/>
 			<description value="A simple example showing how the Library resouce can be used to document metadata about the NInFEA collection of data"/>
-			<exampleCanonical value="http://hl7.org/fhir/uv/fhir4fair/StructureDefinition/Library-uv-f4f"/>
+			<exampleCanonical value="http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f"/>
 		</resource>
 		<resource>
 			<extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -59,7 +59,7 @@
 			</reference>
 			<name value="Frail Survey: metadata as Library"/>
 			<description value="A simple example showing how the Library resouce can be used to document metadata about the Frail Survey collection of data"/>
-			<exampleCanonical value="http://hl7.org/fhir/uv/fhir4fair/StructureDefinition/Library-uv-f4f"/>
+			<exampleCanonical value="http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f"/>
 		</resource>
 		<!-- 		<resource>
 			<extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -70,7 +70,7 @@
 			</reference>
 			<name value="NInFEA: metadata as Citation"/>
 			<description value="A simple example showing how the Citation resouce can be used to document metadata about the NInFEA collection of data"/>
-			<exampleCanonical value="http://hl7.org/fhir/uv/fhir4fair/StructureDefinition/Citation-uv-f4f"/>
+			<exampleCanonical value="http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Citation-uv-f4f"/>
 		</resource> -->
 		<page>
 			<!-- The root will always be toc.html - the template will force it if you don't do it -->
@@ -169,7 +169,7 @@
 			</page>
 			<page>
 				<nameUrl value="metadata.html"/>
-				<title value="Metadata"/>
+				<title value="Metadata and data"/>
 				<generation value="markdown"/>
 			</page>
 			<page>

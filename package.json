@@ -1,8 +1,8 @@
 {
- "name": "fhir4fair",
+ "name": "fhir-for-fair",
  "version" : "0.0.1",  
- "canonical" : "http://hl7.org/fhir/uv/fhir4fair",
- "url" : "http://hl7.org/fhir/uv/fhir4fair",
+ "canonical" : "http://hl7.org/fhir/uv/fhir-for-fair",
+ "url" : "http://hl7.org/fhir/uv/fhir-for-fair",
  "title" : "FHIR for FAIR Implementation Guide",
  "description": "An example of how FSH can be used to create an IG about fish",
  "dependencies": {

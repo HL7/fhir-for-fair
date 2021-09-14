@@ -1,8 +1,8 @@
-canonical: http://hl7.org/fhir/uv/fhir4fair
+canonical: http://hl7.org/fhir/uv/fhir-for-fair
 fhirVersion: 4.1.0
 applyExtensionMetadataToRoot: false
-id: hl7.fhir.uv.fhir4fair
-name: Fhir4FairIG
+id: hl7.fhir.uv.fhir-for-fair
+name: FhirForFairIG
 status: active
 version: 0.0.1
 

@@ -1,17 +1,14 @@
 ### The Problem
 
-The concept of FAIR digital object is quite wide and can vary in term of
-granularity and type of data that should be represented.
+The concept of FAIR digital object (FAIR DO) is quite wide and can cover
+from a single atomic information (e.g., a coded diagnosis) up to a
+collection of data (e.g., a data set). Data, moreover, can represent
+quite different kinds of information: it might be for example a
+waveform, an image, a condition, a medication, or other kinds of data.
 
-In fact, a FAIR digital object can be a single atomic information (e.g.,
-a coded diagnosis) up to a collection of data (e.g., a data set). Data,
-moreover, can represent quite different kinds of information: it might
-be for example a waveform, an image, a condition, a medication, or other
-kinds of data.
-
-This variety makes not so straightforward the mapping between FAIR data
-objects and the FHIR resources covering a large range of resources and
-elements (see figure below).
+This variety makes not so straightforward the mapping with the FHIR
+resources covering a large range of resources and elements (see figure
+below).
 
 <div><img src="metadata-1.png" style="width:55%"/></div>
 
@@ -28,11 +25,13 @@ of linked resources.
 
 #### Data vs metadata
 
-In addition to the issue reported above, depending on what a "FAIR
-object" is the boundary between data and metadata may change. That means
-that based on the context, the same information can be considered as
-part of the data or of the metadata. This makes even more complex the
-mapping to the FHIR resources.
+The logical distinction between metadata and data (both are FAIR DO) is
+a key point; with metadata playing a key role for making data findable,
+accessible, interoperable and reusable. Metadata are usually described
+as the “data about data”, but in practice what is “data” and what is
+“metadata” is a matter of perspective: based on the context, the same
+information can be considered as part of the data or of the metadata.
+This makes even more complex the mapping to the FHIR resources.
 
 The figure below shows how information that were part of the metadata in
 the previous example are now part of the data; and how metadata and data
@@ -51,8 +50,8 @@ the FHIR space, except for specific contexts.
 
 ### The approach
 
-Even though many levels of granularity can be considered in this work we
-distinguish two main levels:
+Even though many levels of granularity can be identified, in this work
+we consider two main levels:
 
 1.  The **study level**: describing the collection of data referring to
     a specific study, publication, usage context.
@@ -65,49 +64,37 @@ distinguish two main levels:
 **Figure** **4 - Level of data objects granularity considered in this
 guide**
 
-If the boundary between metadata and data is quite clear for the
-collection (study level)
+For collections of data (study level) it is reasonable to assume that a
+distinction between metadata and data is possible.
 
 <div><img src="metadata-5.png" style="width:55%"/></div>
 
-**Figure** **2 – Metadata and data for a data collection.**
+**Figure** **5 – Metadata and data for a data collection.**
 
 This might be not so true for the instance level, where information as
-the gestational week or the mother height and weight, might be
-considered metadata for the signals, but also patient level data.
+the gestational week or the mother height and weight in the example
+below, might be considered metadata for the signals, but also patient
+level data.
 
 <div><img src="metadata-6.png" style="width:55%"/></div>
 
-**Figure** **3 – Metadata and data at the subject level.**
+**Figure** **6 – Metadata and data at the subject level.**
 
 ### Metadata Representation in FHIR
 
 #### Study Level (Collection)
 
-HL7 FHIR provides several candidates resources that could be used to
-represent collection of data (e.g., Bundle, Lists..); some of them
-however seem not to fully support the “rich metadata” FAIR requirement.
+HL7 FHIR provides several candidates resources to represent metadata of
+collection of data (e.g., Bundle, Lists..) and the choice of the
+resource to be used strongly depend on the usage context. **Library,**
+**Citation** and **ResearchStudy**, seem to be the most promising
+resources to better support the “rich metadata” FAIR requirement;
+however not all of them are available in the current FHIR Version.
+Furthermore, due to their low FHIR maturity level, they may be subject
+to non-negligeable changes among the different FHIR versions, including
+the way the linkage between metadata and data is realized.
 
-At this stage three FHIR resources have been identified to represent
-Collection metadata:
-
-  - Library
-
-  - Citation
-
-  - ResearchStudy
-
-The choice of the resource depends on the usage context.
-
-<div><img src="metadata-7.png" style="width:55%"/></div>
-
-**Figure** **4 – Data Collection Metadata representation**
-
-The figure highlights the version of FHIR from which this resource is
-available and how the linkage between metadata and data is realized
-(with the FHIR version where this is derived from).
-
-Considering three possible kinds of data objects:
+The kinds of data objects that the metadata may refer to can be:
 
 1.  Non-FHIR objects
 
@@ -115,116 +102,43 @@ Considering three possible kinds of data objects:
 
 3.  FHIR-only objects
 
-The following table highlights how this linkage could be realized.
+Depending on the “metadata” resource, the FHIR version chosen and the
+type of object to point to, different solutions can be adopted. For
+example, the current Library resource covers this requirement through
+the content element (Attachment datatype), in this case the link to data
+is recorded by using an uri (this may or may not be enough for referring
+FHIR resources). Citation (looking at the FHIR R5 specs) provides
+instead more flexible and comprehensive solutions through the
+citedArtifact.relatedTo.target\[x\] element; providing different means
+(uri, resource references, business identifiers) to handle these
+references.
 
-<table style="border-color: #000000; width:80 1px solid gray;">
-<thead>
-<tr style="border: 1px solid gray; background-color: #E5E4E2;">
-<th></th>
-<th><strong>Library content</strong></th>
-<th><strong>Citation relatedTo.target[x]</strong></th>
-<th><strong>Research Study results</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr style="border: 1px solid gray; ">
-<td><strong>Applicable to</strong></td>
-<td>FHIR R4</td>
-<td>FHIR R5 (R4b)</td>
-<td>FHIR R5</td>
-</tr>
-<tr style="border: 1px solid gray; ">
-<td><strong>Non-FHIR binary</strong></td>
-<td>link via uri</td>
-<td>link via uri</td>
-<td>EvidenceReport.relatedArtifact</td>
-</tr>
-<tr style="border: 1px solid gray; ">
-<td><strong>Combination of FHIR and non-FHIR objects</strong></td>
-<td><p>link via uri</p>
-<p><em>(Add an extension ?)</em></p></td>
-<td>Reference to a FHIR resource</td>
-<td>EvidenceReport.relatedArtifact</td>
-</tr>
-<tr style="border: 1px solid gray; ">
-<td><strong>Only FHIR</strong></td>
-<td><p>link via uri</p>
-<p><em>(Add an extension ?)</em></p></td>
-<td>Reference to a FHIR resource</td>
-<td>EvidenceReport.relatedArtifact</td>
-</tr>
-</tbody>
-</table>
+It’s worth to mention that FHIR specifies a dedicated resources
+(Provenance) to record Provenance information typically part of the
+“metadata”.
 
 #### Subject Level (e.g. Patient)
 
-As describe above, at the subject level, the boundary between metadata
-and data is not always so sharp, since the classification can depend on
-the perspective: for example, the gestational age of a EGC measurement
-subject, is a measure metadata, but also a subject data.
+As described above, at the subject level, the boundary between metadata
+and data is not always so sharp.
 
-This guide will not therefore to attempt to **prescribe any tight
-separation of metadata/data at the subject level.**
+This guide will not therefore attempt to **prescribe any tight
+separation of metadata/data at the subject level** when FAIR is
+implemented by using HL7 FHIR.
 
-Concerning three possible kinds of data objects that have been mentioned
-above:
+There are HL7 FHIR resources (e.g. EvidenceReport, Bundle\[collection\],
+Composition, List; DocumentManifest) that can be potentially used to
+record some subject level metadata information as a distinct FHIR
+resource instance. Nevertheless, typically metadata information is
+recorded by a set of linked FHIR resources. For example, a Condition
+instance documenting a specific problem (the data), may use the
+*subject*, the *encounter* and the *evidence* references to Patient,
+Encounter and Observation FHIR instances to document the patient,
+encounter and other information used as evidence to describe the context
+of this problem (the metadata).
 
-1.  Non-FHIR objects
-
-2.  FHIR and non-FHIR objects
-
-3.  FHIR-only objects
-
-In case of non-FHIR objects it should be evaluated feasibility and
+In case of *non-FHIR data objects* or mixed cases (*FHIR and non-FHIR
+objects*) implementers should evaluate the feasibility and the
 cost/benefit of transforming these objects (completely or partially) in
-FHIR; or having them referred by a subject level FHIR resource (see the
-group resource case)
-
-For what concern the intermediate case (FHIR and non-FHIR objects) this
-should be evaluated case by case depending on where and how FHIR
-resources are used and the possibility to FHIRify the non-FHIR objects.
-Depending on this the solutions proposed for the other two cases should
-be assessed
-
-In case of all the data represented by using FHIR resources, two main
-possible approaches for FAIR subject level data/metadata can be
-considered, leaving then to the implementers the choice about the most
-appropriate solution in a specific context:
-
-1.  Direct references: the collection refers directly the resources
-    describing the (main) subject level data, relying on the existing
-    FHIR resource relationships to describe the entire subject level set
-    of data/metadata. For example, a study refers a Condition resource,
-    using the *subject*, the *encounter* and the *evidence* references
-    to document the patient, encounter and other information used as
-    evidences.
-
-2.  Group resources. The second approach is to group all the subject
-    level data, by using appropriate FHIR resources (EvidenceReport,
-    Bundle\[collection\], Composition, List; DocumentManifest). This
-    grouping resource may play a metadata role.
-
-> Open questions:
-> 
-> Should we leave all these options open or suggest one or few specific
-> solutions?
-
-*\< expand this part explain pros and contra of the different options\>*
-
-*\< to be continued\>*
-
-### Conclusions
-
-*\< move to another page?\>*
-
-  - Do not pretend to address all the identified issues and realize all
-    the FAIR recommendations since the beginning: **FAIRness is a
-    continuous improvement process**.
-
-  - Follow a progressive approach focusing on the characteristics that
-    are relevant for your context, balancing advantages and costs. For
-    example, you may reasonably accept that metadata and data
-    information at the patient level may be represented by a set of
-    already existing FHIR resources, focusing your effort on a well
-    identifiable and distinct representation of the metadata of the data
-    collection at the study level.
+FHIR instances; and/or creating FHIR resources (e.g. DocumentManifest)
+to document some metadata information.

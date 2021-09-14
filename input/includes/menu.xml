@@ -26,13 +26,7 @@
 				<a href="RDAMetrics.html">RDA Indicators</a>
 			</li>
 			<li>
-				<a href="FHIRandFAIR.html">HL7 FHIR and FAIR principles</a>
-			</li>
-			<li>
-				<a href="FHIRandRDAMetrics.html">HL7 FHIR and RDA Indicators</a>
-			</li>
-			<li>
-				<a href="metadata.html">Metadata</a>
+				<a href="metadata.html">Metadata and Data</a>
 			</li>
 			<li>
 				<a href="deployment.html">Deployment</a>
@@ -76,13 +70,29 @@
 			<li>
 				<a href="personalGeneticLocker.html">Personal Genetic Locker</a>
 			</li>
+
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown"
+ 			href="#"
+ 			class="dropdown-toggle">Recommendations<b class="caret">
+			</b>
+		</a>
+		<ul class="dropdown-menu">
 			<li>
+				<a href="FHIRandFAIR.html">Impelmenting FAIR principles</a>
+			</li>
+			<li>
+				<a href="FHIRandRDAMetrics.html">Implementing RDA Indicators</a>
+			</li>
+			<li>
+				<a href="recommendations.html">General</a>
+			</li>
+						<li>
 				<a href="scenarioTerminology.html">Terminologies</a>
 			</li>
 		</ul>
-	</li>
-	<li>
-		<a href="recommendations.html">Recommendations</a>
 	</li>
 	<!-- Background -->
 	<!-- What is FAIR and RDA indicators -->
@@ -104,8 +114,8 @@
 		<ul class="dropdown-menu">
 			<li>
 				<a target="_blank"
- 					href="{{site.data.fhir.path}}index.html">FHIR Spec<img src="external.png"
-   						style="text-align: baseline"/>
+ 					href="{{site.data.fhir.path}}index.html">FHIR Spec<!-- <img src="external.png"
+   						style="text-align: baseline"/> -->
 				</a>
 			</li>
 			<li>
