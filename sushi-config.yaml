@@ -1,9 +1,121 @@
-canonical: http://hl7.org/fhir/uv/fhir-for-fair
-fhirVersion: 4.1.0
-applyExtensionMetadataToRoot: false
-id: hl7.fhir.uv.fhir-for-fair
-name: FhirForFairIG
-status: active
-version: 0.0.1
+# ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
+# │  ACTION REQUIRED: REVIEW AND EDIT THIS FILE TO ENSURE IT ACCURATELY REFLECTS YOUR PROJECT!     │
+# │                                                                                                │
+# │  This file was generated from your existing project files and will be used for SUSHI           │
+# │  configuration from now on. You may delete your package.json as it is no longer needed.        │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-FSHOnly: true
+# ╭──────────────────────────────ImplementationGuide-gh.json───────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.md#ig-development           │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.uv.fhir-for-fair
+canonical: http://hl7.org/fhir/uv/fhir-for-fair
+version: 0.0.1
+name: FhirForFairIG
+title: FHIR for FAIR - FHIR Implementation Guide
+status: active
+publisher: Health Level Seven International - SOA Work Group
+contact:
+  - name: HL7 SOA Work Group
+    telecom:
+      - system: url
+        value: http://www.hl7.org/Special/committees/soa
+description: The FHIR for FAIR - FHIR Implementation Guide aims to provide guidance on how HL7 FHIR can be used for supporting FAIR health data implementation and assessment. 
+license: CC0-1.0
+fhirVersion: 4.1.0
+# jurisdiction:
+ #    - system: http://unstats.un.org/unsd/methods/m49/m49.htm
+  #    value: 001
+
+parameters:
+  find-other-resources: true
+
+copyrightYear: 2020+
+releaseLabel: CI Build
+
+resources:
+  Library/ninfea-1:
+    name: Dimethyl-fumarate PIL (Greek)
+    description: Example of Greek Product information leaflet for Dimethyl-fumarate  
+    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
+  Library/26dc407a-9b03-4a25-9dad-7e53ce6b4bbb:
+    name: Dimethyl-fumarate PIL (English)
+    description: Example of English Product information leaflet for Dimethyl-fumarate 
+    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
+
+pages:
+  index.md:
+    title: FHIR for FAIR Home Page                
+  aboutThisVersion.md:
+    title: About this version
+  scenarios.md:
+    title: Use cases and scenarios
+  recommendations.md:
+    title: General Recommendations
+  immPort.md:
+    title: Immunology Database and Analysis Portal
+  FAIR4Health.md:
+    title: FAIR4Health Project
+  fitbir.md:
+    title: FITBIR datasets
+  leipzigHealthAtlas.md:
+    title: Leipzig Health Atlas (LHA)
+  healthCare.md:
+    title: Healthcare datasets
+  scenarioTerminology.md:
+    title: Terminologies
+  FHIRandRDAMetrics.md:
+    title: HL7 FHIR and RDA Indicators
+  RDAMetrics.md:
+    title: RDA Indicators
+  methodology.md:
+    title: Methodology
+  deployment.md:
+    title: Deployments
+  metadata.md:
+    title: Metadata and data
+  FAIR.md:
+    title: FAIR Guiding Principles
+  FHIRandFAIR.md:
+    title: HL7 FHIR and FAIR principles
+  downloads.html:
+    title: Useful Downloads
+  changes.html:
+    title: IG Change History
+			
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the menu property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+menu:
+  IG Home: index.html
+  Table of Contents: toc.html
+  Background:
+    About this version: aboutThisVersion.html
+    Methodology: methodology.html
+    FAIR Guiding Principles: FAIR.html
+    RDA Indicators: RDAMetrics.html   
+    Metadata and Data: metadata.html  
+    Deployment: deployment.html  
+  Real World Cases:
+    Use cases and scenarios: scenarios.html
+    FAIR4Health Project: FAIR4Health.html
+    MIMIC: mimic.html    
+    Immunology Database and Analysis Portal: immPort.html              
+    NInFEA: ninfea.html            
+    Leipzig Health Atlas (LHA): leipzigHealthAtlas.html              
+  Recommendations: 
+    Impelmenting FAIR principles: FHIRandFAIR.html    
+    Implementing RDA Indicators: FHIRandRDAMetrics.html  
+    General: recommendations.html    
+    Terminologies: scenarioTerminology.html  
+  Artifact Index: artifacts.html
+  Support:
+  # to be updated
+    FHIR Spec: http://hl7.org/fhir/2021Mar/index.html
+    Downloads: downloads.html
+    
+FSHOnly: false

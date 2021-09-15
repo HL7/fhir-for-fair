@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Mon, Sep 13, 2021 19:07+0000 for FHIR v4.6.0 
+  Generated on Wed, Sep 15, 2021 11:21+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -3241,7 +3241,7 @@ The type is the Canonical URL of Resource Definition that is the type this refer
             <xs:annotation>
               <xs:documentation xml:lang="en">The shelf life time period can be specified using a numerical value for the period of time and its unit of time measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.</xs:documentation>
             </xs:annotation>
-           <xs:element name="periodQuantity" type="Quantity"  maxOccurs="1"/>
+           <xs:element name="periodDuration" type="Duration"  maxOccurs="1"/>
            <xs:element name="periodString" type="string"  maxOccurs="1"/>
           </xs:choice>
           <xs:element name="specialPrecautionsForStorage" type="CodeableConcept" minOccurs="0" maxOccurs="unbounded">
@@ -5792,7 +5792,7 @@ A coverage may only be responsible for specific types of charges, and the sequen
               <xs:documentation xml:lang="en">The ingredients of this administrable medicinal product. Sometimes it may be appropriate to specify these via the associated manufactured item(s).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="device" minOccurs="0" maxOccurs="unbounded" type="Reference">
+          <xs:element name="device" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">A device that is integral to the medicinal product, in effect being considered as an &quot;ingredient&quot; of the medicinal product. This is not intended for devices that are just co-packaged.</xs:documentation>
            </xs:annotation>
@@ -29261,14 +29261,9 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
               <xs:documentation xml:lang="en">The organization that manufactures this ingredient.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="substance" type="Ingredient.Substance" minOccurs="0" maxOccurs="1">
+          <xs:element name="substance" type="Ingredient.Substance" minOccurs="1" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">The substance that comprises this ingredient.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="specifiedSubstance" type="Ingredient.SpecifiedSubstance" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A specified substance that comprises this ingredient.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -29383,38 +29378,6 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           <xs:element name="country" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The country or countries for which the strength range applies.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="Ingredient.SpecifiedSubstance">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">An ingredient of a manufactured item or pharmaceutical product.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="code" minOccurs="1" maxOccurs="1" type="CodeableReference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Substance as a 'specified substance', implying extra substance related characteristics.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="group" minOccurs="1" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The group of specified substance, e.g. group 1 to 4, where the group categorises the level of 
-description of the substance according to standardised sets of properties.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="confidentiality" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Confidentiality level of the specified substance as the ingredient.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="strength" type="Ingredient.Strength" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Quantity of the substance or specified substance present in the manufactured item or pharmaceutical product.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -38869,7 +38832,7 @@ For resource issues, this will be a simple XPath limited to element names, repet
               <xs:documentation xml:lang="en">A high level category e.g. medicinal product, raw material, shipping/transport container, etc.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="subject" minOccurs="0" maxOccurs="unbounded" type="Reference">
+          <xs:element name="packageFor" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The product that this is a pack for.</xs:documentation>
            </xs:annotation>
@@ -38894,7 +38857,7 @@ For resource issues, this will be a simple XPath limited to element names, repet
               <xs:documentation xml:lang="en">Textual description. Note that this is not the name of the package or product.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="legalStatusOfSupply" type="PackagedProductDefinition.LegalStatusOfSupply" minOccurs="0" maxOccurs="1">
+          <xs:element name="legalStatusOfSupply" type="PackagedProductDefinition.LegalStatusOfSupply" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The legal status of supply of the packaged item as classified by the regulator.</xs:documentation>
            </xs:annotation>
