@@ -80,6 +80,8 @@ pages:
     title: FAIR Guiding Principles
   FHIRandFAIR.md:
     title: HL7 FHIR and FAIR principles
+  FHIRidentifiers.md:
+    title: FHIR identifiers and FAIR principles
   downloads.html:
     title: Useful Downloads
   changes.html:
@@ -98,7 +100,8 @@ menu:
     Methodology: methodology.html
     FAIR Guiding Principles: FAIR.html
     RDA Indicators: RDAMetrics.html   
-    Metadata and Data: metadata.html  
+    Metadata and Data: metadata.html
+    Identifiers: FHIRidentifiers.html     
     Deployment: deployment.html  
   Real World Cases:
     Use cases and scenarios: scenarios.html
@@ -114,7 +117,7 @@ menu:
     Terminologies: scenarioTerminology.html  
   Artifact Index: artifacts.html
   Support:
-  # to be updated
+  # link to FHIR specs to be checked
     FHIR Spec: http://hl7.org/fhir/2021Mar/index.html
     Downloads: downloads.html
     

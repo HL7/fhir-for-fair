@@ -345,7 +345,7 @@ of the FAIR-compliant vocabularies.
 FAIR-compliant vocabularies, preferably managed through FHIR 
 terminology services.
 
-This choice should be formalized  through  community specified FHIR
+This choice should be formalized through  community specified FHIR
 Implementation Guide, including appropriate conformance and terminology
 resources.
 
@@ -404,18 +404,22 @@ resources in FHIR implementation guides.
 ##### R1.1: Metadata and data are released with a clear and accessible data usage license
 
 HL7 FHIR provides different means to specify the license and the
-conditions under which data can be used (e.g. security labels, dedicated
-resource elements, the Consent resource;...). The adoption of FHIR is
-not however a sufficient condition for fulfilling this requirement.
-
-*\< add options and examples Citation, copyright; security labels; and
-consent \>*
+conditions under which data can be used. For example, a resource may
+convey specific security metadata by using the security labels, enabling
+policy fragments to accompany the resource data; the Citation resource
+offers a copyright element to covey human readable copyright information
+at different level of granularity (Citation , abstract, cited
+artefacts); the Consent resource can be used to record choices which
+permits or denies identified recipient(s) or recipient role(s) to
+perform one or more actions within a given policy context, for specific
+purposes and periods of time.
 
 The solution to be adopted may change depending on the type of data and
 the context of use.
 
-Implementers should therefore define how this requirement is met through
-clear references to the usage license *\< complete the sentence \>*
+The adoption of FHIR is not however a sufficient condition for
+fulfilling this requirement, implementers should therefore define how
+this requirement is supposed to be met.
 
 **Summary recommendation:** Published FHIR resources have to include
 clear references to the usage license. Communities should specify in
