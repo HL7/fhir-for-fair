@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Fri, Sep 17, 2021 21:19+0000 for FHIR v4.6.0 
+  Generated on Mon, Sep 20, 2021 21:15+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -3106,6 +3106,11 @@ The type is the Canonical URL of Resource Definition that is the type this refer
               <xs:documentation xml:lang="en">The type of relationship to the related artifact.</xs:documentation>
             </xs:annotation>
           </xs:element>
+          <xs:element name="classifier" type="CodeableConcept" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Provides additional classifiers of the related artifact.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
           <xs:element name="label" type="string" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">A short label that can be used to reference the citation from elsewhere in the containing artifact, such as a footnote index.</xs:documentation>
@@ -3121,11 +3126,6 @@ The type is the Canonical URL of Resource Definition that is the type this refer
               <xs:documentation xml:lang="en">A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format.</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element name="url" type="url" minOccurs="0" maxOccurs="1">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A url for the artifact that can be followed to access the actual content.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
           <xs:element name="document" type="Attachment" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">The document being referenced, represented as an attachment. This is exclusive with the resource element.</xs:documentation>
@@ -3133,7 +3133,12 @@ The type is the Canonical URL of Resource Definition that is the type this refer
           </xs:element>
           <xs:element name="resource" type="canonical" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The related resource, such as a library, value set, profile, or other knowledge resource.</xs:documentation>
+              <xs:documentation xml:lang="en">The related artifact, such as a library, value set, profile, or other knowledge resource.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="resourceReference" type="Reference" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The related artifact, if the artifact is not a canonical resource, or a resource reference to a canonical resource.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -3180,6 +3185,126 @@ The type is the Canonical URL of Resource Definition that is the type this refer
       <xs:enumeration value="composed-of">
         <xs:annotation>
           <xs:documentation xml:lang="en">Composed Of</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="part-of">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Part Of</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="amends">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Amends</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="amended-with">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Amended With</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="appends">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Appends</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="appended-with">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Appended With</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cites">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Cites</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cited-by">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Cited By</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="comments-on">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Is Comment On</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="comment-in">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Has Comment In</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="contains">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Contains</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="contained-in">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Contained In</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="corrects">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Corrects</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="correction-in">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Correction In</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="replaces">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Replaces</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="replaced-with">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Replaced With</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="retracts">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Retracts</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="retracted-by">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Retracted By</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="signs">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Signs</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="similar-to">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Similar To</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="supports">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Supports</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="supported-with">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Supported With</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="transforms">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Transforms</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="transformed-into">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Transformed Into</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="transformed-with">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Transformed With</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
@@ -20546,6 +20671,11 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
               <xs:documentation xml:lang="en">[Observations](observation.html)  that are part of this diagnostic report.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Comments about the diagnostic report.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="imagingStudy" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images.</xs:documentation>
@@ -22976,11 +23106,6 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
               <xs:documentation xml:lang="en">When true, members with this characteristic are excluded from the element.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="timeFromStart" type="EvidenceVariable.TimeFromStart" minOccurs="0" maxOccurs="1">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates duration, period, or point of observation from the participant's study entry.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="timeFromEvent" type="EvidenceVariable.TimeFromEvent" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Observation time from study specified event.</xs:documentation>
@@ -22989,37 +23114,6 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           <xs:element name="groupMeasure" minOccurs="0" maxOccurs="1" type="GroupMeasure">
             <xs:annotation>
               <xs:documentation xml:lang="en">Value or set of values that define the grouping.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="EvidenceVariable.TimeFromStart">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">The EvidenceVariable resource describes an element that knowledge (Evidence) is about.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A short, natural language description.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Used to express the observation at a defined amount of time after the study start.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="range" minOccurs="0" maxOccurs="1" type="Range">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Used to express the observation within a period after the study start.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A human-readable string to clarify or explain concepts about the resource.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -23040,7 +23134,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           </xs:element>
           <xs:element name="event" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The type of event where the observation started.</xs:documentation>
+              <xs:documentation xml:lang="en">The event used as a base point (reference point) in time.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">

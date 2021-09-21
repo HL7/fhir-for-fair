@@ -37,12 +37,12 @@ releaseLabel: CI Build
 
 resources:
   Library/ninfea-1:
-    name: Dimethyl-fumarate PIL (Greek)
-    description: Example of Greek Product information leaflet for Dimethyl-fumarate  
+    name: FRAILSURVEY Study level metadata example (Library)
+    description: FRAILSURVEY is an app that collects data from elderly communally. This app integrates Groningen Frailty Index, and a set of questions about socio demographic data, social resources, self-perception of health, nutrition, medication, cognitive and psychosocial status and time occupation. The results obtained classify the elderly as robust, pre-frail or frail. The app displays tailored recommendations if the elderly is classified as frail or pre-frail. The recommendations cover aspects such as physical exercise, healthy diet, social network, among others. FRAILSURVEY generates a totally anonymous database that can be used for research purposes. The development of such technology was based on an accessibility principle for the elderly, with the purpose of guaranteeing a greater autonomy to use it. Considerations such as vision, hearing, motor control and cognition were considered. In addition, the app features a typographic font designed for low-vision people, APHont, developed by the American Printing House for the Blind, also presenting a way to increase or decrease the font size, as well as the possibility of listening to some audio information.
     exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
   Library/26dc407a-9b03-4a25-9dad-7e53ce6b4bbb:
-    name: Dimethyl-fumarate PIL (English)
-    description: Example of English Product information leaflet for Dimethyl-fumarate 
+    name: Non-invasive foetal electrocardiography example (Library)
+    description: Non-invasive foetal electrocardiography 
     exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
 
 pages:
@@ -51,9 +51,9 @@ pages:
   aboutThisVersion.md:
     title: About this version
   scenarios.md:
-    title: Use cases and scenarios
+    title: Overview
   recommendations.md:
-    title: General Recommendations
+    title: Overview
   immPort.md:
     title: Immunology Database and Analysis Portal
   FAIR4Health.md:
@@ -82,6 +82,10 @@ pages:
     title: HL7 FHIR and FAIR principles
   FHIRidentifiers.md:
     title: FHIR identifiers and FAIR principles
+  ninfea.md:
+    title: Non-Invasive Multimodal Foetal ECG-Doppler Dataset for Antenatal Cardiology Research
+  mimic.md:
+    title: MIMIC
   downloads.html:
     title: Useful Downloads
   changes.html:
@@ -104,16 +108,16 @@ menu:
     Identifiers: FHIRidentifiers.html     
     Deployment: deployment.html  
   Real World Cases:
-    Use cases and scenarios: scenarios.html
+    Overview: scenarios.html
     FAIR4Health Project: FAIR4Health.html
     MIMIC: mimic.html    
     Immunology Database and Analysis Portal: immPort.html              
     NInFEA: ninfea.html            
     Leipzig Health Atlas (LHA): leipzigHealthAtlas.html              
   Recommendations: 
+    Overview: recommendations.html
     Impelmenting FAIR principles: FHIRandFAIR.html    
-    Implementing RDA Indicators: FHIRandRDAMetrics.html  
-    General: recommendations.html    
+    Implementing RDA Indicators: FHIRandRDAMetrics.html        
     Terminologies: scenarioTerminology.html  
   Artifact Index: artifacts.html
   Support:

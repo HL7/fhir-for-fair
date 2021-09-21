@@ -1,8 +1,20 @@
-//============== ALIAS ===============
-// Alias: ips_Patient = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
-//=========================
 
-//====== Profiles =====================================
+
+//====== Data Types =====================================
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Profile:  AttachmentF4F
+Parent:   Attachment
+Id:       Attachment-uv-f4f
+Title:    "Attachment (FHIR for FAIR)"
+Description: "This profile defines how to use the Attachment data type to convey metadata information for a FAIR collection of data at the study level realized by using HL7 FHIR"
+//-------------------------------------------------------------------------------------------
+// * data 0..0 => to be checked
+* url 1..1 MS
+
+
+
+//====== Resources =====================================
 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -22,18 +34,6 @@ Description: "This profile defines how to use the Library resource to convey met
 * content MS 
 * content 1..* 
 * content only AttachmentF4F
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  AttachmentF4F
-Parent:   Attachment
-Id:       Attachment-uv-f4f
-Title:    "Attachment (FHIR for FAIR)"
-Description: "This profile defines how to use the Attachment data type to convey metadata information for a FAIR collection of data at the study level realized by using HL7 FHIR"
-//-------------------------------------------------------------------------------------------
-// * data 0..0 => to be checked
-* url 1..1 MS
-
-
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  CitationF4F

@@ -1,40 +1,39 @@
 ### What is in
 
-1.  General guidance for FHIR implementation of the FAIR principles
+1.  General recommendations for implementing with HL7 FHIR the FAIR
+    principles and the RDA indicators.
 
-2.  Providing guidance by examples by using some representative Real
-    World cases
+2.  Description of some representative Real World Cases  
 
-3.  Study level metadata representation. Conformance resources and
-    examples for a set of reference cases
+3.  Conformance resources for the representation of some study and
+    subject level metadata
 
-4.  Subject Level metadata. Addressing their representation in FHIR (it
-    may be a distinct resource or not)
+4.  Examples associated to the representative Real World Cases
 
-5.  Addressing general information about Copyright Licence management
-    (metadata level)
+### Not in this version
 
-### What is out
+1.  FHIR representation of domain / use case specific data (e.g.
+    genomics; cancer;..).
 
-1.  Security protocols (e.g. Data is accessible through an access
+2.  Security protocols (e.g. Data is accessible through an access
     protocol that supports authentication and authorization)
 
-2.  End point discovery (findability)
+3.  Consent/Security Labels management
 
-3.  Provenance (Metadata includes provenance information according to
-    community-specific standards)
+4.  FHIR end point discovery (findability)
 
-4.  Consent/Security Labels management
+5.  Provenance resource profiling (Metadata includes provenance
+    information according to community-specific standards)
 
-### Known/Open Issues
+### To be further discussed 
 
 1.  Persistency of identifiers (DOI)
 
 2.  Distinct and identifiable data and metadata FAIR data objects
 
-3.  Low maturity of some of the Evidence based resources.
+3.  Level of maturity of some of the Evidence based resources.
 
 4.  "Metadata is guaranteed to remain available after data is no longer
-    available" true if metadata are in distinct FHIR resources. 
+    available"
 
 5.  "FAIR-compliant vocabularies"
