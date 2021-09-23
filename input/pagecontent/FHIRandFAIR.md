@@ -228,49 +228,74 @@ guides.
 
 #### Accessibility
 
-##### 
-
 ##### A1: Metadata and data are retrievable by each of their identifiers using a standardised communication protocol
 
-*FHIR is described as a 'RESTful' specification based on common industry
+FHIR is described as a 'RESTful' specification based on common industry
 level use of the term REST, in this RESTful framework, transactions are
 performed directly on the server resource using an HTTP
-request/response.*
+request/response.
 
-***Summary recommendation**: This principle is covered by virtue of
-using HL7 FHIR RESTful API*
+**Summary recommendation**: This principle is covered by virtue of using
+HL7 FHIR RESTful API
 
 ##### A1.1: The protocol is open, free and universally implementable
 
-*Both HL7 FHIR RESTful API and the http protocols  are open, free
-and universally implementable.*
+Both HL7 FHIR RESTful API and the http protocols  are open, free
+and universally implementable.
 
-*There are different definitions of what an 'open standard' is, but also
+There are different definitions of what an 'open standard' is, but also
 considering openness of access; of the process and of the rights of
 use, HL7 FHIR fulfills all of them. It is released under Creative
 Commons "No Rights Reserved"
-(*[*CC0 *![](FHIRandFAIR-1.png)](http://creativecommons.org/publicdomain/zero/1.0/)*)
-licence and it is globally implemented. *
+([CC0 ![](FHIRandFAIR-1.png)](http://creativecommons.org/publicdomain/zero/1.0/))
+licence and it is globally implemented. 
 
-***Summary recommendation**: This principle is covered by virtue of
-using HL7 FHIR RESTful API*
+**Summary recommendation**: This principle is covered by virtue of using
+HL7 FHIR RESTful API
 
 ##### A1.2: The protocol allows for an authentication and authorisation, where necessary
 
-HL7 FHIR is not 'per se' a security protocol, nor does it define any
-security related functionality. However, HL7 FHIR does define exchange
-protocols and content models that need to be used with various security
-protocols defined elsewhere (e.g. . \<continue the description\>
+It often makes sense to request users to create a user account for a
+repository. This allows authentication of the owner (or contributor) of
+each dataset, and to potentially set user-specific rights. This can also
+affect the choice of the repository that is suitable to share data and
+associate metadata. HL7 FHIR is not 'per se' a security protocol, nor
+does it define any security related functionality. However, we can make
+the following recommendation.
+
+**Summary recommendation**: HL7 FHIR defines exchange protocols and
+content models (cross reference?) that can be used with various
+open security protocols such as HMAC authentication
+(<https://en.wikipedia.org/wiki/HMAC>), HTTPS
+(<https://en.wikipedia.org/wiki/HTTPS>) and FTPS
+(<https://en.wikipedia.org/wiki/FTPS>).
 
 ##### A2: Metadata should be accessible even when the data is no longer available
 
-consider three cases:
+This principle is important because there can be many reasons why data
+are no longer available whereas the associated metadata should be a
+permanent record to describe the data. Future reuse of available data
+requires separately identified metadata and it also crucial to enable
+future reproducibility of new data for more science. The practical
+application of this A2 FAIR principle to data and metadata from the
+clinical sciences and specifically, supported by the HL7 FHIR standards
+should consider the following recommendations.
 
-  - metadata and data as separate resources
+**Summary recommendations:**
 
-  - where data are stored
+  - Some clinical data elements may serve as metadata for other data
+    elements. If all data elements have identifiers are compliant with
+    FAIR principle, A1 being global, unique, persistent and resolvable
+    by machine (GUPRI) it should be possible to comply with this FAIR
+    principle, A2.
 
-  - how the manage the persistency (indipendetly on FHIR) when 
+  - Clinical data and associated metadata can be stored on multiple FHIR
+    servers. This will present no issues if compliant with the FAIR
+    principles of F1 and A2.
+
+  - To maintain FAIR compliance, it is critical to manage and maintain
+    the persistency aspect of GUPRIs (independently on FHIR) for all
+    data and metadata elements.
 
 #### Interoperability
 
@@ -372,7 +397,7 @@ for the scope of their community.
 **Summary recommendation**:  FHIR implementers should determine what are
 the qualified references to other resources that are needed to provide a
 sufficient contextual knowledge for the scope of their community. This
-should be formalized  through a community FHIR Implementation Guide.
+should be formalized through a community FHIR Implementation Guide.
 
 #### Reusability
 

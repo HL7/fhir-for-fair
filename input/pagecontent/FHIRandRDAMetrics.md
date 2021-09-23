@@ -115,18 +115,16 @@ This can be done referencing the target FHIR resource, per business identifier o
 <td>Important</td>
 <td>If RDA-F3-01M is true, this is true.<br />
 <br />
-This is in general true, since depending on how metadata and data FAIR objects are represented in FHIR different means are provided by this standard to enable the access to the referred data.<br />
+This is in general true, since depending on how metadata and data FAIR objects are represented in FHIR, different means are provided by this standard to enable the access to the referred data.<br />
 <br />
-Communities can enforce this requirement by using community FHIR profiles and Implementation Guides.</td>
+Communities should agree what are the relevant metadata information enabling the access of data in their context and formalize and enforce their usage by specifying appropriate FHIR profiles and Implementation Guides.</td>
 <td><p>Please refer to RDA-F1-01M and RDA-F1-01D for the discussion on distinct and identifiable metadata and data FAIR objects.<br />
 <br />
 In the FHIR REST paradigm _"the location of a resource instance is an absolute URI constructed from the server base address at which the instance is found, the resource type and the Logical ID, such as</p>
-<p><a href="http://test.hl7/">http://test.HL7<img src="FHIRandRDAMetrics-1.gif" /></a></p>
-<p>FHIR.org/rest/Patient/123 (where 123 is the Logical Id of a Patient resource). When the location is an HTTP address, this address can generally be used to retrieve or manipulate the resource."_<br />
-<br />
-Depending on the FAIR data design, different FHIR mechanisms can be used to refer the FAIR data, e.g. by using direct or reverse references to other FHIR resources, or referring data business identifiers. FHIR also provides mechanisms to enable the access to non-FHIR data.</p>
-<p>Recommendation: the solution architecture should ensure that the metadata FHIR resource includes a reference to the actual data or information on how to access it directly or indirectly. <br />
-<strong>See also:</strong><br />
+<p>http://example.org/fhir/Patient/123 (where 123 is the Logical Id of a Patient resource). When the location is an HTTP address, this address can generally be used to retrieve or manipulate the resource."_</p>
+<p>Depending on the FAIR data design, different FHIR mechanisms can be used to refer the FAIR data, e.g. by using direct or reverse references to other FHIR resources, or referring data business identifiers. FHIR also provides mechanisms to enable the access to non-FHIR data.</p>
+<p>The solution architecture should ensure that the metadata FHIR resource includes a reference to the actual data or information on how to access it directly or indirectly. </p>
+<p><strong>See also:</strong><br />
 <a href="http://hl7.org/fhir/2021Mar/references.html#Reference">http://hl7.org/fhir/2021Mar/references.html#Reference</a></p>
 <p><a href="http://hl7.org/fhir/2021Mar/metadatatypes.html#RelatedArtifact">http://hl7.org/fhir/2021Mar/metadatatypes.html#RelatedArtifact<img src="FHIRandRDAMetrics-1.gif" /></a></p></td>
 </tr>
@@ -134,17 +132,16 @@ Depending on the FAIR data design, different FHIR mechanisms can be used to refe
 <td>RDA-A1-02M</td>
 <td>Metadata can be accessed manually (i.e. with human intervention)</td>
 <td>Essential</td>
-<td>This is not related to the FHIR standard, but on the capabilities offered by the system/platform implementing the services.</td>
-<td><p>Concerning the ability to identify FAIR metadata as distinct and identifiable FHIR resource(s), please refer to item RDA-F1-01M</p>
-<p>Recommendation: the metadata FHIR resources should provide information on how to access the data, if direct access is not available or possible.</p></td>
+<td><p>This is not related to the FHIR standard, but on the capabilities offered by the system/platform implementing the services.</p>
+<p>The metadata FHIR resources should provide information on how to access the data, if a manual access is foreseen.</p></td>
+<td>Concerning the ability to identify FAIR metadata as distinct and identifiable FHIR resource(s), please refer to item RDA-F1-01M</td>
 </tr>
 <tr style="border: 1px solid gray; ">
 <td>RDA-A1-02D</td>
 <td>Data can be accessed manually (i.e. with human intervention)</td>
 <td>Essential</td>
 <td>See RDA-A1-02M</td>
-<td><p>See RDA-A1-02M</p>
-<p>Here we may also consider access to the data through a software program, as in the case of distributed privacy preserving data mining.</p></td>
+<td>See RDA-A1-02M</td>
 </tr>
 <tr style="border: 1px solid gray; ">
 <td>RDA-A1-03M</td>
@@ -155,8 +152,7 @@ Depending on the FAIR data design, different FHIR mechanisms can be used to refe
 This is in general true, since depending on how metadata and data FAIR objects are represented in FHIR different means are provided by this standard to enable the access to the referred metadata.<br />
 <br />
 Communities can enforce this requirement by using community FHIR profiles and Implementation Guides.</td>
-<td><p>For the situations where metadata are represented with data in a single or a set of linked resources the implementer should describe how this requirement is going to be realized.</p>
-<p>Recommendation: the metadata identifier included in selected metadata resource is pointing to the metadata resource. This should be clearly presented in the implementation guide associated with the architected FHIR solution.</p></td>
+<td>Please refer to RDA-F1-01M and RDA-F1-01D for the discussion on distinct and identifiable metadata and data FAIR objects.</td>
 </tr>
 <tr style="border: 1px solid gray; ">
 <td>RDA-A1-03D</td>
@@ -167,8 +163,7 @@ Communities can enforce this requirement by using community FHIR profiles and Im
 This is in general true, since depending on how metadata and data FAIR objects are represented in FHIR different means are provided by this standard to enable the access to the referred data.<br />
 <br />
 Communities can enforce this requirement by using community FHIR profiles and Implementation Guides.</td>
-<td><p>The way a single persistent and unique ID is used to identify the data FAIR data object depends on the data design. For the other situations the implemention guide associated with the solution, should describe how this requirement is going to be realized.</p>
-<p>Recommendation: The use of data identifiers resolving to a data object is  a requirement for the solution architected. </p></td>
+<td>Please refer to RDA-F1-01M and RDA-F1-01D for the discussion on distinct and identifiable metadata and data FAIR objects.</td>
 </tr>
 <tr style="border: 1px solid gray; ">
 <td>RDA-A1-04M</td>
@@ -176,7 +171,7 @@ Communities can enforce this requirement by using community FHIR profiles and Im
 <td>Essential</td>
 <td>FHIR specifies standardized mechanisms to access FHIR resources</td>
 <td><p>Please refer to RDA-F1-01M and RDA-F1-01D for the discussion on distinct and identifiable metadata and data FAIR objects</p>
-<p>This requirement is typically fulfilled if the metadata object is expressed in HL7 FHIR and the data will be available in a FHIR server.</p></td>
+<p>This requirement is typically fulfilled if the metadata object is expressed in HL7 FHIR and available in a FHIR server.</p></td>
 </tr>
 <tr style="border: 1px solid gray; ">
 <td>RDA-A1-04D</td>
@@ -184,7 +179,7 @@ Communities can enforce this requirement by using community FHIR profiles and Im
 <td>Essential</td>
 <td>FHIR specifies standardized mechanisms to access FHIR resources</td>
 <td><p>Please refer to RDA-F1-01M and RDA-F1-01D for the discussion on distinct and identifiable metadata and data FAIR objects</p>
-<p>This requirement can be fulfilled in the data are captured by FHIR resources.</p></td>
+<p>This requirement is typically fulfilled if the data object is expressed in HL7 FHIR and available in a FHIR server.</p></td>
 </tr>
 <tr style="border: 1px solid gray; ">
 <td>RDA-A1-05D</td>
@@ -212,19 +207,25 @@ Communities can enforce this requirement by using community FHIR profiles and Im
 <td>RDA-A1.2-01D</td>
 <td>Data is accessible through an access protocol that supports authentication and authorisation</td>
 <td>Useful</td>
-<td>FHIR is not a security protocol, nor does it define any security related functionality. However, FHIR does define exchange protocols and content models that need to be used with various security protocols defined elsewhere.</td>
+<td><p>FHIR is not a security protocol, nor does it define any security related functionality.</p>
+<p>However, FHIR does define exchange protocols and content models that need to be used with various security protocols defined elsewhere.</p></td>
 <td>Please refer to RDA-F1-01M and RDA-F1-01D for the discussion on distinct and identifiable metadata and data FAIR objects</td>
 </tr>
 <tr style="border: 1px solid gray; ">
 <td>RDA-A2-01M</td>
 <td>Metadata is guaranteed to remain available after data is no longer available</td>
 <td>Essential</td>
-<td>If RDA-F1-01M is true, this is true.<br />
+<td><p>FHIR provides mean to fulfils this requirements, excepting for the metadata information that are recorded in the same FHIR resource documenting the data.</p>
+<p>The fulfillment of this requirement is not however determined by the technical capabilities of FHIR, but it depends also on architectural and organizational choices.<br />
 <br />
-In general, this is true excepting for the case when metadata are recorded in the same FHIR resource documenting data.<br />
-<br />
-Community can enforce the adoption of suitable FAIR data object design choices to enforce this requirement, by specifying community FHIR profiles and implementation guides.</td>
-<td>Please refer to RDA-F1-01M and RDA-F1-01D for the discussion on distinct and identifiable metadata and data FAIR objects</td>
+Community can enforce the adoption of suitable FAIR data object design choices to enforce this requirement, by specifying community FHIR profiles and implementation guides.</p></td>
+<td><p>Please refer to RDA-F1-01M and RDA-F1-01D for the discussion on distinct and identifiable metadata and data FAIR objects</p>
+<p>This principle is important because there can be many reasons why data are no longer available whereas the associated metadata should be a permanent record to describe the data. Future reuse of available data requires separately identified metadata and it also crucial to enable future reproducibility of new data for more science. The practical application of this A2 FAIR principle to data and metadata from the clinical sciences and specifically, supported by the HL7 FHIR standards should consider the following recommendations.</p>
+<ul>
+<li><p>Some clinical data elements may serve as metadata for other data elements. If all data elements have identifiers are compliant with FAIR principle, A1 being global, unique, persistent and resolvable by machine (GUPRI) it should be possible to comply with this FAIR principle, A2.</p></li>
+<li><p>Clinical data and associated metadata can be stored on multiple FHIR servers. This will present no issues if compliant with the FAIR principles of F1 and A2.</p></li>
+<li><p>To maintain FAIR compliance it is critical to manage and maintain the persistency aspect of GUPRIs (independently on FHIR) for all data and metadata elements.</p></li>
+</ul></td>
 </tr>
 </tbody>
 </table>

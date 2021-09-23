@@ -14,6 +14,18 @@ Description: "This profile defines how to use the Attachment data type to convey
 
 
 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Profile:  RelatedArtifactF4F
+Parent:   RelatedArtifact
+Id:       RelatedArtifact-uv-f4f
+Title:    "RelatedArtifact (FHIR for FAIR)"
+Description: "This profile enhances the current RelatedArtifact data with the enhancements identified in FHIR R5 "
+//-------------------------------------------------------------------------------------------
+
+*  extension contains ExtRelatedArtifact named extRelatedArtifact 0..1
+
+
+
 //====== Resources =====================================
 
 
