@@ -123,10 +123,7 @@ Communities should agree what are the relevant metadata information enabling the
 In the FHIR REST paradigm _"the location of a resource instance is an absolute URI constructed from the server base address at which the instance is found, the resource type and the Logical ID, such as</p>
 <p>http://example.org/fhir/Patient/123 (where 123 is the Logical Id of a Patient resource). When the location is an HTTP address, this address can generally be used to retrieve or manipulate the resource."_</p>
 <p>Depending on the FAIR data design, different FHIR mechanisms can be used to refer the FAIR data, e.g. by using direct or reverse references to other FHIR resources, or referring data business identifiers. FHIR also provides mechanisms to enable the access to non-FHIR data.</p>
-<p>The solution architecture should ensure that the metadata FHIR resource includes a reference to the actual data or information on how to access it directly or indirectly. </p>
-<p><strong>See also:</strong><br />
-<a href="http://hl7.org/fhir/2021Mar/references.html#Reference">http://hl7.org/fhir/2021Mar/references.html#Reference</a></p>
-<p><a href="http://hl7.org/fhir/2021Mar/metadatatypes.html#RelatedArtifact">http://hl7.org/fhir/2021Mar/metadatatypes.html#RelatedArtifact<img src="FHIRandRDAMetrics-1.gif" /></a></p></td>
+<p>The solution architecture should ensure that the metadata FHIR resource includes a reference to the actual data or information on how to access it directly or indirectly.</p></td>
 </tr>
 <tr style="border: 1px solid gray; ">
 <td>RDA-A1-02M</td>

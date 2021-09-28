@@ -1,14 +1,17 @@
-### The Problem
+The concept of FAIR digital object is quite wide and can vary in term of
+granularity and type of data that should be represented. (For a
+definition of a FAIR data object see section 4.1 of the EC
+publication [Turning FAIR into
+reality](https://ec.europa.eu/info/publications/turning-fair-reality_en) )
 
-The concept of FAIR digital object (FAIR DO) is quite wide and can cover
-from a single atomic information (e.g., a coded diagnosis) up to a
-collection of data (e.g., a data set). Data, moreover, can represent
-quite different kinds of information: it might be for example a
-waveform, an image, a condition, a medication, or other kinds of data.
+A FAIR digital object must accommodate a variety of informational units
+for data, and different levels of granularity. It may be a single unit
+such as a coded diagnosis or a collection of machine actionable data
+(data set). The types of units differ: a waveform, an image, a
+condition, a medication, text, and many other types.
 
-This variety makes not so straightforward the mapping with the FHIR
-resources covering a large range of resources and elements (see figure
-below).
+An overall mapping plan must accommodate the variety of FAIR data
+objects with associated FHIR resources and elements. (see figure below).
 
 <div><img src="metadata-1.png" style="width:55%"/></div>
 
@@ -22,8 +25,6 @@ of linked resources.
 <div><img src="metadata-2.png" style="width:55%"/></div>
 
 **Figure** **2 – Mapping FAIR data and metadata**
-
-#### Data vs metadata
 
 The logical distinction between metadata and data (both are FAIR DO) is
 a key point; with metadata playing a key role for making data findable,
@@ -41,58 +42,44 @@ elements are represented in the same FHIR resource.
 
 **Figure** **3 – Mapping FAIR data and metadata**
 
-#### Metadata identification
+In consideration of the previous arguments, the realization of the
+requirement for a metadata FAIR data object, distinct from the data FAIR
+data object, and identified by a persistent and unique ID need to be
+pragmatically evaluated, above all for FHIR implementations.
 
-In consideration of the previous arguments, the expectation of having a
-persistent and unique ID that identifies the metadata FAIR data object,
-distinct from the data FAIR data object, cannot be always satisfied in
-the FHIR space, except for specific contexts.
+This means that depending on the context of use and on the granularity
+of data, distinct and identifiable FHIR resources can be used to record
+a selected set of metadata elements; but this might not be true for all
+the information that could be considered metadata.
 
-### The approach
+Let's consider for example the following levels of data granularity:
 
-Even though many levels of granularity can be identified, in this work
-we consider two main levels:
+1.  **Study Level**: specific to a study, publication, or usage context
+    (collection of subject level data).
 
-1.  The **study level**: describing the collection of data referring to
-    a specific study, publication, usage context.
-
-2.  The **subject Level**: providing the metadata/data information
-    associated to a single subject.
+2.  **Subject Level**: specific to a single subject (patient).
 
 <div><img src="metadata-4.png" style="width:55%"/></div>
 
-**Figure** **4 - Level of data objects granularity considered in this
-guide**
+**Figure** **4 - Example of levels of data objects granularity**
 
-For collections of data (study level) it is reasonable to assume that a
-distinction between metadata and data is possible.
+If for the study level we can assume data are represented by the subject
+level objects, distinct from the metadata describing the "study" (see
+figure below) ; this might be not so true for the subject level.
 
 <div><img src="metadata-5.png" style="width:55%"/></div>
 
 **Figure** **5 – Metadata and data for a data collection.**
 
-This might be not so true for the instance level, where information as
-the gestational week or the mother height and weight in the example
-below, might be considered metadata for the signals, but also patient
-level data.
-
-<div><img src="metadata-6.png" style="width:55%"/></div>
-
-**Figure** **6 – Metadata and data at the subject level.**
-
-### Metadata Representation in FHIR
-
-#### Study Level (Collection)
-
 HL7 FHIR provides several candidates resources to represent metadata of
 collection of data (e.g., Bundle, Lists..) and the choice of the
-resource to be used strongly depend on the usage context. **Library,**
-**Citation** and **ResearchStudy**, seem to be the most promising
-resources to better support the “rich metadata” FAIR requirement;
-however not all of them are available in the current FHIR Version.
-Furthermore, due to their low FHIR maturity level, they may be subject
-to non-negligeable changes among the different FHIR versions, including
-the way the linkage between metadata and data is realized.
+resource to be used strongly depend on the usage
+context. **Library,** **Citation** and **ResearchStudy**, seem to be
+the most promising resources to better support the “rich metadata” FAIR
+requirement; however not all of them are available in the current FHIR
+Version. Furthermore, due to their low FHIR maturity level, they may be
+subject to non-negligible changes among the different FHIR versions,
+including the way the linkage between metadata and data is realized.
 
 The kinds of data objects that the metadata may refer to can be:
 
@@ -117,13 +104,19 @@ It’s worth to mention that FHIR specifies a dedicated resources
 (Provenance) to record Provenance information typically part of the
 “metadata”.
 
-#### Subject Level (e.g. Patient)
-
 As described above, at the subject level, the boundary between metadata
-and data is not always so sharp.
+and data is not always so sharp. In the example below derived form the
+[Ninfea](https://confluence.hl7.org/display/SOA/NInFEA) real world case
+is shown for example how the gestational week or the mother height and
+weight, might be considered metadata for the signals, but also patient
+level data.
 
-This guide will not therefore attempt to **prescribe any tight
-separation of metadata/data at the subject level** when FAIR is
+<div><img src="metadata-6.png" style="width:55%"/></div>
+
+**Figure** **6 – Metadata and data at the subject level.**
+
+This guide will not therefore attempt to **prescribe any tight
+separation of metadata/data at the subject level** when FAIR is
 implemented by using HL7 FHIR.
 
 There are HL7 FHIR resources (e.g. EvidenceReport, Bundle\[collection\],
@@ -131,13 +124,13 @@ Composition, List; DocumentManifest) that can be potentially used to
 record some subject level metadata information as a distinct FHIR
 resource instance. Nevertheless, typically metadata information is
 recorded by a set of linked FHIR resources. For example, a Condition
-instance documenting a specific problem (the data), may use the
-*subject*, the *encounter* and the *evidence* references to Patient,
-Encounter and Observation FHIR instances to document the patient,
-encounter and other information used as evidence to describe the context
-of this problem (the metadata).
+instance documenting a specific problem (the data), may use
+the *subject*, the *encounter* and the *evidence* references to
+Patient, Encounter and Observation FHIR instances to document the
+patient, encounter and other information used as evidence to describe
+the context of this problem (the metadata).
 
-In case of *non-FHIR data objects* or mixed cases (*FHIR and non-FHIR
+In case of *non-FHIR data objects* or mixed cases (*FHIR and non-FHIR
 objects*) implementers should evaluate the feasibility and the
 cost/benefit of transforming these objects (completely or partially) in
 FHIR instances; and/or creating FHIR resources (e.g. DocumentManifest)

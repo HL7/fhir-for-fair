@@ -1,5 +1,3 @@
-### Rationale
-
 The purpose of this page is to present an application scenario
 illustrating the need for FAIR FHIR resources and demonstrating the
 benefits of their existence to the field of medical research studies.
@@ -86,5 +84,3 @@ specifications, which affects reproducibility and reusability.
 
   - Generic attributes such as category, type or class can be used in a
     misleading way
-
-#### Support for Reusability

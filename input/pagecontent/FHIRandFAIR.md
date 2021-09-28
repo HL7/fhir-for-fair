@@ -42,9 +42,9 @@ Throughout the FAIR principles referred to in this guide, the phrase
 ‘(meta)data’ means that the principle should be applied to both
 metadata and data.
 
-#### Findability
+### Findability
 
-##### F1: (Meta)data are assigned a globally unique and persistent identifier
+#### F1: (Meta)data are assigned a globally unique and persistent identifier
 
 The first and arguably most important FAIR principle
 is [F1](https://www.go-fair.org/fair-principles/f1-meta-data-assigned-globally-unique-persistent-identifiers/):
@@ -100,7 +100,7 @@ worth to register identifiers on a public permanent registry
 Use both reference and identifier elements in the Reference data type.
 Promote the specification of FHIR profiles enforcing these choices.
 
-##### F2: Data are described with rich metadata (a plurality of accurate and relevant attributes, defined by R1)
+#### F2: Data are described with rich metadata (a plurality of accurate and relevant attributes, defined by R1)
 
 The rationale behind this principle is that someone should be able to
 find data based on the information provided by their metadata, even
@@ -193,7 +193,7 @@ should always be semantically coherent and machine resolvable even when
 the the resource data itself is no longer available, for a variety of
 potential reasons.
 
-##### F4: (Meta)data are registered or indexed in a searchable resource
+#### F4: (Meta)data are registered or indexed in a searchable resource
 
 Identifiers and rich metadata descriptions alone will not ensure
 ‘findability’ on the internet. Perfectly good data resources may go
@@ -226,9 +226,9 @@ FHIR server for each supported resource to fulfil this principle;
 formalizing them with FHIR conformance resources and implementation
 guides.
 
-#### Accessibility
+### Accessibility
 
-##### A1: Metadata and data are retrievable by each of their identifiers using a standardised communication protocol
+#### A1: Metadata and data are retrievable by each of their identifiers using a standardised communication protocol
 
 FHIR is described as a 'RESTful' specification based on common industry
 level use of the term REST, in this RESTful framework, transactions are
@@ -238,7 +238,7 @@ request/response.
 **Summary recommendation**: This principle is covered by virtue of using
 HL7 FHIR RESTful API
 
-##### A1.1: The protocol is open, free and universally implementable
+#### A1.1: The protocol is open, free and universally implementable
 
 Both HL7 FHIR RESTful API and the http protocols  are open, free
 and universally implementable.
@@ -247,13 +247,13 @@ There are different definitions of what an 'open standard' is, but also
 considering openness of access; of the process and of the rights of
 use, HL7 FHIR fulfills all of them. It is released under Creative
 Commons "No Rights Reserved"
-([CC0 ![](FHIRandFAIR-1.png)](http://creativecommons.org/publicdomain/zero/1.0/))
-licence and it is globally implemented. 
+([CC0](http://creativecommons.org/publicdomain/zero/1.0/)) licence and
+it is globally implemented. 
 
 **Summary recommendation**: This principle is covered by virtue of using
 HL7 FHIR RESTful API
 
-##### A1.2: The protocol allows for an authentication and authorisation, where necessary
+#### A1.2: The protocol allows for an authentication and authorisation, where necessary
 
 It often makes sense to request users to create a user account for a
 repository. This allows authentication of the owner (or contributor) of
@@ -270,7 +270,7 @@ open security protocols such as HMAC authentication
 (<https://en.wikipedia.org/wiki/HTTPS>) and FTPS
 (<https://en.wikipedia.org/wiki/FTPS>).
 
-##### A2: Metadata should be accessible even when the data is no longer available
+#### A2: Metadata should be accessible even when the data is no longer available
 
 This principle is important because there can be many reasons why data
 are no longer available whereas the associated metadata should be a
@@ -297,9 +297,9 @@ should consider the following recommendations.
     the persistency aspect of GUPRIs (independently on FHIR) for all
     data and metadata elements.
 
-#### Interoperability
+### Interoperability
 
-##### I1: Metadata and data use a formal, accessible, shared, and broadly applicable language for knowledge representation
+#### I1: Metadata and data use a formal, accessible, shared, and broadly applicable language for knowledge representation
 
 There are different ways to interpret 'language knowledge
 representation', for example the capability to:
@@ -399,9 +399,9 @@ the qualified references to other resources that are needed to provide a
 sufficient contextual knowledge for the scope of their community. This
 should be formalized through a community FHIR Implementation Guide.
 
-#### Reusability
+### Reusability
 
-##### R1: Metadata and data are richly described with a plurality of accurate and relevant attributes
+#### R1: Metadata and data are richly described with a plurality of accurate and relevant attributes
 
 This principle is related the F2, but while F2 focuses on metadata that
 allows its discovery, R1 focuses on the context under which the data
@@ -426,7 +426,7 @@ metadata are sufficient to describe data to make them useful in their
 context. This should be formalized with appropriate FHIR conformance
 resources in FHIR implementation guides.
 
-##### R1.1: Metadata and data are released with a clear and accessible data usage license
+#### R1.1: Metadata and data are released with a clear and accessible data usage license
 
 HL7 FHIR provides different means to specify the license and the
 conditions under which data can be used. For example, a resource may
@@ -451,7 +451,7 @@ clear references to the usage license. Communities should specify in
 community FHIR implementation guide how - for each kind of data - this
 is realized in their context.
 
-##### R1.2: Metadata and data are associated with detailed provenance
+#### R1.2: Metadata and data are associated with detailed provenance
 
 This principle focuses on specific type of contextual data as where the
 data came from, how they have been processed; if it has been published
@@ -474,7 +474,7 @@ Provenance resource to improve description the data context. Communities
 should specify in community FHIR implementation guide how this
 requirement is realized in their context.
 
-##### R1.3: Metadata and data meet domain-relevant community standards
+#### R1.3: Metadata and data meet domain-relevant community standards
 
 HL7 FHIR is a globally recognized standard in the health domain, that
 can be used to represent human and machine-readable metadata and data

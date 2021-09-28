@@ -50,7 +50,7 @@ pages:
     title: FHIR for FAIR Home Page                
   aboutThisVersion.md:
     title: About this version
-  scenarios.md:
+  rw-overview.md:
     title: Overview
   recommendations.md:
     title: Overview
@@ -58,13 +58,15 @@ pages:
     title: Immunology Database and Analysis Portal
   FAIR4Health.md:
     title: FAIR4Health Project
+  benefitResearch.md:
+    title: Benefits for research studies
   fitbir.md:
     title: FITBIR datasets
   leipzigHealthAtlas.md:
     title: Leipzig Health Atlas (LHA)
   healthCare.md:
     title: Healthcare datasets
-  scenarioTerminology.md:
+  terminology.md:
     title: Terminologies
   FHIRandRDAMetrics.md:
     title: HL7 FHIR and RDA Indicators
@@ -85,11 +87,12 @@ pages:
   ninfea.md:
     title: Non-Invasive Multimodal Foetal ECG-Doppler Dataset for Antenatal Cardiology Research
   mimic.md:
-    title: MIMIC
+    title: The Medical Information Mart for Intensive Care IV - Emergency Department (MIMIC-IV-ED, v1.0) dataset
   downloads.html:
     title: Useful Downloads
   changes.html:
     title: IG Change History
+
 			
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
@@ -103,14 +106,15 @@ menu:
     About this version: aboutThisVersion.html
     Methodology: methodology.html
     FAIR Guiding Principles: FAIR.html
-    RDA Indicators: RDAMetrics.html   
+    RDA Indicators: RDAMetrics.html
+    Benefits: benefitResearch.html    
     Metadata and Data: metadata.html
     Identifiers: FHIRidentifiers.html     
     Deployment: deployment.html  
   Real World Cases:
-    Overview: scenarios.html
+    Overview: rw-overview.html
     FAIR4Health Project: FAIR4Health.html
-    MIMIC: mimic.html    
+    MIMIC-IV-ED: mimic.html    
     Immunology Database and Analysis Portal: immPort.html              
     NInFEA: ninfea.html            
     Leipzig Health Atlas (LHA): leipzigHealthAtlas.html              
@@ -118,7 +122,7 @@ menu:
     Overview: recommendations.html
     Impelmenting FAIR principles: FHIRandFAIR.html    
     Implementing RDA Indicators: FHIRandRDAMetrics.html        
-    Terminologies: scenarioTerminology.html  
+    Terminologies: terminology.html  
   Artifact Index: artifacts.html
   Support:
   # link to FHIR specs to be checked
