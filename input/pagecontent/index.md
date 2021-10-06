@@ -1,8 +1,9 @@
 ### Scope
 
 This guide aims to provide guidance on how HL7 FHIR can be used for
-supporting **FAIR health data** implementation and assessment. Other
-kinds of health-related artefacts, as clinical guidelines, algorithms,
+supporting **FAIR health data** implementation and assessment to enable
+a cooperative usage of the HL7 FHIR and FAIR paradigms. Other kinds of
+health-related artefacts, such as clinical guidelines, algorithms,
 software, models are out of scope.
 
 ### What does FAIR mean?

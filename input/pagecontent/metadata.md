@@ -1,8 +1,11 @@
-The concept of FAIR digital object is quite wide and can vary in term of
-granularity and type of data that should be represented. (For a
+The concept of FAIR digital object is quite wide and can vary in term of
+granularity and type of data that should be represented. (For a
 definition of a FAIR data object see section 4.1 of the EC
 publication [Turning FAIR into
-reality](https://ec.europa.eu/info/publications/turning-fair-reality_en) )
+reality](https://ec.europa.eu/info/publications/turning-fair-reality_en) and
+Wittenburg, P., Strawn, G., Mons, B. et al.: Digital objects as drivers
+towards convergence in data infrastructures 2019 - [Full
+Text](https://github.com/GEDE-RDA-Europe/GEDE/blob/master/FAIR%20Digital%20Objects/do-fdo-papers/Digital%20Objects%20as%20Drivers%20towards%20Convergence%20in%20Data-b2share.pdf))
 
 A FAIR digital object must accommodate a variety of informational units
 for data, and different levels of granularity. It may be a single unit

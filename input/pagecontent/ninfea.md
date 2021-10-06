@@ -1,9 +1,8 @@
-### NInFEA: Non-Invasive Multimodal Foetal ECG-Doppler Dataset for Antenatal Cardiology Research
-
 The NInFEA dataset is accessible from the Physionet
 repository: <https://doi.org/10.13026/c4n5-3b04>. This dataset has been
 presented as part of a peer-reviewed, scientific article by Pani, D et
-al. [*Scientific Data*](https://www.nature.com/sdata) 8:30
+al. [*<span class="underline">Scientific
+Data</span>*](https://www.nature.com/sdata) 8:30
 (2021) <https://doi.org/10.1038/s41597-021-00811-3> which is entitled
 "NInFEA: Non-Invasive Multimodal Foetal ECG-Doppler Dataset for
 Antenatal Cardiology Research". The abstract is given below:
@@ -42,54 +41,60 @@ section). The overall assessment at the study level, is that arguably
 all essential FAIR assessment criteria are met, which is no surprise
 given the fact that the dataset is provided as part of Physionet, which
 is supported by a strong international community. However, we have
-identified areas for improvement especially regarding interoperability
-which will benefit from application of the FHIR standards. Furthermore,
-the FHIR standards enable more detailed representation of FAIR metadata
-at the anonymised patient level for method and context which is
-currently limited to the full text of the publication (HTML and PDF
-formats), which is not readily readable by machine. Making data FAIR is
-an interactive process guided by the priority of the RDA maturity
-indicators. Optimal level of FAIRness should be determined by
-understanding the requirements of the community (rather than
-perfection\!). Here we are going to show what is possible using the
-current FHIR standards, how these can bring unique and greatest value
-and how FHIR-based solutions compare to alternative technical options
-for FAIR Implementation.
+identified areas for improvement especially with regard to
+interoperability which will benefit from application of the FHIR
+standards. Furthermore, the FHIR standards enable more detailed
+representation of FAIR metadata at the anonymised patient level for
+method and context which is currrently limited to the full text of the
+publication (HTML and PDF formats), which is not readily readable by
+machine. Making data FAIR is an interative process guided by the
+priority of the RDA maturity indicators. Optimal level of FAIRness
+should be determined by understanding the requirements of the community
+(rather than perfection\!). Here we we are going to show what is
+possible using the current FHIR standards, how these can bring unique
+and greatest value and how FHIR-based solutions compare to alternative
+technical options for FAIR Implementation.
 
-### NinFEA: FHIR enabled FAIR improvements (work in progress)
+### NinFEA: FHIR enabled FAIR improvements
 
 Taking a curator approach, we looked more closely at the features that
-would push FAIR implementation even further for this NInFEA dataset.
-Notably, significant effort has been invested on preparing the data
-set.  What FAIR improvements could be made by implementation of the
-FHIR standards? Can the FAIR metadata be enhanced at the study and
-patient levels?
+would improve FAIR implementation even further for this NInFEA dataset.
+Notably, significant effort has been invested on preparing the data set.
+What FAIR improvents could be made by utilisation of the FHIR standards?
+Can the metadata be enhanced in a FAIR manner at the study and patient
+levels?
 
 Several observations were made during the initial FAIR assessment:
 
-1.  The metadata provided for the data set can be further extended,
-    especially by harnessing the open source, full text paper.
+1.  The metadata provided for the data set can be further extended, by
+    harnessing the full text of the open source paper
+    (<https://doi.org/10.1038/s41597-021-00811-3>).
 
-2.  Richer metadata would facilitate repurposing for future reuse of the
-    dataset.
+2.  Richer metadata would facilitate future reuse of the dataset to
+    maximise it's value which is the major motivation for making data
+    FAIR.
 
-3.  What is possible to enrich the metadata using FHIR? What brings
-    unique and greatest value? Approaches to automate FHIR enhancement
-    if FAIR metadata?
+3.  What brings unique and greatest value for enriching the metadata
+    using the HL7 FHIR standards? How can FHIR enhancement to make the
+    metadata more FAIR be scaled through automation?
 
 4.  Developing FHIR resources and storing the data set in a FHIR server
     would allow easier access to more researchers, further pushing the
     envelope for interoperability, going beyond Physionet.
 
-5.  Information on data provenance and licence could be included in the
-    metadata with a clear header rather than in comment.
+5.  Information on data provenance and licence would be included in the
+    metadata with a machine readable header on the FHIR server.
 
-6.  Publishing information on the structure of the data and the clinical
-    information further support the work done, building best practices.
+6.  Publishing the structure and elements of the data and metadata
+    provides richer support for the work done, therby building best
+    practices.
 
-Overall, there is currently a tradeoff between the quantity and richness
-of metadata at the study level, provided for the dataset on Physionet.
-We will explore the library FHIR resource
-(<https://www.hl7.org/fhir/library.html>) to follow-up on the initial
+Overall, the purpose of application for the dataset should drive finding
+the optimal balance between acceptable cost and richness of metadata. We
+have started this from the study level, provided already by Physionet
+and enriched further from the full text paper, which is an open source
+publication. We will explore the library FHIR resource
+(<https://www.hl7.org/fhir/library.html>) to follow-up on the intial
 FAIR assessment, as noted in the list of observations. Other technical
-options will be considered and explored as well.
+options using the FHIR standards will be considered and explored as
+well.

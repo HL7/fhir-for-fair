@@ -25,15 +25,19 @@ contact:
 description: The FHIR for FAIR - FHIR Implementation Guide aims to provide guidance on how HL7 FHIR can be used for supporting FAIR health data implementation and assessment. 
 license: CC0-1.0
 fhirVersion: 4.1.0
-# jurisdiction:
- #    - system: http://unstats.un.org/unsd/methods/m49/m49.htm
-  #    value: 001
+jurisdiction:
+    system: http://unstats.un.org/unsd/methods/m49/m49.htm
+    value: "001"
 
 parameters:
   find-other-resources: true
+  apply-jurisdiction: true
+  apply-publisher: true
+
+  
 
 copyrightYear: 2020+
-releaseLabel: CI Build
+releaseLabel: ci-build
 
 resources:
   Library/ninfea-1:

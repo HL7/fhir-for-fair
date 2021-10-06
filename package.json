@@ -3,8 +3,8 @@
  "version" : "0.0.1",  
  "canonical" : "http://hl7.org/fhir/uv/fhir-for-fair",
  "url" : "http://hl7.org/fhir/uv/fhir-for-fair",
- "title" : "FHIR for FAIR Implementation Guide",
- "description": "An example of how FSH can be used to create an IG about fish",
+ "title" : "FHIR for FAIR - FHIR Implementation Guide",
+ "description": "The FHIR for FAIR - FHIR Implementation Guide aims to provide guidance on how HL7 FHIR can be used for supporting FAIR health data implementation and assessment.",
  "dependencies": {
     "hl7.fhir.r4b.core": "4.1.0"    
  },
@@ -14,8 +14,14 @@
 	"FHIR4FAIR"
  ],
  "language": "en",
- "author": "Giorio Cangioli"
-
- ],
+ "author": "HL7 International", 
+ 
+  "maintainers": [
+   {
+     "name": "HL7 SOA Work Group",
+     "url": "http://www.hl7.org/Special/committees/soa"
+   }
+ ], 
+ "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#001",
  "license": "CC0-1.0"
 }

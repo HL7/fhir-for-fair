@@ -25,6 +25,6 @@ The cases described in this guide are:
 3.  [Immunology Database and Analysis Portal](immPort.html):
 
 4.  [Non-Invasive Multimodal Foetal ECG-Doppler Dataset for Antenatal
-    Cardiology Research](nunfea.html) NInFEA
+    Cardiology Research](ninfea.html) NInFEA
 
 5.  [Leipzig Health Atlas](leipzigHealthAtlas.html) (LHA)

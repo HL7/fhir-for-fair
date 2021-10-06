@@ -259,16 +259,19 @@ It often makes sense to request users to create a user account for a
 repository. This allows authentication of the owner (or contributor) of
 each dataset, and to potentially set user-specific rights. This can also
 affect the choice of the repository that is suitable to share data and
-associate metadata. HL7 FHIR is not 'per se' a security protocol, nor
-does it define any security related functionality. However, we can make
-the following recommendation.
+associate metadata.
 
-**Summary recommendation**: HL7 FHIR defines exchange protocols and
-content models (cross reference?) that can be used with various
-open security protocols such as HMAC authentication
-(<https://en.wikipedia.org/wiki/HMAC>), HTTPS
-(<https://en.wikipedia.org/wiki/HTTPS>) and FTPS
-(<https://en.wikipedia.org/wiki/FTPS>).
+HL7 FHIR is not 'per se' a security protocol, nor does it define any
+security related functionality; however it defines exchange protocols
+and content models (<https://www.hl7.org/fhir/exchange-module.html>)
+that can be used with various open security protocols such as** **HMAC
+authentication (<https://en.wikipedia.org/wiki/HMAC>), HTTPS
+(<https://en.wikipedia.org/wiki/HTTPS>) (see
+e.g. <https://hl7.org/fhir/security.html#http> for Communications
+Security in FHIR)
+
+**Summary recommendation**:  Each community should declare what are the
+security standards there are adopted in their context.
 
 #### A2: Metadata should be accessible even when the data is no longer available
 
