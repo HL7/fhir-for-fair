@@ -1,15 +1,25 @@
 {
  "package-id" : "hl7.fhir.uv.fhir-for-fair",
  "title" : "FHIR for FAIR Implementation ", 
- "canonical" : "http://hl7.org/fhir/uv/fhir-for-fair", 
- "category" : "Research"
- "introduction" : "This implementaion guide aims to provide guidance on supporting health data FAIRness by using HL7 FHIR",
- "list" : [{
-  "version" : "0.0.1",
+ "canonical" : "http://hl7.org/fhir/uv/fhir-for-fair",
+ "category" : "category", 
+ "list" : [
+ {
+  "version" : "current",
   "desc" : "Continuous Integration Build (latest in version control)",
   "path" : "http://build.fhir.org/ig/HL7/fhir-for-fair",
    "fhirversion": "4.1.0",
   "status" : "ci-build",
   "current" : true
- }]
+ },
+    {
+      "version": "0.1.0",
+      "date": "2021-12-05",
+      "desc": "STU 1 Ballot 1",
+      "path": "http://hl7.org/fhir/uv/fhir-for-fair/2021Jan",
+      "sequence": "STU 1 (FHIR R4b)",
+      "fhirversion": "4.1.0",
+      "status": "ballot"
+    }
+ ]
 }

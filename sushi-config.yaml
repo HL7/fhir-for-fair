@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.fhir-for-fair
 canonical: http://hl7.org/fhir/uv/fhir-for-fair
-version: 0.0.1
+version: 0.1.0
 name: FhirForFairIG
 title: FHIR for FAIR - FHIR Implementation Guide
 status: active
@@ -25,9 +25,8 @@ contact:
 description: The FHIR for FAIR - FHIR Implementation Guide aims to provide guidance on how HL7 FHIR can be used for supporting FAIR health data implementation and assessment. 
 license: CC0-1.0
 fhirVersion: 4.1.0
-jurisdiction:
-    system: http://unstats.un.org/unsd/methods/m49/m49.htm
-    value: "001"
+
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
 parameters:
   find-other-resources: true
@@ -39,15 +38,16 @@ parameters:
 copyrightYear: 2020+
 releaseLabel: ci-build
 
-resources:
-  Library/ninfea-1:
-    name: FRAILSURVEY Study level metadata example (Library)
-    description: FRAILSURVEY is an app that collects data from elderly communally. This app integrates Groningen Frailty Index, and a set of questions about socio demographic data, social resources, self-perception of health, nutrition, medication, cognitive and psychosocial status and time occupation. The results obtained classify the elderly as robust, pre-frail or frail. The app displays tailored recommendations if the elderly is classified as frail or pre-frail. The recommendations cover aspects such as physical exercise, healthy diet, social network, among others. FRAILSURVEY generates a totally anonymous database that can be used for research purposes. The development of such technology was based on an accessibility principle for the elderly, with the purpose of guaranteeing a greater autonomy to use it. Considerations such as vision, hearing, motor control and cognition were considered. In addition, the app features a typographic font designed for low-vision people, APHont, developed by the American Printing House for the Blind, also presenting a way to increase or decrease the font size, as well as the possibility of listening to some audio information.
-    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
-  Library/26dc407a-9b03-4a25-9dad-7e53ce6b4bbb:
-    name: Non-invasive foetal electrocardiography example (Library)
-    description: Non-invasive foetal electrocardiography 
-    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
+# resources:
+#  Library/ninfea-1:
+#    name: FRAILSURVEY Study level metadata example (Library)
+#    description: FRAILSURVEY is an app that collects data from elderly communally. This app integrates Groningen Frailty Index, and a set of questions about socio demographic data, social resources, self-perception of health, nutrition, medication, cognitive and psychosocial status and time occupation. The results obtained classify the elderly as robust, pre-frail or frail. The app displays tailored recommendations if the elderly is classified as frail or pre-frail. The recommendations cover aspects such as physical exercise, healthy diet, social network, 
+# among others. FRAILSURVEY generates a totally anonymous database that can be used for research purposes. The development of such technology was based on an accessibility principle for the elderly, with the purpose of guaranteeing a greater autonomy to use it. Considerations such as vision, hearing, motor control and cognition were considered. In addition, the app features a typographic font designed for low-vision people, APHont, developed by the American Printing House for the Blind, also presenting a way to increase or decrease the font size, as well as the possibility of listening to some audio information.
+#    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
+#  Library/26dc407a-9b03-4a25-9dad-7e53ce6b4bbb:
+#    name: Non-invasive foetal electrocardiography example (Library)
+#    description: Non-invasive foetal electrocardiography 
+#    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
 
 pages:
   index.md:
@@ -124,13 +124,13 @@ menu:
     Leipzig Health Atlas (LHA): leipzigHealthAtlas.html              
   Recommendations: 
     Overview: recommendations.html
-    Impelmenting FAIR principles: FHIRandFAIR.html    
+    Implementing FAIR principles: FHIRandFAIR.html    
     Implementing RDA Indicators: FHIRandRDAMetrics.html        
     Terminologies: terminology.html  
   Artifact Index: artifacts.html
   Support:
   # link to FHIR specs to be checked
-    FHIR Spec: http://hl7.org/fhir/2021Mar/index.html
+    FHIR Spec: https://build.fhir.org/branches/R4B/index.html
     Downloads: downloads.html
     
 FSHOnly: false

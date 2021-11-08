@@ -98,8 +98,10 @@ Parent:   DocumentManifest
 Id:       DocumentManifest-uv-f4f
 Title:    "DocumentManifest (Subject Level Medatata)"
 Description: "This profile defines how to use the DocumentManifest resource to convey metadata information for a FAIR collection of data at the subject level realized by using HL7 FHIR"
+
 //-------------------------------------------------------------------------------------------
 // * url MS
+* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * masterIdentifier MS
 * status MS
 * subject MS 

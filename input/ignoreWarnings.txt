@@ -3,9 +3,5 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 
-# Not supported FHIR version
-The value provided ('4.5.0') is not in the value set http://hl7.org/fhir/ValueSet/FHIR-version|4.2.0 (http://hl7.org/fhir/ValueSet/FHIR-version), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/FHIR-version#4.5.0 in http://hl7.org/fhir/FHIR-version)
-The link 'http://build.fhir.org/' for "FHIR 4.5.0" cannot be resolved
 
-# We're expecting these to not match the slice - we're showing how you can use slicing to define the one repetition you want even when many repetitions might be present
 
