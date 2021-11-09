@@ -1,3 +1,12 @@
+
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<blockquote class="stu-note">
+		<p>Readers should be aware that this version of the guide is based on a FHIR version (FHIR 4b) that has not been publihsed yet.</p>
+		<p>This implies that some profiles and examples used in this guide (e.g. instances based on the Citation resource) may be subject to changes in dependance on the published content.</p>
+	</blockquote>
+</div>
+
+
 ### Scope
 
 This guide aims to provide guidance on how HL7 FHIR can be used for supporting **FAIR health data** implementation and assessment to enable a cooperative usage of the HL7 FHIR and FAIR paradigms. Other kinds of health-related artefacts, such as clinical guidelines, algorithms, software, models are out of scope.

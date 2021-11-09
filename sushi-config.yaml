@@ -38,8 +38,12 @@ parameters:
 copyrightYear: 2020+
 releaseLabel: ci-build
 
-# resources:
-#  Library/ninfea-1:
+resources:
+ Library/ninfea-1:
+   name: Non-invasive foetal electrocardiography example (Library)
+   description: Example of usage of the Library reosurce to describe study level metadata (example based on the Non-invasive foetal electrocardiography NInFEA case)
+   exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
+
 #    name: FRAILSURVEY Study level metadata example (Library)
 #    description: FRAILSURVEY is an app that collects data from elderly communally. This app integrates Groningen Frailty Index, and a set of questions about socio demographic data, social resources, self-perception of health, nutrition, medication, cognitive and psychosocial status and time occupation. The results obtained classify the elderly as robust, pre-frail or frail. The app displays tailored recommendations if the elderly is classified as frail or pre-frail. The recommendations cover aspects such as physical exercise, healthy diet, social network, 
 # among others. FRAILSURVEY generates a totally anonymous database that can be used for research purposes. The development of such technology was based on an accessibility principle for the elderly, with the purpose of guaranteeing a greater autonomy to use it. Considerations such as vision, hearing, motor control and cognition were considered. In addition, the app features a typographic font designed for low-vision people, APHont, developed by the American Printing House for the Blind, also presenting a way to increase or decrease the font size, as well as the possibility of listening to some audio information.

@@ -13,19 +13,31 @@ augment, share and reuse datasets derived from publicly funded research
 initiatives, demonstrating the FAIR strategy’s potential impact on
 health outcomes and health research. It focuses on two main use cases:
 
-> 1\. FAIR4Health Pathfinder Use case 1 (P1): to support the discovery
-> of disease onset triggers and disease association patterns in comorbid
-> patients and demonstrate the reproducibility of research
-> 
-> 2\. FAIR4Health Pathfinder Use case 2 (P2): to develop and pilot a
-> prediction service for 30-days readmission risk in patients with COPD
+1.  FAIR4Health Pathfinder Use case 1 (P1): to support the discovery of
+    disease onset triggers and disease association patterns in comorbid
+    patients and demonstrate the reproducibility of research
+
+2.  FAIR4Health Pathfinder Use case 2 (P2): to develop and pilot a
+    prediction service for 30-days readmission risk in patients with
+    COPD
 
 This project has developed an intuitive, user-centered **technological
 platform** to enable the translation from raw (meta)data to FAIR
 (meta)data, and the use of this FAIRified information to execute
 Privacy-preserving Distributed Data Mining (PPDDM) algorithms.
 
-![](FAIR4Health-1.png)
+<table>
+<thead>
+<tr class="header">
+<th><img src="FAIR4Health-1.png" style="width:4.875in;height:2.30208in" /></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Figure 1 – FAIR4Health overview</td>
+</tr>
+</tbody>
+</table>
 
 Raw data extracted from real healthcare institution EHRs across Europe,
 are FAIRified and converted to HL7 FHIR resources complying to a common
@@ -117,7 +129,7 @@ principles, is the way to overcome all the experienced shortages,
 potentially more and more critical when the domain of application will
 be extended.
 
-Added value of FHIR
+#### Added value of FHIR
 
 Even if not all the capabilities offered by HL7 FHIR have been used at
 this stage by the project, the adoption of HL7 FHIR gave a strong
