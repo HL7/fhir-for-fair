@@ -42,6 +42,7 @@ Description: "This profile defines how to use the Library resource to convey met
 * title MS
 * status MS
 * type MS
+* copyright MS
 * purpose MS
 * content MS 
 * content 1..* 

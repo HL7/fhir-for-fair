@@ -41,7 +41,12 @@ releaseLabel: ci-build
 resources:
  Library/ninfea-1:
    name: Non-invasive foetal electrocardiography example (Library)
-   description: Example of usage of the Library reosurce to describe study level metadata (example based on the Non-invasive foetal electrocardiography NInFEA case)
+   description: Example of usage of the Library reosurce to describe study level metadata. This example is based on the Non-invasive foetal electrocardiography NInFEA case.
+   exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
+ 
+ Library/f4h-1:
+   name: FAIR4Health portal (Library)
+   description: Example of usage of the Library reosurce to describe project level metadata. This example is based on the data published by the FAIR4Health project thorugh the https://portal.fair4health.eu/ portal
    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
 
 #    name: FRAILSURVEY Study level metadata example (Library)

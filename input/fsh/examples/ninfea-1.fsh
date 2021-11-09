@@ -33,14 +33,37 @@ Usage: #example
 * topic[+].text = "non-invasive"
 * topic[+].text = "doppler"
 * topic[+].text = "antenatal"
+
 * relatedArtifact[0].type = #citation
+* relatedArtifact[=].label = "Article"
+* relatedArtifact[=].display = "Scientific Data"
 * relatedArtifact[=].citation = "Sulas, E., Urru, M., Tumbarello, R. et al. A non-invasive multimodal foetal ECG–Doppler dataset for antenatal cardiology research. Sci Data 8, 30 (2021)."
 * relatedArtifact[=].url = "https://doi.org/10.1038/s41597-021-00811-3"
+
 * relatedArtifact[+].type = #citation
-* relatedArtifact[=].citation = "Sulas, E., Urru, M., Tumbarello, R. et al. A non-invasive multimodal foetal ECG–Doppler dataset for antenatal cardiology research. Sci Data 8, 30 (2021)."
-* relatedArtifact[=].url = "https://doi.org/10.1038/s41597-021-00811-3"
+* relatedArtifact[=].label = "Article"
+* relatedArtifact[=].display = "40th Annual International Conference of the IEEE EMBC"
+* relatedArtifact[=].citation = "Sulas E, Ortu E, Raffo L, Urru M, Tumbarello R, Pani D, Automatic Recognition of Complete Atrioventricular Activity in Fetal Pulsed-Wave Doppler Signals, 2018 40th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), Honolulu, HI, 2018, pp. 917-920, doi: 10.1109/EMBC.2018.8512329."
+* relatedArtifact[=].url = "https://doi.org/10.1109/EMBC.2018.8512329"
+
+* relatedArtifact[+].type = #citation
+* relatedArtifact[=].label = "FHIR Resource"
+* relatedArtifact[=].display = "FEvIR platform"
+* relatedArtifact[=].citation = "Example of FHIR R5 Citation Resource describing the NinFea metadata"
+* relatedArtifact[=].url = "https://fevir.net/resources/Citation/60"
+
+
 * relatedArtifact[+].type = #depends-on
-* relatedArtifact[=].label = "ontology"
+* relatedArtifact[=].label = "Ontology"
 * relatedArtifact[=].display = "Experimental Factor Ontology"
 * relatedArtifact[=].url = "http://data.bioontology.org/ontologies/EFO"
+
+* relatedArtifact[+].type = #depends-on
+* relatedArtifact[=].label = "ontology"
+* relatedArtifact[=].display = "National Center for Biotechnology Information (NCBI) Organismal Classification"
+* relatedArtifact[=].url = "http://purl.bioontology.org/ontology/NCBITAXON"
+
+* content.contentType = #application/zip
+* content.size = 792900000
+* content.title = "NInFEA: Non-Invasive Multimodal Foetal ECG-Doppler Dataset for Antenatal Cardiology Research 1.0.0"
 * content.url = "https://physionet.org/static/published-projects/ninfea/ninfea-non-invasive-multimodal-foetal-ecg-doppler-dataset-for-antenatal-cardiology-research-1.0.0.zip"

@@ -1,11 +1,11 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
-		<p>Readers should be aware that this version of the guide is based on a FHIR version (FHIR 4b) that has not been publihsed yet.</p>
-		<p>This implies that some profiles and examples used in this guide (e.g. instances based on the Citation resource) may be subject to changes in dependance on the published content.</p>
+		<p>Readers should be aware that this version of the guide is based on a not yet published FHIR version (FHIR 4b).</p>
+		<p>Some profiles and examples used in this guide (e.g. instances based on the Citation resource) may be subject to changes in dependance on the final published content.</p>
 	</blockquote>
 </div>
-
+<br/>
 
 ### Scope
 
