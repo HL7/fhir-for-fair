@@ -58,6 +58,8 @@ This project has as main goals to:
  <img src="index-3.png" style="width:40%" />
 </div>
 
+ <br />
+ 
 ### Audience
 
 The audience for this Implementation Guide includes:
@@ -92,15 +94,17 @@ This Implementation Guide will be balloted as STU with the intention to go norma
 
 | Role  | Name | Organization |
 | --- | --- | --- | --- |
-| **Primary Editor** | Giorgio Cangioli | HL7 Europe | 
+| **Author** | Giorgio Cangioli | HL7 Europe | 
 | **Author** | Alicia Martinez-Garcia | Andalusian Health Service |
 | **Author** | Kees van Bochove | The Hyve | 
 | **Author** | Ian Harrow | Pistoia Alliance | 
 | **Author** | Philip van Damme  |  |
 | **Author** | Matthias Löb | IMISE University of Leipzig |
 | **Contributor** | Catherine Chronaki | HL7 Europe |
+| **Contributor** | Brian Alper | Computable Publishing LLC |
 | **Contributor** | Anupama Gururaj | NIH/NIAID |
 | **Contributor** | Olga Vovk | Samvit Solutions |
+| **Contributor** | Oya Beyan | Koeln University |
 | **Contributor** | Steve Tsang | NIH/NIAID |
 | **Contributor** | Edward Eikman|  |
 | **Contributor** | Belinda Seto| NIH |
