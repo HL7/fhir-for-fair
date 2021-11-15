@@ -46,7 +46,17 @@ resources:
  
  Library/f4h-1:
    name: FAIR4Health portal (Library)
-   description: Example of usage of the Library reosurce to describe project level metadata. This example is based on the data published by the FAIR4Health project thorugh the https://portal.fair4health.eu/ portal
+   description: Example of usage of the Library resource to describe project level metadata. This example is based on the data published by the FAIR4Health project thorugh the https://portal.fair4health.eu/ portal
+   exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
+   
+ Library/f4h-1-1:
+   name: FAIR4Health study case 1 (Library)
+   description: Example of usage of the Library resource to describe study level metadata. This example is based on the FAIR4Health study case 1 Identification of multimorbidity patterns and polypharmacy correlation on the risk of mortality in elderly, and demonstrate the reproducibility of research
+   exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
+   
+ Library/f4h-1-2:
+   name: FAIR4Health study case 2 (Library)
+   description: Example of usage of the Library resource to describe study level metadata. This example is based on the FAIR4Health study case 2 Develop and pilot an early prediction service for 30-days readmission risk in COPD (Chronic Obstructive Pulmonary Disease) patient
    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
 
 #    name: FRAILSURVEY Study level metadata example (Library)
@@ -93,6 +103,8 @@ pages:
     title: Metadata and data
   FAIR.md:
     title: FAIR Guiding Principles
+  citation.md:
+    title: Representing FAIR metadata with Citation
   FHIRandFAIR.md:
     title: HL7 FHIR and FAIR principles
   FHIRidentifiers.md:
@@ -131,10 +143,11 @@ menu:
     Immunology Database and Analysis Portal: immPort.html              
     NInFEA: ninfea.html            
     Leipzig Health Atlas (LHA): leipzigHealthAtlas.html              
-  Recommendations: 
-    Overview: recommendations.html
+  Guidelines: 
+    General recommendations: recommendations.html
     Implementing FAIR principles: FHIRandFAIR.html    
-    Implementing RDA Indicators: FHIRandRDAMetrics.html        
+    Implementing RDA Indicators: FHIRandRDAMetrics.html
+    Representing metadata with Citation: citation.html
     Terminologies: terminology.html  
   Artifact Index: artifacts.html
   Support:

@@ -49,31 +49,6 @@ Description: "This profile defines how to use the Library resource to convey met
 * content only AttachmentF4F
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  CitationF4F
-Parent:   Citation
-Id:       Citation-uv-f4f
-Title:    "Citation (Study Level Medatata)"
-Description: "This profile defines how to use the Citation resource to convey metadata information for a FAIR collection of data at the study level realized by using HL7 FHIR"
-//-------------------------------------------------------------------------------------------
-* url MS
-* identifier MS
-* title MS
-* status MS
-* date MS
-* summary MS
-* publisher MS
-* webLocation MS
-* contributorship MS
-* keywordList MS
-* relatedArtifact MS
-
-
-/*========== BEGIN COMMENT END COMMENT  
-
-====*/
-
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  ResearchStudyF4F
 Parent:   ResearchStudy
 Id:       ResearchStudy-uv-f4f
@@ -88,9 +63,6 @@ Description: "This profile defines how to use the ResearchStudy resource to conv
 * relatedArtifact MS
 * keyword MS
 * note MS
-
-
-
 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -112,6 +84,27 @@ Description: "This profile defines how to use the DocumentManifest resource to c
 * description MS
 * content MS
 
+/*========== BEGIN COMMENT 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Profile:  CitationF4F
+Parent:   Citation
+Id:       Citation-uv-f4f
+Title:    "Citation (Study Level Medatata)"
+Description: "This profile defines how to use the Citation resource to convey metadata information for a FAIR collection of data at the study level realized by using HL7 FHIR"
+//-------------------------------------------------------------------------------------------
+* url MS
+* identifier MS
+* title MS
+* status MS
+* date MS
+* summary MS
+* publisher MS
+* webLocation MS
+* contributorship MS
+* keywordList MS
+* relatedArtifact MS
+
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  EvidenceReportF4F
 Parent:   EvidenceReport
@@ -124,6 +117,10 @@ Description: "This profile defines how to use the EvidenceReport resource to con
 * citeAsReference MS
 * subject MS 
 * relatedArtifact 1.. MS
+
+END COMMENT  
+
+====*/
 
 
 
