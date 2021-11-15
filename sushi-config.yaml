@@ -39,6 +39,19 @@ copyrightYear: 2020+
 releaseLabel: ci-build
 
 resources:
+    
+ StructureDefinition/Library-uv-f4f:
+   name: Library (Study Level Medatata)	
+   description: This profile defines how to use the Library resource to convey metadata information for a FAIR dataset realized by using HL7 FHIR
+
+ StructureDefinition/ResearchStudy-uv-f4f:
+   name: ResearchStudy (Study Level Medatata)	
+   description: This profile defines how to use the ResearchStudy resource to convey metadata information for a FAIR collection of data at the study level realized by using HL7 FHIR
+
+ StructureDefinition/DocumentManifest-uv-f4f:
+   name: DocumentManifest (Subject Level Medatata)	
+   description: This profile defines how to use the DocumentManifest resource to convey metadata information for a FAIR collection of data at the subject level realized by using HL7 FHIR
+
  Library/ninfea-1:
    name: Non-invasive foetal electrocardiography example (Library)
    description: Example of usage of the Library reosurce to describe study level metadata. This example is based on the Non-invasive foetal electrocardiography NInFEA case.

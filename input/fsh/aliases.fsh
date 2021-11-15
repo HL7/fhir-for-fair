@@ -6,6 +6,7 @@ Alias: $efo = http://www.ebi.ac.uk/efo
 Alias: $obo = http://purl.obolibrary.org/obo
 Alias: $sct = http://snomed.info/sct
 Alias: $radlex = http://radlex.org
+Alias: $example = http://example.org
 
 
 Alias: $Citation = http://hl7.org/fhir/StructureDefinition/Citation
