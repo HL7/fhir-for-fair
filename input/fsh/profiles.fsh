@@ -2,17 +2,6 @@
 
 //====== Data Types =====================================
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  AttachmentF4F
-Parent:   Attachment
-Id:       Attachment-uv-f4f
-Title:    "Attachment (FHIR for FAIR)"
-Description: "This profile defines how to use the Attachment data type to convey metadata information for a FAIR collection of data at the study level realized by using HL7 FHIR"
-//-------------------------------------------------------------------------------------------
-// * data 0..0 => to be checked
-* url 1..1 MS
-
-
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  RelatedArtifactF4F
@@ -34,8 +23,11 @@ Profile:  LibraryF4F
 Parent:   Library
 Id:       Library-uv-f4f
 Title:    "Library (Study Level Medatata)"
-Description: "This profile defines how to use the Library resource to convey metadata information for a FAIR dataset realized by using HL7 FHIR"
+Description: "This profile defines how to use the Library resource to convey metadata information for a FAIR dataset realized by using HL7 FHIR. An extension is used to allow to refer as "
 //-------------------------------------------------------------------------------------------
+
+* extension contains ExtRelatedContent named relatedContent 0..1 
+* extension[relatedContent]
 * url MS
 * identifier MS
 * name MS
@@ -44,9 +36,11 @@ Description: "This profile defines how to use the Library resource to convey met
 * type MS
 * copyright MS
 * purpose MS
-* content MS 
-* content 1..* 
-* content only AttachmentF4F
+// * content MS 
+// * content 1..* 
+// * content only AttachmentF4F
+* content.url 1.. MS
+
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  ResearchStudyF4F
@@ -56,11 +50,13 @@ Title:    "ResearchStudy (Study Level Medatata)"
 Description: "This profile defines how to use the ResearchStudy resource to convey metadata information for a FAIR collection of data at the study level realized by using HL7 FHIR"
 //-------------------------------------------------------------------------------------------
 
+* extension contains ExtPersistentUrl named url 0..1 
+* extension[url] 
 * identifier MS
 * title MS
 * status MS
-* primaryPurposeType MS
-* relatedArtifact MS
+* primaryPurposeType and relatedArtifact MS
+* relatedArtifact only RelatedArtifactF4F
 * keyword MS
 * note MS
 
@@ -73,8 +69,8 @@ Title:    "DocumentManifest (Subject Level Medatata)"
 Description: "This profile defines how to use the DocumentManifest resource to convey metadata information for a FAIR collection of data at the subject level realized by using HL7 FHIR"
 
 //-------------------------------------------------------------------------------------------
-// * url MS
-* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+// * extension contains ExtPersistentUrl named url 0..1 
+// * extension[url] 
 * masterIdentifier MS
 * status MS
 * subject MS 
@@ -85,6 +81,18 @@ Description: "This profile defines how to use the DocumentManifest resource to c
 * content MS
 
 /*========== BEGIN COMMENT 
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Profile:  AttachmentF4F
+Parent:   Attachment
+Id:       Attachment-uv-f4f
+Title:    "Attachment (FHIR for FAIR)"
+Description: "This profile defines how to use the Attachment data type to convey metadata information for a FAIR collection of data at the study level realized by using HL7 FHIR"
+//-------------------------------------------------------------------------------------------
+// * data 0..0 => to be checked
+
+* url 1..1 MS
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  CitationF4F
 Parent:   Citation

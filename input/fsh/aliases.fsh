@@ -7,6 +7,7 @@ Alias: $obo = http://purl.obolibrary.org/obo
 Alias: $sct = http://snomed.info/sct
 Alias: $radlex = http://radlex.org
 Alias: $example = http://example.org
+Alias: $researchStudy-relatesTo = http://hl7.org/fhir/StructureDefinition/researchStudy-relatesTo
 
 
 Alias: $Citation = http://hl7.org/fhir/StructureDefinition/Citation
