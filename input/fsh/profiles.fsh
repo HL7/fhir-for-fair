@@ -11,7 +11,9 @@ Title:    "RelatedArtifact (FHIR for FAIR)"
 Description: "This profile enhances the current RelatedArtifact data with the enhancements identified in FHIR R5"
 //-------------------------------------------------------------------------------------------
 
-*  extension contains ExtRelatedArtifact named extRelatedArtifact 0..1
+*  extension contains 
+ ExtRelatedArtifactClassifier named classifier 0..1
+ and ExtRelatedArtifactResourceReference named resourceReference 0..1
 
 
 
@@ -50,15 +52,20 @@ Title:    "ResearchStudy (Study Level Medatata)"
 Description: "This profile defines how to use the ResearchStudy resource to convey metadata information for a FAIR collection of data at the study level realized by using HL7 FHIR"
 //-------------------------------------------------------------------------------------------
 
-* extension contains ExtPersistentUrl named url 0..1 
-* extension[url] 
+* extension contains 
+	ExtPersistentUrl named url 0..1 
+	and ExtCopyright named copyright 0..1
+	and ExtContext named context 0..*
+* extension[url]
+* extension[copyright]
+* extension[context]
 * identifier MS
 * title MS
-* status MS
+* status  MS
 * primaryPurposeType and relatedArtifact MS
 * relatedArtifact only RelatedArtifactF4F
-* keyword MS
-* note MS
+* description MS
+* objective MS
 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -69,16 +76,21 @@ Title:    "DocumentManifest (Subject Level Medatata)"
 Description: "This profile defines how to use the DocumentManifest resource to convey metadata information for a FAIR collection of data at the subject level realized by using HL7 FHIR"
 
 //-------------------------------------------------------------------------------------------
-// * extension contains ExtPersistentUrl named url 0..1 
-// * extension[url] 
+* extension contains 
+	// ExtPersistentUrl named url 0..1 and 
+	ExtCopyright named copyright 0..1
+// * extension[url]
+* extension[copyright]
 * masterIdentifier MS
+* identifier MS
 * status MS
-* subject MS 
+// * subject MS 
 * created MS
 * author MS
 * recipient 0..
 * description MS
 * content MS
+* related MS
 
 /*========== BEGIN COMMENT 
 

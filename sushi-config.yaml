@@ -25,6 +25,7 @@ contact:
 description: The FHIR for FAIR - FHIR Implementation Guide aims to provide guidance on how HL7 FHIR can be used for supporting FAIR health data implementation and assessment. 
 license: CC0-1.0
 fhirVersion: 4.1.0
+# fhirVersion: 4.0.1
 
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
@@ -62,15 +63,20 @@ resources:
    description: Example of usage of the Library resource to describe project level metadata. This example is based on the data published by the FAIR4Health project thorugh the https://portal.fair4health.eu/ portal
    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
    
- Library/f4h-1-1:
+ Library/f4h-lib-1:
    name: FAIR4Health study case 1 (Library)
    description: Example of usage of the Library resource to describe study level metadata. This example is based on the FAIR4Health study case 1 Identification of multimorbidity patterns and polypharmacy correlation on the risk of mortality in elderly, and demonstrate the reproducibility of research
    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
    
- Library/f4h-1-2:
+ Library/f4h-lib-2:
    name: FAIR4Health study case 2 (Library)
    description: Example of usage of the Library resource to describe study level metadata. This example is based on the FAIR4Health study case 2 Develop and pilot an early prediction service for 30-days readmission risk in COPD (Chronic Obstructive Pulmonary Disease) patient
    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
+   
+ ResearchStudy/f4h-rs-2:
+   name: FAIR4Health study case 2 (ResearchStudy)
+   description: Example of usage of the ResearchStudy resource to describe study level metadata. This example is based on the FAIR4Health study case 2 Develop and pilot an early prediction service for 30-days readmission risk in COPD (Chronic Obstructive Pulmonary Disease) patient
+   exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/ResearchStudy-uv-f4f
 
 #    name: FRAILSURVEY Study level metadata example (Library)
 #    description: FRAILSURVEY is an app that collects data from elderly communally. This app integrates Groningen Frailty Index, and a set of questions about socio demographic data, social resources, self-perception of health, nutrition, medication, cognitive and psychosocial status and time occupation. The results obtained classify the elderly as robust, pre-frail or frail. The app displays tailored recommendations if the elderly is classified as frail or pre-frail. The recommendations cover aspects such as physical exercise, healthy diet, social network, 

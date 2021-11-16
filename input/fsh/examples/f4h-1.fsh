@@ -1,5 +1,5 @@
 Instance: f4h-1
-InstanceOf: Library
+InstanceOf: LibraryF4F
 Usage: #example
 
 * text.status = #additional
@@ -36,22 +36,31 @@ Usage: #example
 </table>
 <p></p>
 
-<p><strong>Platform access point: <a tabindex="0" href="https://github.com/fair4health/common-data-model" target="_blank" rel="noopener" aria-disabled="false">https://portal.fair4health.eu/</a></strong></p>
-<p><strong>Common Data model: </strong><a tabindex="0" href="https://github.com/fair4health/common-data-model" target="_blank" rel="noopener" aria-disabled="false"> https://github.com/fair4health/common-data-model</a></p>
-<p><strong>Owner: </strong><a tabindex="0" href="https://www.fair4health.eu/" target="_blank" rel="noopener" aria-disabled="false">FAIR4Health Consortium.</a></p>
-<p><strong>FAIR metadata repository: </strong><a tabindex="0" href="https://github.com/fair4health/metadata" target="_blank" rel="noopener" aria-disabled="false">https://github.com/fair4health/metadata&nbsp;</a></p>
+<p><strong>Platform access point:</strong>  https://portal.fair4health.eu/</p>
+<p><strong>Common Data model: </strong>https://github.com/fair4health/common-data-model</p>
+<p><strong>Owner: </strong>FAIR4Health Consortium.</p>
+<p><strong>FAIR metadata repository: </strong>https://github.com/fair4health/metadata</p>
 
 
 <h3>Contents</h3>
-<p>Identification of multimorbidity patterns and polypharmacy correlation on the risk of mortality in elderly, and demonstrate the reproducibility of research:&nbsp;<code><a href="https://example.org/registry/f4h-study-1">https://example.org/registry/f4h-study-1</a></code>&nbsp;(<code>application/fhir+json</code>)</p>
-<p>Develop and pilot an early prediction service for 30-days readmission risk in COPD (Chronic Obstructive Pulmonary Disease) patients:&nbsp;<code><a href="https://example.org/registry/f4h-study-2">https://example.org/registry/f4h-study-2</a></code>&nbsp;(<code>application/fhir+json</code>)</p>
+<p>Identification of multimorbidity patterns and polypharmacy correlation on the risk of mortality in elderly, and demonstrate the reproducibility of research:&nbsp;<code>https://example.org/registry/f4h-study-1</code>&nbsp;(<code>application/fhir+json</code>)</p>
+<p>Develop and pilot an early prediction service for 30-days readmission risk in COPD (Chronic Obstructive Pulmonary Disease) patients:&nbsp;<code>https://example.org/registry/f4h-study-2</code>&nbsp;(<code>application/fhir+json</code>)</p>
 
 <p>(C) Fair4Health H2020 Project.</p>
 <p>This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 824666.</p>
 </div>
 """
+/*==============
+* extension[relatedContent][0].valueRelatedArtifact.type = $related-artifact-type#composed-of
+* extension[relatedContent][=].valueRelatedArtifact.display = "FAIR4Health Study 1: Identification of multimorbidity patterns"
+* extension[relatedContent][=].valueRelatedArtifact.url = "https://example.org/registry/f4h-study-1"
+* extension[relatedContent][=].extension[resourceReference].valueReference = "Library/f4h-lib-1"
 
-// 
+* extension[relatedContent][+].valueRelatedArtifact.type = $related-artifact-type#composed-of
+* extension[relatedContent][=].valueRelatedArtifact.display = "FAIR4Health Study 2: 30-days readmission risk in COPD patients"
+* extension[relatedContent][=].valueRelatedArtifact.url = "https://example.org/registry/f4h-study-1"
+* extension[relatedContent][=].extension[resourceReference].valueReference = "Library/f4h-lib-2"
+=========*/
 
 * url = "https://example.org/registry/fair4health"
 // TO be changed
@@ -74,6 +83,7 @@ Usage: #example
 * relatedArtifact[=].display = "Publication Site"
 * relatedArtifact[=].citation = "FAIR4Health Platform access point"
 * relatedArtifact[=].url = "https://portal.fair4health.eu/"
+
 * relatedArtifact[+].type = #depends-on
 * relatedArtifact[=].label = "Model"
 * relatedArtifact[=].display = "Common Data model"
@@ -85,6 +95,7 @@ Usage: #example
 * relatedArtifact[=].display = "Metadata repository"
 * relatedArtifact[=].citation = "FAIR4Health FAIR metadata repository"
 * relatedArtifact[=].url = "https://github.com/fair4health/metadata"
+// * relatedArtifact[=].extension[resourceReference].valueReference = "Library/f4h-lib-2"
 
 * content[0]
   * contentType = #application/fhir+json
@@ -104,13 +115,15 @@ Research study	Description	Total number of sites	Total number of patients	AI Alg
 
 ----*/
 
-Instance: f4h-1-1
-InstanceOf: Library
+// ======================================================
+Instance: f4h-lib-1
+InstanceOf: LibraryF4F
 
 * text.status = #additional
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
 
+<h3>FAIR4Health Study 1: Identification of multimorbidity patterns</h3>
 <p><strong>ID: </strong>https://example.org/registry/f4h-study-1</p>
 
 <table border="1">
@@ -140,6 +153,9 @@ InstanceOf: Library
 </div>
 """
 
+
+ 
+ 
 * url = "https://example.org/registry/f4h-study-1"
 * type = $library-type#asset-collection
 * name = "FAIR4HealthStudy1"
@@ -162,13 +178,14 @@ InstanceOf: Library
 
 //========================================
 
-Instance: f4h-1-2
-InstanceOf: Library
+Instance: f4h-lib-2
+InstanceOf: LibraryF4F
 
 * text.status = #additional
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
 
+<h3>FAIR4Health Study 2: 30-days readmission risk in COPD patients</h3>
 <p><strong>ID: </strong>https://example.org/registry/f4h-study-2</p>
 
 <table border="1">
@@ -201,7 +218,7 @@ InstanceOf: Library
 * type = $library-type#asset-collection
 * name = "FAIR4HealthStudy2"
 * copyright = "Fair4Health H2020 Project"
-* title = "FAIR4Health Study 2: Identification of multimorbidity patterns"
+* title = "FAIR4Health Study 2: 30-days readmission risk in COPD patients"
 * purpose = "Develop and pilot an early prediction service for 30-days readmission risk in COPD (Chronic Obstructive Pulmonary Disease) patients"
 * status = #active
 
@@ -216,4 +233,68 @@ InstanceOf: Library
 // JUST AN EXAMPLE
 * useContext[+].code = $example#algorithm "AI Algorithm"
 * useContext[=].valueCodeableConcept.text = "Support Vector Machine (SVM), Logistic Regression, Decision Trees, Random Forest, Gradient Boosted Trees"
+
+//========================================
+
+Instance: f4h-rs-2
+InstanceOf: ResearchStudyF4F
+
+* text.status = #additional
+* text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml">
+<h3>FAIR4Health Study 2: 30-days readmission risk in COPD patients</h3>
+<p><strong>ID: </strong>https://example.org/registry/f4h-study-2b</p>
+
+<table border="1">
+<tbody>
+<tr>
+<td><strong>Research study</strong></td>
+<td><strong>Description </strong></td>
+<td><strong>Total number of sites</strong></td>
+<td><strong>Total number of patients</strong></td>
+<td><strong>AI Algorithm</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Develop and pilot an early prediction service for 30-days readmission risk in COPD (Chronic Obstructive Pulmonary Disease) patients</td>
+<td>3</td>
+<td>4.944</td>
+<td>Support Vector Machine (SVM), Logistic Regression, Decision Trees, Random Forest, Gradient Boosted Trees</td>
+</tr>
+</tbody>
+</table>
+
+<p>(C) Fair4Health H2020 Project.</p>
+<p>This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 824666.</p>
+
+
+</div>
+"""
+
+* extension[url].valueUrl = "https://example.org/registry/f4h-study-2b"
+* extension[copyright].valueMarkdown = "Fair4Health H2020 Project"
+
+// JUST AN EXAMPLE
+* extension[context][0].valueUsageContext.code = $example#number-of-patients "Total number of patients"
+* extension[context][=].valueUsageContext.valueQuantity.value = 4944
+
+
+// JUST AN EXAMPLE
+* extension[context][+].valueUsageContext.code = $example#number-of-sites "Total number of sites"
+* extension[context][=].valueUsageContext.valueQuantity.value = 3
+
+// JUST AN EXAMPLE
+* extension[context][+].valueUsageContext.code = $example#algorithm "AI Algorithm"
+* extension[context][=].valueUsageContext.valueCodeableConcept.text = "Support Vector Machine (SVM), Logistic Regression, Decision Trees, Random Forest, Gradient Boosted Trees"
+
+
+* title = "FAIR4Health Study 2: 30-days readmission risk in COPD patients"
+
+* status = #active
+* primaryPurposeType = $research-study-prim-purp-type#health-services-research
+
+* description = "Develop and pilot an early prediction service for 30-days readmission risk in COPD (Chronic Obstructive Pulmonary Disease) patients"
+
+
+* objective.name = "30-days readmission risk in COPD patients"
 
