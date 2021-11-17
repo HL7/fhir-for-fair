@@ -1,0 +1,73 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "relatedArtifactResourceReference",
+  "url": "http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/relatedArtifactResourceReference",
+  "version": "0.1.0",
+  "name": "ExtRelatedArtifactResourceReference",
+  "title": "Extensions for the RelatedArtifact data type ResourceReference",
+  "status": "active",
+  "description": "This extension enanches the current RelatedArtifact data type with the enhancements identified in FHIR R5",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Extensions for the RelatedArtifact data type ResourceReference",
+        "definition": "This extension enanches the current RelatedArtifact data type with the enhancements identified in FHIR R5"
+      },
+      {
+        "id": "Extension.extension:resourceReference",
+        "path": "Extension.extension",
+        "sliceName": "resourceReference",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:resourceReference.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:resourceReference.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "resourceReference"
+      },
+      {
+        "id": "Extension.extension:resourceReference.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Resource"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/relatedArtifactResourceReference"
+      }
+    ]
+  }
+}

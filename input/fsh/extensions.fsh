@@ -43,6 +43,10 @@ Description: "This extension allows Library to provide richer information about 
 // publisher, contact, and other metadata could be defined here using caret syntax (omitted)
 * value[x] only RelatedArtifactF4F
 
+
+/*== COMMENTED for the time being 
+
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Extension: ExtRelatedArtifactClassifier
@@ -50,8 +54,8 @@ Id:   relatedArtifactClassifier
 Title:  "Extensions for the RelatedArtifact data type : classifier"
 Description: "This extension enanches the current RelatedArtifact data type with the enhancements identified in FHIR R5"
 
-* ^context[0].type = #fhirpath
-* ^context[=].expression = "RelatedArtifact"
+// * ^context[0].type = #fhirpath
+// * ^context[=].expression = "RelatedArtifact"
 
 * extension contains classifier 0..* 
 	
@@ -60,6 +64,7 @@ Description: "This extension enanches the current RelatedArtifact data type with
 // * extension[classifier].valueCodeableConcept from http://hl7.org/fhir/ValueSet/citation-artifact-classifier (example)
 // * extension[document].value[x] only Attachment
 
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Extension: ExtRelatedArtifactResourceReference
@@ -67,9 +72,12 @@ Id:   relatedArtifactResourceReference
 Title:  "Extensions for the RelatedArtifact data type ResourceReference"
 Description: "This extension enanches the current RelatedArtifact data type with the enhancements identified in FHIR R5"
 
-* ^context[0].type = #fhirpath
-* ^context[=].expression = "RelatedArtifact"
 
-* extension contains  resourceReference 0..1
+// * ^context[0].type = #fhirpath
+// * ^context[=].expression = "RelatedArtifact"
 
-* extension[resourceReference].value[x] only Reference
+* extension contains resourceReference 0..1
+* extension[resourceReference].value[x] only Reference(Resource)
+
+
+=== */

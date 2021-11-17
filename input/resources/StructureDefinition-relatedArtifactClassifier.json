@@ -1,0 +1,70 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "relatedArtifactClassifier",
+  "url": "http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/relatedArtifactClassifier",
+  "version": "0.1.0",
+  "name": "ExtRelatedArtifactClassifier",
+  "title": "Extensions for the RelatedArtifact data type : classifier",
+  "status": "active",
+  "description": "This extension enanches the current RelatedArtifact data type with the enhancements identified in FHIR R5",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Extensions for the RelatedArtifact data type : classifier",
+        "definition": "This extension enanches the current RelatedArtifact data type with the enhancements identified in FHIR R5"
+      },
+      {
+        "id": "Extension.extension:classifier",
+        "path": "Extension.extension",
+        "sliceName": "classifier",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Extension.extension:classifier.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:classifier.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "classifier"
+      },
+      {
+        "id": "Extension.extension:classifier.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/relatedArtifactClassifier"
+      }
+    ]
+  }
+}

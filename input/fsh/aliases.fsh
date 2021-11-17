@@ -10,6 +10,7 @@ Alias: $example = http://example.org
 Alias: $researchStudy-relatesTo = http://hl7.org/fhir/StructureDefinition/researchStudy-relatesTo
 Alias: $research-study-prim-purp-type = http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type
 Alias: $related-artifact-type = http://hl7.org/fhir/related-artifact-type
+Alias: $citation-artifact-classifier = http://terminology.hl7.org/CodeSystem/citation-artifact-classifier
 
 
 Alias: $Citation = http://hl7.org/fhir/StructureDefinition/Citation

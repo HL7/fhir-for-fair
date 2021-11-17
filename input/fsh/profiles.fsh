@@ -12,8 +12,11 @@ Description: "This profile enhances the current RelatedArtifact data with the en
 //-------------------------------------------------------------------------------------------
 
 *  extension contains 
- ExtRelatedArtifactClassifier named classifier 0..1
- and ExtRelatedArtifactResourceReference named resourceReference 0..1
+ 
+ // ExtRelatedArtifactClassifier named classifier 0..1
+ // and ExtRelatedArtifactResourceReference named resourceReference 0..1
+ http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/relatedArtifactClassifier named classifier 0..1
+ and http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/relatedArtifactResourceReference named resourceReference 0..1
 
 
 
@@ -28,7 +31,7 @@ Title:    "Library (Study Level Medatata)"
 Description: "This profile defines how to use the Library resource to convey metadata information for a FAIR dataset realized by using HL7 FHIR. An extension is used to allow to refer as "
 //-------------------------------------------------------------------------------------------
 
-* extension contains ExtRelatedContent named relatedContent 0..1 
+* extension contains ExtRelatedContent named relatedContent 0..* 
 * extension[relatedContent]
 * url MS
 * identifier MS
@@ -38,6 +41,7 @@ Description: "This profile defines how to use the Library resource to convey met
 * type MS
 * copyright MS
 * purpose MS
+* relatedArtifact only RelatedArtifactF4F
 // * content MS 
 // * content 1..* 
 // * content only AttachmentF4F
