@@ -4,9 +4,9 @@
   "url": "http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/relatedArtifactResourceReference",
   "version": "0.1.0",
   "name": "ExtRelatedArtifactResourceReference",
-  "title": "Extensions for the RelatedArtifact data type ResourceReference",
+  "title": "ResourceReference (RelatedArtifact)",
   "status": "active",
-  "description": "This extension enanches the current RelatedArtifact data type with the enhancements identified in FHIR R5",
+  "description": "This extension enanches the current RelatedArtifact data type allowing to reference FHIR resources",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

@@ -51,24 +51,16 @@ This project has as main goals to:
  <br />
  
  - Allow researchers to **make available** under specified conditions of use set of data, derived from a data source, that have been collected and consolidated for a specific purpose.
+ - Allow researchers and data scientists to **look for and access** previously collected data sets to answer specific questions
+ 
 <br />
 
 <div> 
- <img src="index-2.png" style="width:40%" />
+ <img src="index-2.png" style="width:80%" />
 </div>
 
 <br />
 
-- Allow researchers and data scientists to **look for and access** previously collected data sets to answer specific questions
-
- <br />
- 
-<div> 
- <img src="index-3.png" style="width:40%" />
-</div>
-
- <br />
- 
 ### Audience
 
 The audience for this Implementation Guide includes:

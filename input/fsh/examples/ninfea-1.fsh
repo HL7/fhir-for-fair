@@ -59,7 +59,7 @@ Usage: #example
 * relatedArtifact[=].url = "http://data.bioontology.org/ontologies/EFO"
 
 * relatedArtifact[+].type = #depends-on
-* relatedArtifact[=].label = "ontology"
+* relatedArtifact[=].label = "Ontology"
 * relatedArtifact[=].display = "National Center for Biotechnology Information (NCBI) Organismal Classification"
 * relatedArtifact[=].url = "http://purl.bioontology.org/ontology/NCBITAXON"
 

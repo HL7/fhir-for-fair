@@ -4,7 +4,7 @@
   "url": "http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/relatedArtifactClassifier",
   "version": "0.1.0",
   "name": "ExtRelatedArtifactClassifier",
-  "title": "Extensions for the RelatedArtifact data type : classifier",
+  "title": "Classifier (RelatedArtifact)",
   "status": "active",
   "description": "This extension enanches the current RelatedArtifact data type with the enhancements identified in FHIR R5",
   "fhirVersion": "4.0.1",

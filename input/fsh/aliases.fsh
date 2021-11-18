@@ -5,12 +5,16 @@ Alias: $usage-context-type = http://terminology.hl7.org/CodeSystem/usage-context
 Alias: $efo = http://www.ebi.ac.uk/efo
 Alias: $obo = http://purl.obolibrary.org/obo
 Alias: $sct = http://snomed.info/sct
+Alias: $atc = http://www.whocc.no/atc
+Alias: $ucum = http://unitsofmeasure.org
 Alias: $radlex = http://radlex.org
 Alias: $example = http://example.org
 Alias: $researchStudy-relatesTo = http://hl7.org/fhir/StructureDefinition/researchStudy-relatesTo
 Alias: $research-study-prim-purp-type = http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type
 Alias: $related-artifact-type = http://hl7.org/fhir/related-artifact-type
 Alias: $citation-artifact-classifier = http://terminology.hl7.org/CodeSystem/citation-artifact-classifier
+
+Alias: $uri = urn:ietf:rfc:3986
 
 
 Alias: $Citation = http://hl7.org/fhir/StructureDefinition/Citation

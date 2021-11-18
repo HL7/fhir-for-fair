@@ -3,7 +3,7 @@
 
 Extension: ExtContext
 Id:   researchStudy-context
-Title:  "Extension for Library Content"
+Title:  "Usage Context (ResearchStudy)"
 Description: "This extension allows ResearchStudy to provide richer information about the context of the study, when not already covered by the already defined elements"
 
 * ^context[0].type = #fhirpath
@@ -35,8 +35,8 @@ Description: "This extension enanches non-canonical resources with a persistent 
 
 Extension: ExtRelatedContent
 Id:   library-relatedContent
-Title:  "Extension for Library Content"
-Description: "This extension allows Library to provide richer information about the library content (including referred FHIR resources)"
+Title:  "RelatedArtifact (Library)"
+Description: "This extension allows Library to provide information about RelatedArtifact"
 
 * ^context[0].type = #fhirpath
 * ^context[=].expression = "Library"
@@ -51,8 +51,8 @@ Description: "This extension allows Library to provide richer information about 
 
 Extension: ExtRelatedArtifactClassifier
 Id:   relatedArtifactClassifier
-Title:  "Extensions for the RelatedArtifact data type : classifier"
-Description: "This extension enanches the current RelatedArtifact data type with the enhancements identified in FHIR R5"
+Title:  "Classifier (RelatedArtifact)"
+Description: "This extension enanches the current RelatedArtifact data type with the classifier element as specified in R5"
 
 // * ^context[0].type = #fhirpath
 // * ^context[=].expression = "RelatedArtifact"
@@ -69,8 +69,8 @@ Description: "This extension enanches the current RelatedArtifact data type with
 
 Extension: ExtRelatedArtifactResourceReference
 Id:   relatedArtifactResourceReference
-Title:  "Extensions for the RelatedArtifact data type ResourceReference"
-Description: "This extension enanches the current RelatedArtifact data type with the enhancements identified in FHIR R5"
+Title:  "ResourceReference (RelatedArtifact)"
+Description: "This extension enanches the current RelatedArtifact data type allowing to reference FHIR resources"
 
 
 // * ^context[0].type = #fhirpath

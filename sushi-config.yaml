@@ -24,8 +24,9 @@ contact:
         value: http://www.hl7.org/Special/committees/soa
 description: The FHIR for FAIR - FHIR Implementation Guide aims to provide guidance on how HL7 FHIR can be used for supporting FAIR health data implementation and assessment. 
 license: CC0-1.0
-fhirVersion: 4.1.0
+# fhirVersion: 4.1.0
 # fhirVersion: 4.0.1
+fhirVersion: 4.1.0
 
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
@@ -75,8 +76,29 @@ resources:
    
  ResearchStudy/f4h-rs-2:
    name: FAIR4Health study case 2 (ResearchStudy)
-   description: Example of usage of the ResearchStudy resource to describe study level metadata. This example is based on the FAIR4Health study case 2 Develop and pilot an early prediction service for 30-days readmission risk in COPD (Chronic Obstructive Pulmonary Disease) patient
-   exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/ResearchStudy-uv-f4f
+   description: Example of usage of the ResearchStudy resource to describe study level metadata. This example is based on the FAIR4Health study case 2 Develop and pilot an early prediction service for 30-days readmission risk in COPD (Chronic Obstructive Pulmonary Disease) patient   
+   	
+ DocumentManifest/example-f4f-manifest:
+   name: Subject Level Data Collection (DocumentManifest)
+   description: Example of usage of the DocumentManifest resource to describe subject level metadata. 
+
+ Condition/example-f4f-condition:
+   name: Sample used by the Subject Level Collection (Condition)
+   description: Example of Condition resource used by the DocumentManifest example.
+ 
+ Patient/example-f4f-patient:
+   name: Sample used by the Subject Level Collection (Patient)
+   description: Example of Patient resource used by the DocumentManifest example.
+   
+ MedicationStatement/example-f4f-medicationStatement-1:
+   name: Sample used by the Subject Level Collection (MedicationStatement)
+   description: Example of MedicationStatement resource used by the DocumentManifest example.
+   
+ MedicationStatement/example-f4f-medicationStatement-2:
+   name: Sample used by the Subject Level Collection (MedicationStatement)
+   description: Example of MedicationStatement resource used by the DocumentManifest example. 
+
+   
 
 #    name: FRAILSURVEY Study level metadata example (Library)
 #    description: FRAILSURVEY is an app that collects data from elderly communally. This app integrates Groningen Frailty Index, and a set of questions about socio demographic data, social resources, self-perception of health, nutrition, medication, cognitive and psychosocial status and time occupation. The results obtained classify the elderly as robust, pre-frail or frail. The app displays tailored recommendations if the elderly is classified as frail or pre-frail. The recommendations cover aspects such as physical exercise, healthy diet, social network, 
@@ -95,7 +117,7 @@ pages:
   rw-overview.md:
     title: Overview
   recommendations.md:
-    title: Overview
+    title: General Recommendations
   immPort.md:
     title: Immunology Database and Analysis Portal
   FAIR4Health.md:
@@ -111,7 +133,7 @@ pages:
   terminology.md:
     title: Terminologies
   FHIRandRDAMetrics.md:
-    title: HL7 FHIR and RDA Indicators
+    title: Implementing the RDA Indicators
   RDAMetrics.md:
     title: RDA Indicators
   methodology.md:
@@ -125,7 +147,7 @@ pages:
   citation.md:
     title: Representing FAIR metadata with Citation
   FHIRandFAIR.md:
-    title: HL7 FHIR and FAIR principles
+    title: Implementing the FAIR principles
   FHIRidentifiers.md:
     title: FHIR identifiers and FAIR principles
   ninfea.md:
