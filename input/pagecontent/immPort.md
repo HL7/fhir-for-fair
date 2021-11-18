@@ -89,7 +89,7 @@ API: <https://docs.immport.org/#API/DataQueryAPI/dataqueryapi/>
 
 To understand the FAIRness of this resource prior to the implementation
 of FHIR, we mapped the RDA FAIR indicators to the ImmPort resource at
-the study level using two datasets defined above (https://tinyurl.com/ImmPortFHIRMapping).
+the study level using two datasets defined above.
 
 Dataset SDY1544 is a clinical trial study with no associated study files
 and no mechanistic data, and dataset SDY998 is a clinical research study
@@ -108,6 +108,7 @@ respectively.
 <th>Accessible</th>
 <th>Interoperable</th>
 <th>Reusable</th>
+<th>Comments</th>
 </tr>
 </thead>
 <tbody>
@@ -132,8 +133,6 @@ respectively.
 
 ### Mapping of ImmPort metadata into FHIR resources
 
-The study level metadata of the two datasets mentioned above were mapped to FHIR resources (https://tinyurl.com/ImmPortFHIRMapping); primarily the ResearchStudy resource. Additional resources that are of utility to map some metadata elements are Citation resource and Group resource. Of note, version 5 of the ResearchStudy resource proved to map better to ImmPort study level metadata than the current version 4 or version 4b.
-
 In an effort outside of this implementation guide, ImmPort has planned
 to improve its interoperability by mapping the FHIR resources to the
 ImmPort data model.  In addition, ImmPort clinical data will also be
@@ -141,11 +140,7 @@ transformed and disseminated in the FHIR format.  After the FHIR
 implementation and data transformation, it is expected that ImmPort will
 see an improvement in the interoperability and reusability category,
 which is consistent to the assessments from other scenarios in this
-implementation guide. 
-
-### FHIR implementation and FAIRness
-
-The FHIR implementation of ImmPort has the potential to improve the interoperability of the data. This is likely to be manifested at the more granular level of subjects within the study. Since the study level metadata for ImmPort datasets were already FAIR compliant to a large extent, there were no obvious changes in the extent of FAIRness.
+implementation guide.
 
 ### References
 

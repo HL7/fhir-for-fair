@@ -47,6 +47,9 @@ Description: "This extension allows Library to provide information about Related
 /*== COMMENTED for the time being 
 
 
+=== */
+
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Extension: ExtRelatedArtifactClassifier
@@ -56,10 +59,9 @@ Description: "This extension enanches the current RelatedArtifact data type with
 
 // * ^context[0].type = #fhirpath
 // * ^context[=].expression = "RelatedArtifact"
-
-* extension contains classifier 0..* 
+// * extension contains classifier 0..* 
 	
-* extension[classifier].value[x] only CodeableConcept
+* value[x] only CodeableConcept
 // this value set is not in the current 4b version decide if to include a simliar vlaue set within this guide
 // * extension[classifier].valueCodeableConcept from http://hl7.org/fhir/ValueSet/citation-artifact-classifier (example)
 // * extension[document].value[x] only Attachment
@@ -76,8 +78,6 @@ Description: "This extension enanches the current RelatedArtifact data type allo
 // * ^context[0].type = #fhirpath
 // * ^context[=].expression = "RelatedArtifact"
 
-* extension contains resourceReference 0..1
-* extension[resourceReference].value[x] only Reference(Resource)
+// * extension contains resourceReference 0..1
+* value[x] only Reference(Resource)
 
-
-=== */

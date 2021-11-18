@@ -13,10 +13,14 @@ Description: "This profile enhances the current RelatedArtifact data with the en
 
 *  extension contains 
  
- // ExtRelatedArtifactClassifier named classifier 0..1
- // and ExtRelatedArtifactResourceReference named resourceReference 0..1
- http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/relatedArtifactClassifier named classifier 0..1
- and http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/relatedArtifactResourceReference named resourceReference 0..1
+  ExtRelatedArtifactClassifier named classifier 0..1
+  and ExtRelatedArtifactResourceReference named resourceReference 0..1
+  
+ // http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/relatedArtifactClassifier named classifier 0..1
+ // and http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/relatedArtifactResourceReference named resourceReference 0..1
+ 
+// * extension[classifier] only CodeableConcept
+// * extension[resourceReference] only Reference(Resource)
 
 
 

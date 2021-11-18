@@ -8,7 +8,7 @@
 3.  Conformance resources for the representation of some study and
     subject level metadata
 
-4.  Examples associated to the representative Real World Cases
+4.  Examples associated to some representative Real World Cases
 
 ### Not in this version
 
@@ -20,20 +20,17 @@
 
 3.  Consent/Security Labels management
 
-4.  FHIR end point discovery (findability)
+4.  FHIR end point discovery
 
 5.  Provenance resource profiling (Metadata includes provenance
     information according to community-specific standards)
 
 ### To be further discussed 
 
-1.  Persistency of identifiers (DOI)
+1.  Persistency of identifiers (e.g. DOI)
 
 2.  Distinct and identifiable data and metadata FAIR data objects
 
-3.  Level of maturity of some of the Evidence based resources.
+3.  Adoption of the Citation resource.
 
-4.  "Metadata is guaranteed to remain available after data is no longer
-    available"
-
-5.  "FAIR-compliant vocabularies"
+4.  "FAIR-compliant vocabularies"

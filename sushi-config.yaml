@@ -154,6 +154,8 @@ pages:
     title: Non-Invasive Multimodal Foetal ECG-Doppler Dataset for Antenatal Cardiology Research
   mimic.md:
     title: The Medical Information Mart for Intensive Care IV - Emergency Department (MIMIC-IV-ED, v1.0) dataset
+  NFDI4Health.md:
+    title: The NFDI4Health consortia
   downloads.html:
     title: Useful Downloads
   changes.html:
@@ -183,7 +185,8 @@ menu:
     MIMIC-IV-ED: mimic.html    
     Immunology Database and Analysis Portal: immPort.html              
     NInFEA: ninfea.html            
-    Leipzig Health Atlas (LHA): leipzigHealthAtlas.html              
+    Leipzig Health Atlas (LHA): leipzigHealthAtlas.html 
+    NFDI4Health: NFDI4Health.html  
   Guidelines: 
     General recommendations: recommendations.html
     Implementing FAIR principles: FHIRandFAIR.html    
