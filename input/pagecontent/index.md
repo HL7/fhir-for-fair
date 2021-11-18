@@ -99,7 +99,7 @@ This Implementation Guide will be balloted as STU with the intention to go norma
 | **Author** | Alicia Martinez-Garcia | Andalusian Health Service |
 | **Author** | Kees van Bochove | The Hyve | 
 | **Author** | Ian Harrow | Pistoia Alliance | 
-| **Author** | Philip van Damme  |  |
+| **Author** | Philip van Damme  | Amsterdam UMC |
 | **Author** | Matthias Löb | IMISE University of Leipzig |
 | **Contributor** | Catherine Chronaki | HL7 Europe |
 | **Contributor** | Brian Alper | Computable Publishing LLC |
