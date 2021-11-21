@@ -26,7 +26,7 @@ description: The FHIR for FAIR - FHIR Implementation Guide aims to provide guida
 license: CC0-1.0
 # fhirVersion: 4.1.0
 # fhirVersion: 4.0.1
-fhirVersion: 4.0.1
+fhirVersion: 4.1.0
 
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
