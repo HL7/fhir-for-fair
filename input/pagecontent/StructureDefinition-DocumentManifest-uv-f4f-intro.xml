@@ -1,0 +1,8 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+	<blockquote class="stu-note">
+		<p>Balloters are invited to provide thier feedback about the best solution for recording the FAIR persistent identifier for this resource.</p>
+		<p>Possible choices are:</p>
+		<ul><li>By using the <code>masterIdentifier</code> element with the <i>system</i> valorized with 'urn:ietf:rfc:3986' and the <i>value</i> with the persistent url. This case is described in the <a href='DocumentManifest-example-f4f-manifest.html'>provided example</a>.</li>
+		<li>By using the <a href='StructureDefinition-persistentUrl.html'><code>persistentUrl</code> extension</a> defined in this guide, as suggested for the other non-canonical resources</li></ul>
+	</blockquote>
+</div>

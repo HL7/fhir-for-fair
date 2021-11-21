@@ -3,5 +3,12 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 
+Code System URI 'http://terminology.hl7.org/CodeSystem/citation-artifact-classifier' is unknown so the code cannot be validated
+Code System URI 'http://example.org' is unknown so the code cannot be validated
+Code System URI 'http://purl.bioontology.org/ontology/NCBITAXON' is unknown so the code cannot be validated
+Code System URI 'http://www.ebi.ac.uk/efo' is unknown so the code cannot be validated
+Code System URI 'http://radlex.org' is unknown so the code cannot be validated
+Code System URI 'http://purl.obolibrary.org/obo' is unknown so the code cannot be validated
+
 
 
