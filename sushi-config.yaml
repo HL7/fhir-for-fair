@@ -91,11 +91,11 @@ resources:
    description: Example of Patient resource used by the DocumentManifest example.
    
  MedicationStatement/example-f4f-medicationStatement-1:
-   name: Sample used by the Subject Level Collection (MedicationStatement)
+   name: MedicationStatement Sample used by the Subject Level Collection (1)
    description: Example of MedicationStatement resource used by the DocumentManifest example.
    
  MedicationStatement/example-f4f-medicationStatement-2:
-   name: Sample used by the Subject Level Collection (MedicationStatement)
+   name: MedicationStatement Sample used by the Subject Level Collection (2)
    description: Example of MedicationStatement resource used by the DocumentManifest example. 
 
    
@@ -124,12 +124,8 @@ pages:
     title: FAIR4Health Project
   benefitResearch.md:
     title: Benefits for research studies
-  fitbir.md:
-    title: FITBIR datasets
   leipzigHealthAtlas.md:
     title: Leipzig Health Atlas (LHA)
-  healthCare.md:
-    title: Healthcare datasets
   terminology.md:
     title: Terminologies
   FHIRandRDAMetrics.md:
