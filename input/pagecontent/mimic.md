@@ -129,7 +129,7 @@ understandable standard (CSV)</p></li>
 when the data is no longer available</p></li>
 </ul></td>
 <td><ul>
-<li><p>(Meta)data don't use FAIR-compliant vocabularies<br />
+<li><p>(Meta)data do not use FAIR-compliant vocabularies<br />
 for annotating data semantics</p></li>
 <li><p>(Meta)data don't use a standardised format for <br />
 knowledge representation</p></li>
@@ -137,8 +137,8 @@ knowledge representation</p></li>
 <td><ul>
 <li><p>No standard or machine-understandable reuse<br />
 license (PhysioNet license, free-text)</p></li>
-<li><p>Metadata doesn't include provenance information</p></li>
-<li><p>(Meta)data don't comply with a community standard<br />
+<li><p>Metadata does not include provenance information</p></li>
+<li><p>(Meta)data do not comply with a community standard<br />
 (ongoing efforts to use OMOP CDM)</p></li>
 </ul></td>
 </tr>
@@ -166,3 +166,82 @@ We took the following steps. 
 
 **Figure 2.** *Exemplar implementation of a FHIR facade for serving
 MIMIC-ED data. *
+
+### Post-FHIR assessment of FAIRness
+We assessed the FAIRness of MIMIC-ED again after modeling the (meta)data as FHIR resources and setting up a FHIR facade server. The goal of this assessment is to help identify where FHIR improves or does not improve FAIRness, and to formulate best practices and lessons learned. The full assessment is available [here (Google Drive)](https://docs.google.com/spreadsheets/d/1sv9nO-J7WD6Q6RkE4YrTtqNReXxJWDoM938n50h-am0/edit?usp=sharing).
+
+**Table 2. ***FAIRness assessment of MIMIC-ED after implementing
+FHIR. *
+
+<table style="border-color: #000000; width:80 1px solid gray;">
+<thead>
+<tr style="border: 1px solid gray; background-color: #E5E4E2;">
+<th></th>
+<th><strong>Findable</strong></th>
+<th><strong>Accessible</strong></th>
+<th><strong>Interoperable</strong></th>
+<th><strong>Reusable</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr style="border: 1px solid gray; ">
+<td><strong>Passed RDA indicators</strong></td>
+<td>5 / 7<br />
+Partly implemented</td>
+<td>8 / 12<br />
+Partly implemented</td>
+<td>5 / 12<br />
+Partly implemented</td>
+<td>5 / 10<br />
+Partly implemented</td>
+</tr>
+<tr style="border: 1px solid gray; ">
+<td><strong>Positives</strong></td>
+<td><ul>
+<li><p>FHIR provides resource identifiers and captures business identifiers</p></li>
+<li><p>Some metadata is already implied by resources<br/><br/>
+(e.g., a Patient resource covers "who" information about patients)</p></li>
+<li><p>Metadata can be captured in separate resources<br/><br/>  
+(e.g., CapabilityStatement, StructureDefinition, Library) </p></li>
+</ul></td>
+<td><ul>
+<li><p>REST API (HTTP) to access (meta)data</p></li>
+<li><p>Resolvable resource identifiers</p></li>
+<li><p>Support for authentication and authorization</p></li>
+</ul></td>
+<td><ul>
+<li><p>FHIR data model</p></li>
+<li><p>JSON and/or XML representation</p></li>
+<li><p>Use of vocabularies and value sets</p></li>
+</ul></td>
+<td><ul>
+<li><p>Metadata contains license information</p></li>
+<li><p>Data are expressed in compliance with a machine-<br />
+understandable standard (CSV)</p></li>
+</ul></td>
+</tr>
+<tr style="border: 1px solid gray; ">
+<td><strong>Negatives</strong></td>
+<td><ul>
+<li><p>Metadata discovery needs extra attention</p></li>
+</ul></td>
+<td><ul>
+<li><p>Metadata does not contain access information,<br/><br/>  
+already assumed to have access to a FHIR server</p></li>
+</ul></td>
+<td><ul>
+<li><p>(Meta)data don't use FAIR-compliant vocabularies<br />
+for annotating data semantics</p></li>
+<li><p>(Meta)data don't use a standardised format for <br />
+knowledge representation</p></li>
+</ul></td>
+<td><ul>
+<li><p>No standard or machine-understandable reuse<br />
+license (PhysioNet license, free-text)</p></li>
+<li><p>Metadata doesn't include provenance information</p></li>
+<li><p>(Meta)data don't comply with a community standard<br />
+(ongoing efforts to use OMOP CDM)</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
