@@ -44,36 +44,34 @@ MIMIC-ED can be used for educational and research purposes. PhysioNet
 distributes the data to its credentialed users that, after signing a
 data use agreement, can download the raw data (CSV) and/or access the
 data through services such as the Google Cloud Platform. The objective
-of this exercise is to create a FHIR version of MIMIC-ED and assess the
-data FAIRness before and after implementing FHIR. For the FAIRness
+of this exercise is to create an HL7 FHIR version of MIMIC-ED and assess the
+data FAIRness before and after implementing HL7 FHIR. For the FAIRness
 assessment, we use the [RDA FAIR Data Maturity
 Indicators](https://confluence.hl7.org/x/rJw7Bg). By doing so, we can 1)
-contribute to the MIMIC-ED community by creating a FHIR model of the
-data and providing an exemplar implementation of a FHIR server that can
+contribute to the MIMIC-ED community by creating an HL7 FHIR model of the
+data and providing an exemplar implementation of an HL7 FHIR server that can
 serve MIMIC-ED data, and 2) showing what parts of FAIR can be addressed
-in this particular case when using FHIR. The lessons learned can be used
-for other cases where the implementation of the FAIR principles using
+in this particular case when using HL7 FHIR. The lessons learned can be used
+for other cases where the implementation of the FAIR principles using HL7
 FHIR is desirable.
 
 ### Initial assessment of FAIRness using the RDA FAIR indicators
 
-We assessed the FAIRness of MIMIC-ED before the implementation of FHIR.
+We assessed the FAIRness of MIMIC-ED before the implementation of HL7 FHIR.
 In other words, the FAIRness of MIMIC-ED as it is being distributed by
-PhysioNet. The full assessment is available [here (Google
-Drive)](https://docs.google.com/spreadsheets/d/1N0SKq7iT-MOqCxl3rZAYQsUBGbrh9s5QDHazetFzrGA/edit?usp=sharing).
-In summary, MIMIC-ED passed most (except one) indicators for Findability
+PhysioNet. In summary, MIMIC-ED passed most (except one) indicators for Findability
 and Accessibility. The one indicator that it did not pass is the
 requirement for metadata to be available when the data is no longer
 available, we can assume this is true but it has not been specified by
 PhysioNet. When we look at Interoperability and Reusability we can see a
-clear use case for using FHIR. MIMIC-ED does not use any FAIR-compliant
+clear use case for using HL7 FHIR. MIMIC-ED does not use any FAIR-compliant
 vocabularies for annotating its data semantics, nor does it comply with
-a standard data model. Hence, implementing FHIR would probably
+a standard data model. Hence, implementing HL7 FHIR would probably
 contribute to the Interoperability and Reusability aspects of FAIR in
 the case of MIMIC-ED. 
 
 **Table 1. ***FAIRness assessment of MIMIC-ED before implementing
-FHIR. *
+HL7 FHIR. *
 
 <table style="border-color: #000000; width:80 1px solid gray;">
 <thead>
@@ -92,8 +90,8 @@ FHIR. *
 Fully implemented</td>
 <td>11 / 12<br />
 Fully implemented</td>
-<td>3 / 12<br />
-Not/partly implemented</td>
+<td>7 / 12<br />
+Partly implemented</td>
 <td>2 / 10<br />
 Not/partly implemented</td>
 </tr>
@@ -131,7 +129,7 @@ when the data is no longer available</p></li>
 <td><ul>
 <li><p>(Meta)data do not use FAIR-compliant vocabularies<br />
 for annotating data semantics</p></li>
-<li><p>(Meta)data don't use a standardised format for <br />
+<li><p>(Meta)data do not use a standardised format for <br />
 knowledge representation</p></li>
 </ul></td>
 <td><ul>
@@ -147,15 +145,15 @@ license (PhysioNet license, free-text)</p></li>
 
 ### FHIR implementation
 
-By using FHIR we want to improve the
+By using HL7 FHIR we want to improve the
 machine-readability/interoperability/FAIRness of the MIMIC-ED dataset.
 We took the following steps. 
 
-  - Model the data and metadata conforming the FHIR data model (using
+  - Model the data and metadata conforming the HL7 FHIR data model (using
     the Patient, Encounter, Condition, MedicationStatement,
     MedicationDispense, Observation, and Procedure resources)
 
-  - Set up a FHIR facade server that can serve the (meta)data via the
+  - Set up an HL7 FHIR facade server that can serve the (meta)data via the HL7
     FHIR REST API
 
   - Enable SEARCH operations that allow queries such as “retrieve all ED
@@ -164,14 +162,14 @@ We took the following steps. 
 
 <div><img src="mimic-2.png" style="width:55%"/></div>
 
-**Figure 2.** *Exemplar implementation of a FHIR facade for serving
+**Figure 2.** *Exemplar implementation of an HL7 FHIR facade for serving
 MIMIC-ED data. *
 
 ### Post-FHIR assessment of FAIRness
-We assessed the FAIRness of MIMIC-ED again after modeling the (meta)data as FHIR resources and setting up a FHIR facade server. The goal of this assessment is to help identify where FHIR improves or does not improve FAIRness, and to formulate best practices and lessons learned. The full assessment is available [here (Google Drive)](https://docs.google.com/spreadsheets/d/1sv9nO-J7WD6Q6RkE4YrTtqNReXxJWDoM938n50h-am0/edit?usp=sharing).
+We assessed the FAIRness of MIMIC-ED again after modeling the (meta)data as HL7 FHIR resources and setting up an HL7 FHIR facade server. The goal of this assessment is to help identify where HL7 FHIR improves or does not improve FAIRness, and to formulate best practices and lessons learned. Important note: the indicators RDA-I3-02M and RDA-I3-02D ((meta)data includes (qualified) references to other data) were considered to be 'not applicable' for the post assessment, as those were not implemented despite that HL7 FHIR provides the tools to satisfy these indicators.
 
 **Table 2. ***FAIRness assessment of MIMIC-ED after implementing
-FHIR. *
+HL7 FHIR. *
 
 <table style="border-color: #000000; width:80 1px solid gray;">
 <thead>
@@ -190,7 +188,7 @@ FHIR. *
 Partly implemented</td>
 <td>8 / 12<br />
 Partly implemented</td>
-<td>5 / 12<br />
+<td>11 / 12<br />
 Partly implemented</td>
 <td>5 / 10<br />
 Partly implemented</td>
@@ -198,7 +196,7 @@ Partly implemented</td>
 <tr style="border: 1px solid gray; ">
 <td><strong>Positives</strong></td>
 <td><ul>
-<li><p>FHIR provides resource identifiers and captures business identifiers</p></li>
+<li><p>HL7 FHIR provides resource identifiers and captures business identifiers</p></li>
 <li><p>Some metadata is already implied by resources<br/><br/>
 (e.g., a Patient resource covers "who" information about patients)</p></li>
 <li><p>Metadata can be captured in separate resources<br/><br/>  
@@ -210,7 +208,7 @@ Partly implemented</td>
 <li><p>Support for authentication and authorization</p></li>
 </ul></td>
 <td><ul>
-<li><p>FHIR data model</p></li>
+<li><p>HL7 FHIR data model</p></li>
 <li><p>JSON and/or XML representation</p></li>
 <li><p>Use of vocabularies and value sets</p></li>
 </ul></td>
@@ -226,10 +224,10 @@ Partly implemented</td>
 </ul></td>
 <td><ul>
 <li><p>Metadata does not contain access information,<br/><br/>  
-already assumed to have access to a FHIR server</p></li>
+already assumed to have access to an HL7 FHIR server</p></li>
 </ul></td>
 <td><ul>
-<li><p>No reference to other (meta)data, but could be added using FHIR</p></li>
+<li><p>No reference to other (meta)data, but could be added using HL7 FHIR</p></li>
 </ul></td>
 <td><ul>
 <li><p>No standard or machine-understandable reuse<br />
@@ -240,12 +238,12 @@ license (PhysioNet license, free-text)</p></li>
 </table>
 
 #### **Lessons learned**
-Overall, using FHIR for expressing and distributing the data in MIMIC-ED improves the interoperability and reusability and poses some extra challenges in terms of findability and accessibility. Findability requires ample metadata that is offered in such a way that it can be harvested and indexed. Some of the metadata that PhysioNet [publishes](https://physionet.org/content/mimic-iv-ed/1.0/) for MIMIC-ED became redundant, as all FHIR resources are self-descriptive. For instance, when using a MedicationStatement resource it is not necessary to seperately describe that there is data about medication consumed by a patient, as this information is captured in the definition and scope of the resource. Other metadata, such as author information, provenance, license, and access information, have to be captured in separete resources such as Library. Metadata discoverability in challenging when only using FHIR, as details on how to reach a FHIR server should be published outside of that server anyway. Hence, it is recommended to keep an indexable, publicly available, page to expose such metadata. The PhysioNet repository is a good example here. Such a page would also be necessary to satisfy indicators RDA-A1-02M and RDA-A1-02D (manual access to (meta)data). In short:
+Overall, using HL7 FHIR for expressing and distributing the data in MIMIC-ED improves the interoperability and reusability and poses some extra challenges in terms of findability and accessibility. Findability requires ample metadata that is offered in such a way that it can be harvested and indexed. Some of the metadata that PhysioNet [publishes](https://physionet.org/content/mimic-iv-ed/1.0/) for MIMIC-ED became redundant, as all HL7 FHIR resources are self-descriptive. For instance, when using a MedicationStatement resource it is not necessary to seperately describe that there is data about medication consumed by a patient, as this information is captured in the definition and scope of the resource. Other metadata, such as author information, provenance, license, and access information, have to be captured in separete resources such as Library. Metadata discoverability in challenging when only using HL7 FHIR, as details on how to reach an HL7 FHIR server should be published outside of that server anyway. Hence, it is recommended to keep an indexable, publicly available, page to expose such metadata. The PhysioNet repository is a good example here. Such a page would also be necessary to satisfy indicators RDA-A1-02M and RDA-A1-02D (manual access to (meta)data). In short:
 
   - To satisfy indicator RDA-F4-01M (metadata discoverability), using a separate public repository for certain metadata is recommended.
 
   - Some metadata is captured in resources used for the data (e.g., Patient or Observation) while other resources are used specifically for metadata (e.g., Library). 
 
-  - FHIR improves interoperability by providing a (meta)data model, machine-readible representations, and REST API. Modeling MIMIC-ED using FHIR resources was relatively easy to do. 
+  - HL7 FHIR improves interoperability by providing a (meta)data model, machine-readible representations, and REST API. Modeling MIMIC-ED using HL7 FHIR resources was relatively easy to do. 
 
-  - FHIR does not solve the lack of a standard licence, references to other (meta)data, or provenance data. However, once present those data can be modeled and exposed with FHIR. 
+  - HL7 FHIR does not solve the lack of a standard licence, references to other (meta)data, or provenance data. However, once present those data can be modeled and exposed with HL7 FHIR. 
