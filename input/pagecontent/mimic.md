@@ -216,8 +216,7 @@ Partly implemented</td>
 </ul></td>
 <td><ul>
 <li><p>Metadata contains license information</p></li>
-<li><p>Data are expressed in compliance with a machine-<br />
-understandable standard (CSV)</p></li>
+<li><p>Provenance information in Provenance resource as metadata</p></li>
 </ul></td>
 </tr>
 <tr style="border: 1px solid gray; ">
@@ -230,18 +229,23 @@ understandable standard (CSV)</p></li>
 already assumed to have access to a FHIR server</p></li>
 </ul></td>
 <td><ul>
-<li><p>(Meta)data don't use FAIR-compliant vocabularies<br />
-for annotating data semantics</p></li>
-<li><p>(Meta)data don't use a standardised format for <br />
-knowledge representation</p></li>
+<li><p>No reference to other (meta)data, but could be added using FHIR</p></li>
 </ul></td>
 <td><ul>
 <li><p>No standard or machine-understandable reuse<br />
 license (PhysioNet license, free-text)</p></li>
-<li><p>Metadata doesn't include provenance information</p></li>
-<li><p>(Meta)data don't comply with a community standard<br />
-(ongoing efforts to use OMOP CDM)</p></li>
 </ul></td>
 </tr>
 </tbody>
 </table>
+
+#### **Lessons learned**
+Overall, using FHIR for expressing and distributing the data in MIMIC-ED improves the interoperability and reusability and poses some extra challenges in terms of findability and accessibility. Findability requires ample metadata that is offered in such a way that it can be harvested and indexed. Some of the metadata that PhysioNet [publishes](https://physionet.org/content/mimic-iv-ed/1.0/) for MIMIC-ED became redundant, as all FHIR resources are self-descriptive. For instance, when using a MedicationStatement resource it is not necessary to seperately describe that there is data about medication consumed by a patient, as this information is captured in the definition and scope of the resource. Other metadata, such as author information, provenance, license, and access information, have to be captured in separete resources such as Library. Metadata discoverability in challenging when only using FHIR, as details on how to reach a FHIR server should be published outside of that server anyway. Hence, it is recommended to keep an indexable, publicly available, page to expose such metadata. The PhysioNet repository is a good example here. Such a page would also be necessary to satisfy indicators RDA-A1-02M and RDA-A1-02D (manual access to (meta)data). In short:
+
+  - To satisfy indicator RDA-F4-01M (metadata discoverability), using a separate public repository for certain metadata is recommended.
+
+  - Some metadata is captured in resources used for the data (e.g., Patient or Observation) while other resources are used specifically for metadata (e.g., Library). 
+
+  - FHIR improves interoperability by providing a (meta)data model, machine-readible representations, and REST API. Modeling MIMIC-ED using FHIR resources was relatively easy to do. 
+
+  - FHIR does not solve the lack of a standard licence, references to other (meta)data, or provenance data. However, once present those data can be modeled and exposed with FHIR. 
