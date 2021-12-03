@@ -16,7 +16,9 @@ version: 0.1.0
 name: FhirForFairIG
 title: FHIR for FAIR - FHIR Implementation Guide
 status: active
-publisher: Health Level Seven International - SOA Work Group
+publisher:
+  - name: Health Level Seven International - SOA Work Group
+    url: http://www.hl7.org/Special/committees/soa
 contact:
   - name: HL7 SOA Work Group
     telecom:
@@ -34,6 +36,7 @@ parameters:
   find-other-resources: true
   apply-jurisdiction: true
   apply-publisher: true
+  apply-version: true
 
   
 
