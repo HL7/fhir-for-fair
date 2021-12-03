@@ -34,6 +34,7 @@ parameters:
   find-other-resources: true
   apply-jurisdiction: true
   apply-publisher: true
+  apply-version: true
 
   
 
