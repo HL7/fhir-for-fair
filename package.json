@@ -1,6 +1,6 @@
 {
  "name": "fhir-for-fair",
- "version" : "0.0.1",  
+ "version" : "0.1.0",  
  "canonical" : "http://hl7.org/fhir/uv/fhir-for-fair",
  "url" : "http://hl7.org/fhir/uv/fhir-for-fair",
  "title" : "FHIR for FAIR - FHIR Implementation Guide",
