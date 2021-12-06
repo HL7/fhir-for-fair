@@ -41,7 +41,7 @@ parameters:
   
 
 copyrightYear: 2020+
-releaseLabel: ci-build
+releaseLabel: STU 1 Ballot
 
 resources:
     
