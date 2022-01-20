@@ -49,6 +49,21 @@ Description: "This extension allows Library to provide information about Related
 
 === */
 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Extension: ExtRelatedArtifactType 
+Id:   relatedArtifactType
+Title:  "Type (RelatedArtifact)"
+Description: "This extension enanches the current RelatedArtifact data type with extending the supported relationship types as specified in R5"
+
+// * ^context[0].type = #fhirpath
+// * ^context[=].expression = "RelatedArtifact"
+	
+* value[x] only CodeableConcept
+* valueCodeableConcept from VsRelatedArtifactType (extensible)
+
+
+
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
