@@ -169,13 +169,13 @@ persistent identifier in the metadata.
 
 The F3 principle can be interpreted differently depending on how
 metadata information are implemented in FHIR, but it is in general
-possible to satisfy. When metadata is represented by a FHIR resource
+possible to satisfy. When metadata is represented by a FHIR resource
 distinct from those recording data (e.g. a Citation resource pointing to
 the used data) the mechanism typically used by FHIR to assure this link
-is through the Reference datatype. This data type supports either (a)
-the direct reference to the FHIR resource with absolute or relative url
-based on the resource logical ID; and (b) the reference to its business
-identifier. 
+is through either the Reference datatype or canonical urls. The
+Reference data type supports either (a) the direct reference to the FHIR
+resource with absolute or relative url based on the resource logical ID;
+and (b) the reference to its business identifier. 
 
 In the cases when metadata information are recorded in the same FHIR
 resource of the data they describe, data are uniquely identified within
