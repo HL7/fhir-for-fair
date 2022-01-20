@@ -179,7 +179,9 @@ identifier. 
 
 In the cases when metadata information are recorded in the same FHIR
 resource of the data they describe, data are uniquely identified within
-the resource by their path ( e.g. Observation.valueQuantity).
+the resource either by their path ( e.g.
+Evidence.statistic.modelCharacteristic.value) or by their identifiers
+(e.g. Questionnaire.item.linkId).
 
 All the adopted identifiers (see F1 recommendations) should always be
 included in any resource record that holds data for the resource in
