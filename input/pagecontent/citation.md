@@ -45,88 +45,88 @@ The *citedArtifact* element contains the following elements:
     the *classification* element contains *type*, *classifier*, and
     *whoClassified* elements.
 
-7.a) A type element can be used to describe the kind of classification.
-Expressing the classification type as a classification.type value
-enables extensive re-use of the structure without requiring separate
-structural elements for keywords, conditions, domains, severity,
-certainty, geographic categories, and many other commonly used types of
-classification.
+7.a) A *type* element can be used to describe the kind of
+classification. Expressing the classification type as a
+classification.type value enables extensive re-use of the structure
+without requiring separate structural elements for keywords, conditions,
+domains, severity, certainty, geographic categories, and many other
+commonly used types of classification.
 
-7.b) A classifier element can be used to include any number of
+7.b) A *classifier* element can be used to include any number of
 classification values.
 
-7.c) A whoClassified element can be used to include attribution,
+7.c) A *whoClassified* element can be used to include attribution,
 ownership, and rights management data for the classification.
 
-8)  A publicationForm element can include any number of publication
+8)  A *publicationForm* element can include any number of publication
     forms for the cited artifact and each publication form can be
     represented with any of:
 
-8.a) a publishedIn element to represent the collection in which the
+8.a) a *publishedIn* element to represent the collection in which the
 cited artifact is published;
 
-8.b) a periodicRelease element to represent the specific issue within
+8.b) a *periodicRelease* element to represent the specific issue within
 the collection, such as a journal or newspaper that is released in
 periodic packages;
 
-8.c) articleDate and lastRevisionDate elements for dates related to the
-cited artifact itself;
+8.c) *articleDate* and *lastRevisionDate* elements for dates related to
+the cited artifact itself;
 
-8.d) accessionNumber, pageString, firstPage, lastPage, and pageCount
-elements that can be used to identify the specific location or position
-within the collection;
+8.d) *accessionNumber*, *pageString*, *firstPage*, *lastPage*, and
+*pageCount* elements that can be used to identify the specific location
+or position within the collection;
 
-8.e) a language element; and
+8.e) a *language* element; and
 
-8.f) a copyright element to report rights management data specific to
+8.f) a *copyright* element to report rights management data specific to
 the publication form.
 
-9)  A webLocation element can include any number of web locations (often
-    called URLs for Uniform Resource Locators) and each url element can
-    be paired with a classifier element to distinguish among multiple
-    web locations.
+9)  A *webLocation* element can include any number of web locations
+    (often called URLs for Uniform Resource Locators) and each url
+    element can be paired with a classifier element to distinguish among
+    multiple web locations.
 
-10) A relatesTo element can include any number of relations to other
+10) A *relatesTo* element can include any number of relations to other
     artifacts. The RelatedArtifact datatype includes elements to
     classify the type of relationship, to classify the related artifact,
     and to identify the related artifact.
 
-11) A dateAccessed element can document when the cited artifact was
+11) A *dateAccessed* element can document when the cited artifact was
     accessed.
 
-12) A currentState element can include any number of status
+12) A *currentState* element can include any number of status
     classifications for the cited artifact.
 
-13) A statusDate element can include any number of status
+13) A *statusDate* element can include any number of status
     classifications for the cited artifact paired with the timing of
     these status classifications.
 
-14) A contributorship element can be used to report attribution of any
+14) A *contributorship* element can be used to report attribution of any
     type of contribution to the creation of the cited artifact.
 
-14.a) The contributorship element includes a summary element that can
+14.a) The *contributorship* element includes a summary element that can
 include any number of strings used to summarize contributorship, such as
 author lists, contributorship statements, and acknowledgement
 statements.
 
-14.b) The contributorship element includes an entry element that can
+14.b) The *contributorship* element includes an entry element that can
 include any number of entities that contributed to the cited artifact.
 The entry element may include:
 
-14.b.i. name, initials, collectiveName, and identifier elements to
-identify the entity;
+14.b.i. *name*, *initials*, *collectiveName*, and *identifier* elements
+to identify the entity;
 
-14.b.ii. affiliationInfo, address, and telecom elements to provide
+14.b.ii. *affiliationInfo*, *address*, and *telecom* elements to provide
 additional information about the entity;
 
-14.b.iii. contributionType, role, contributionInstance, and
-correspondingContact elements to report specific contributions by the
+14.b.iii. *contributionType*, *role*, *contributionInstance*, and
+*correspondingContact* elements to report specific contributions by the
 entity; and
 
-14.b.iv. a rankingOrder element to provide a rank order among
+14.b.iv. a *rankingOrder* element to provide a rank order among
 contributing entities.
 
-15) A note element can include any number of annotations for data that
+15) A *note* element can include any number of annotations for data that
     does not fit other elements.
 
 ### Metadata of the Citation

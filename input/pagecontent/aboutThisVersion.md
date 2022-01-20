@@ -27,7 +27,8 @@
 
 ### To be further discussed 
 
-1.  Persistency of identifiers (DOI)
+1.  Persistency of identifiers, e.g. Digital Object Identifier (DOI) or
+    FEvIR Object Identifier (FOI)
 
 2.  Distinct and identifiable data and metadata FAIR data objects
 

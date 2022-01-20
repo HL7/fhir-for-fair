@@ -46,7 +46,7 @@ This project has as main goals to:
 
   - Support the **assessment and implementation of FAIR health data** by using HL7 FHIR
 
-### Which kind of problems FAIR and this guide is trying to address?
+### What problems are FAIR and this guide trying to address?
 
  <br />
  
@@ -76,7 +76,7 @@ The audience for this Implementation Guide includes:
 
 This guide has been structured in the following  parts:
 
-1. A _Backgroud_ section describing the contenxt of this work , including the [**methodology**](methodology.html) followed. This section summarizes also the [ FAIR data principles](FAIR.html), the [RDA indicators for assessment of FAIRness](RDAMetrics.html); and some general considerations about data and metadata, and Globally Unique, Persistent and Resolvable Identifiers.
+1. A _Backgroud_ section describing the context of this work , including the [**methodology**](methodology.html) followed. This section summarizes also the [ FAIR data principles](FAIR.html), the [RDA indicators for assessment of FAIRness](RDAMetrics.html); and some general considerations about data and metadata, and Globally Unique, Persistent and Resolvable Identifiers.
 1. A _Real World Cases_ section describing a set of real world cases used as case study for this guide.
 1. A _Recommendations_ section, the core part of this guide, including:
 	1.  [General recommendations](recommendations.html)
