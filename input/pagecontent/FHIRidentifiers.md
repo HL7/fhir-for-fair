@@ -113,12 +113,7 @@ Notes:
 4.  The adopted FHIR profiles should enable any of these choices
 
 5.  It should be recommended to include business identifiers that might
-    facilitate the search and the access of these objects beyond FHIR
-    
-    1.  For example, FHIR resources representing the metadata of study
-        level collection of data should include DOIs
-    
-    2.  [<span class="underline">FHIR
-        references</span>](https://www.hl7.org/fhir/references.html) should
-        include
-        both [<span class="underline">reference</span>](https://www.hl7.org/fhir/references-definitions.html#Reference.reference) and [<span class="underline">identifier</span>](https://www.hl7.org/fhir/references-definitions.html#Reference.identifier) elements
+    facilitate the search and the access of these objects beyond FHIR.
+    For example, FHIR resources representing the metadata of study level
+    collection of data should include permanent identifiers (e.g.,
+    DOIs).
