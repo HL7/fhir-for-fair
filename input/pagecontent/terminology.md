@@ -2,7 +2,7 @@
 
 The FAIR principles have recently been applied to a vocabulary by Cox et
 al 2021 (<https://doi.org/10.1371/journal.pcbi.1009041>). This is
-summaried as follows (adapted from Table 1):
+summarized as follows (adapted from Table 1):
 
 Findability
 
@@ -19,8 +19,8 @@ Findability
 
 Accessibility
 
-  - When the vocabulary or tem identifier is de-referenced, a machine or
-    human readable representation is returned as returned, as requested
+  - When the vocabulary or term identifier is de-referenced, a machine
+    or human readable representation is returned as requested
 
 Interoperability
 
