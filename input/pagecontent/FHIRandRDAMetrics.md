@@ -1,12 +1,9 @@
-This page integrate the [HL7 FHIR and FAIR
-principles](https://confluence.hl7.org/display/SOA/HL7+FHIR+and+FAIR+principles) page
+This page integrates the [HL7 FHIR and FAIR principles](FAIR.html) page
 providing an overview of the relationship between the FAIR Data Maturity
-Model described in the [RDA
-Indicators](https://confluence.hl7.org/pages/createpage.action?spaceKey=SOA&title=RDAMetrics.html&linkCreation=true&fromPageId=104570030) page
-and the HL7 FHIR standard, independently on the implementation approach
-adopted (Native Vs non-Native FHIR architectures, see [HL7 FHIR and FAIR
-principles](https://confluence.hl7.org/display/SOA/HL7+FHIR+and+FAIR+principles) for
-more details).
+Model described in the [RDA Indicators](RDAMetrics.html) page and the
+HL7 FHIR standard, independently on the implementation approach adopted
+(Native Vs non-Native FHIR architectures, see [HL7 FHIR and FAIR
+principles](FHIRandFAIR.html) for more details).
 
 ### Findable
 
@@ -25,10 +22,10 @@ more details).
 <td>RDA-F1-01M</td>
 <td>Metadata is identified by a persistent identifier</td>
 <td>Essential</td>
-<td><p>HL7 FHIR provides different means to assign persistent identifiers to FHIR resources. See <a href="https://confluence.hl7.org/display/SOA/FHIR+identifiers+and+FAIR+principles+on+IDs">FHIR identifiers and FAIR principles on IDs</a> for more details. </p>
-<p>The page <a href="https://confluence.hl7.org/display/SOA/Metadata+and+data">Metadata and data</a> describes some of the challenges in implementing distinct data and metadata by using HL7 FHIR.</p>
+<td><p>HL7 FHIR provides different means to assign persistent identifiers to FHIR resources. See <a href="FHIRidentifiers.html">FHIR identifiers and FAIR principles on IDs</a> for more details. </p>
+<p>The page <a href="metadata.html">Metadata and data</a> describes some of the challenges in implementing distinct data and metadata by using HL7 FHIR.</p>
 <p>Depending on the usage context and on the kind of metadata to deal with, implementers may choose different means , including a partial fulfillment of the requirement or the adoption of hybrid solutions (FHIR and non-FHIR).</p></td>
-<td><p>Given that FHIR provides means to uniquely identify resources, the key point of this requirement is a clear identification of what a metadata is (see also the page <a href="https://confluence.hl7.org/display/SOA/Metadata+and+data">Metadata and data</a> ).</p>
+<td><p>Given that FHIR provides means to uniquely identify resources, the key point of this requirement is a clear identification of what a metadata is (see also the page <a href="file:///C:\Users\giorg\OneDrive\github\fhir-for-fair\pandoc\word\metadata.html">Metadata and data</a> ).</p>
 <p>If there are no doubts that metadata are the “data about data”, more complex is to turn this definition in the reality, with a clear distinction between data and metadata. In fact, what is “data” and what is “metadata” is a matter of perspective: based on the context, the same information can be in fact considered as part of the data or of the metadata. </p>
 <p>In consideration of this, the expectation of having a single persistent and unique ID that identifies the metadata FAIR data object, distinct from that describing the data one, cannot be always satisfied in the FHIR space, except for specific contexts.</p>
 <p>A pragmatic approach is therefore suggested in the evaluation of this requirement, determining case by case, and in dependence of the type of data (study level or subject level data), what are the actual information to label as metadata, that should and can be distinguished by the associated data.</p>
@@ -68,10 +65,10 @@ In consideration of this, the way a single persistent and unique ID is used to i
 <p>Communities should define what is meant with "rich" metadata for the use cases they need to cover and possibly formalize them by using FHIR profiles and implementation guides.</p></td>
 <td><p>The rationale behind this principle is that someone should be able to find data based on the information provided by their metadata, even without the data’s identifier (adapted from GO-FAIR F2 principle). </p>
 <p>Whether metadata is 'rich' enough would therefore really depend on what users would need to search on in terms of metadata fields to find the resources. This 'richness' criterium is then use case dependent. </p>
-<p>Please refer to <a href="https://confluence.hl7.org/display/SOA/Metadata+and+data">Metadata and data</a> about a more general discussion about issues in implementing metadata in FHIR.<br />
+<p>Please refer to <a href="file:///C:\Users\giorg\OneDrive\github\fhir-for-fair\pandoc\word\metadata.html">Metadata and data</a> about a more general discussion about issues in implementing metadata in FHIR.<br />
 <br />
 The adoption of FHIR can enable the documentation of metadata but claiming the conformance with FHIR is not a sufficient <span class="underline">condition</span> for fulfilling this requirement.</p>
-<p>Communities should define what is meant with "rich" metadata for the use cases they need to cover ; indicating what are the information that have to be recorded, possibly formalized as FHIR profiles; and the kind of searches that servers should support, possibly formalized as FHIR Capability Statement.</p></td>
+<p>Communities should define what is meant with "rich" metadata for the use cases they need to cover; indicating what are the information that have to be recorded, possibly formalized as FHIR profiles; and the kind of searches that servers should support, possibly formalized as FHIR Capability Statement.</p></td>
 </tr>
 <tr style="border: 1px solid gray; ">
 <td>RDA-F3-01M</td>
