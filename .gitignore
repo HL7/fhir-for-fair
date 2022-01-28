@@ -3,3 +3,5 @@ fsh-generated
 output
 temp
 template
+input-cache/publisher.jar
+FHIR-fhir-for-fair.xml
