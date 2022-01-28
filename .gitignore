@@ -1,0 +1,5 @@
+# ignore these directory
+fsh-generated
+output
+temp
+template
