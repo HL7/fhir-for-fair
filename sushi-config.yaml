@@ -155,6 +155,8 @@ pages:
     title: The Medical Information Mart for Intensive Care IV - Emergency Department (MIMIC-IV-ED, v1.0) dataset
   NFDI4Health.md:
     title: The NFDI4Health consortia
+  cedar.md:
+    title: Center for Evidence and Practice Improvement (CEPI) Evidence Discovery and Retrieval (CEDAR) - Making evidence more FAIR
   downloads.html:
     title: Useful Downloads
   changes.html:
