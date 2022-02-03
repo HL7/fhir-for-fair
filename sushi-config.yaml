@@ -188,6 +188,7 @@ menu:
     NInFEA: ninfea.html            
     Leipzig Health Atlas (LHA): leipzigHealthAtlas.html 
     NFDI4Health: NFDI4Health.html  
+    CEDAR: cedar.html
   Guidelines: 
     General recommendations: recommendations.html
     Implementing FAIR principles: FHIRandFAIR.html    
