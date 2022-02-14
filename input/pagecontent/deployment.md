@@ -1,18 +1,23 @@
 ### Overview
 
 This page provides a short overview of a non-exhaustive list of possible
-logical deployment architectures that communities could consider
-allowing the discovery and access to FAIR data by using HL7 FHIR API;
-starting from a simple case where a FHIR server is acting as registry
-and repository for data and metadata, up to the case where repository
-endpoints are not known a-priori and needs to be discovered.
+logical HL7 FHIR-based deployment architectures that communities could
+consider allowing the discovery and access to FAIR data by using HL7
+FHIR API. Described architectures varying from a simple case with a
+well-known FHIR server acting as registry and repository for data and
+metadata, up to the case where repository endpoints are not known
+a-priori and needs to be discovered.
 
-This is not the only possible approach, for example hybrid FHIR/non-FHIR
-solutions could be considered as well.
+Implementers could also consider Hybrid FHIR/non-FHIR solutions not
+described here.
 
 It is assumed that a proper privacy and security layer is realized to
 assure that all the access and usage conditions specified by the data
 sources are properly enforced (not shown in the pictures).
+
+Future versions of this guide envision to analyze the described
+architectures more in details and provide specifications to support
+them.
 
 ### Case 1: FHIR Server acting as Registry/Repository
 

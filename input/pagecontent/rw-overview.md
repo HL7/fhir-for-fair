@@ -22,7 +22,7 @@ summarized:
 
 6.  The [NFDI4Health consortia](NFDI4Health.html)
 
-7.  The [CEDAR](cedar.html) 
+7.  The [CEDAR](cedar.html)
 
 For each of them the following information has been provided:
 
