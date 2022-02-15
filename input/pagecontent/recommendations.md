@@ -1,7 +1,6 @@
 1.  **FAIRness** is an ongoing aspiration driven by application rather a
-    pursuit of perfection for its own sake. Therefore
-    a **continuous approach of incremental improvement **should be
-    followed.
+    pursuit of perfection for its own sake. Therefore, an **incremental
+    approach** for **continuous improvement** should be followed.
     
     1.  Do not pretend to implement everything from the beginning i.e.
         Do not try to "boil the ocean"\!
@@ -12,15 +11,16 @@
         
         3.  in terms of coverage across communities. For example, a
             solution applicable within a well-defined community may not
-            be fit for purpose for a wider target (e.g. global search)
+            be fit for purpose for a wider target (e.g., global search)
     
     2.  You need to determine where you are with the selected data and
         metadata ("as is" FAIR assessment), what you want to achieve and
         the resources you have available.
     
-    3.  Metrics, such as the RDA FAIR data maturity indicators, are
-        essential. These are used to evaluate improvements made in an
-        iterative manner, to realise successful objectives.
+    3.  Metrics, such as the [RDA FAIR data maturity
+        indicators](RDAMetrics.html), are essential. These are used to
+        evaluate improvements made in an iterative manner, to realize
+        successful objectives.
 
 2.  The **HL7 FHIR** standard is a widely recognized and used standard
     in the health space providing **value** in
@@ -28,7 +28,7 @@
     
     1.  Even if HL7 FHIR can provide support to data FAIRification,
         implementing HL7 FHIR is not a sufficient requirement for being
-        FAIR. This guides provides suggestions on how to use FHIR to
+        FAIR. This guide provides suggestions on how to use FHIR to
         improve FAIRness.
     
     2.  The HL7 FHIR standard provides its highest value in
@@ -38,9 +38,9 @@
         principles.
     
     3.  This would not exclude the possibility to realize also
-        Findability and Accessibility principles  by using FHIR.
-        However, a cost benefit evaluation, considering the level of
-        adoption by that community, should be accomplished.
+        Findability and Accessibility principles by using FHIR. However,
+        a cost benefit evaluation, considering the level of adoption by
+        that community, should be accomplished.
 
 3.  As with the FAIR principles in general, the FHIR implementation of
     the FAIR principles should follow an **incremental approach.**
@@ -58,15 +58,15 @@
         3.  how much is realized by using HL7 FHIR.
     
     2.  A **minimal set of FAIR data maturity indicators should be
-        prioritized** by local application or business needs. RDA have
+        prioritized** by local application or business needs. RDA has
         given an essential minimal set as part of their canonical
         specification. Some pragmatic considerations:
         
         1.  earliest progress is likely to be made with the principles
-            for Findability and Accessibility and Reusability.
+            for Findability, Accessibility and Reusability.
         
         2.  Much tougher and longer term is the implementation of
-            Interoperability, when data are not FHIR by design.
+            Interoperability when data are not FHIR by design.
             Interoperability is one the strengths of the FHIR standard. 
         
         3.  FHIR provides a rich and expressive source of metadata
