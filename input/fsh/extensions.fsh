@@ -16,10 +16,19 @@ Description: "This extension allows ResearchStudy to provide richer information 
 
 Extension: ExtCopyright
 Id:   copyright
-Title:  "Copyright and Licence"
-Description: "This extension may be used to provide Copyright and  Licence information about the set of data described by this resource"
+Title:  "Copyright"
+Description: "This extension may be used to provide Copyright information about the set of data described by this resource"
 
-* value[x] only markdown
+* value[x] only markdown 
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Extension: ExtLicenceTerm
+Id:   licenceTerm
+Title:  "Licence Terms"
+Description: "This extension may be used to provide machine-processable Licence information about the set of data described by this resource"
+
+* value[x] only CodeableConcept 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

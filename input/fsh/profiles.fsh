@@ -57,12 +57,12 @@ Description: "This profile defines how to use the ResearchStudy resource to conv
 //-------------------------------------------------------------------------------------------
 
 * extension contains 
-	// ExtPersistentUrl named url 0..1 and 
-	ExtCopyright named copyright 0..1
+	ExtCopyright named copyright 0..1 and 
+	ExtLicenceTerm named licenceTerm 0..1
 	and ExtContext named context 0..*
 
-// * extension[url]
 * extension[copyright]
+* extension[licenceTerm]
 * extension[context]
 * identifier MS
 * title MS
@@ -82,13 +82,13 @@ Description: "This profile defines how to use the DocumentManifest resource to c
 
 //-------------------------------------------------------------------------------------------
 * extension contains 
-	// ExtPersistentUrl named url 0..1 and 
-	ExtCopyright named copyright 0..1 and
+	ExtCopyright named copyright 0..1 and 
+	ExtLicenceTerm named licenceTerm 0..1 and
 	ExtSubjectOther named subjectOther 0..1 and
 	ExtClassifier named classifier 0..*
 	
-
 * extension[copyright]
+* extension[licenceTerm]
 * extension[subjectOther]
 * extension[classifier]
 
