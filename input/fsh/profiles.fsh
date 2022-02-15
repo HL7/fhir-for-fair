@@ -83,9 +83,15 @@ Description: "This profile defines how to use the DocumentManifest resource to c
 //-------------------------------------------------------------------------------------------
 * extension contains 
 	// ExtPersistentUrl named url 0..1 and 
-	ExtCopyright named copyright 0..1
-// * extension[url]
+	ExtCopyright named copyright 0..1 and
+	ExtSubjectOther named subjectOther 0..1 and
+	ExtClassifier named classifier 0..*
+	
+
 * extension[copyright]
+* extension[subjectOther]
+* extension[classifier]
+
 * masterIdentifier MS
 * identifier MS
 * status MS

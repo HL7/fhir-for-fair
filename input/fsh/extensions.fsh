@@ -33,18 +33,28 @@ Description: "This extension allows Library to provide information about Related
 // publisher, contact, and other metadata could be defined here using caret syntax (omitted)
 * value[x] only RelatedArtifactF4F
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Extension: ExtSubjectOther
+Id:   subjectOther
+Title:  "Other Subjects"
+Description: "This extension allows to record kinds of subjects that are not currently supported by some resources (e.g.,DocumentManifest limited to Patient | Practitioner | Group | Device for )"
+
+// publisher, contact, and other metadata could be defined here using caret syntax (omitted)
+* value[x] only Reference(Resource)
+
+Extension: ExtClassifier
+Id:   classifier
+Title:  "Classifier"
+Description: "This extension allows to assign this resource to an organizing scheme"
+
+// publisher, contact, and other metadata could be defined here using caret syntax (omitted)
+* value[x] only CodeableConcept
+
 
 /*== COMMENTED 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Extension: ExtPersistentUrl
-Id:   persistentUrl
-Title:  "Persistent URL extension"
-Description: "This extension enanches non-canonical resources with a persistent identifier (a kind of canonical url) to better support the FAIR requirement to have Globally Unique, Persistent and Resolvable Identifiers"
-
-// publisher, contact, and other metadata could be defined here using caret syntax (omitted)
-* value[x] only url
 
 
 
