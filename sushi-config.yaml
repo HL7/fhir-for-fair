@@ -159,6 +159,8 @@ pages:
     title: Center for Evidence and Practice Improvement (CEPI) Evidence Discovery and Retrieval (CEDAR) - Making evidence more FAIR
   downloads.html:
     title: Useful Downloads
+  copyrights.md:
+    title: Acknowledgments, licenses and copyrights
   changes.html:
     title: IG Change History
 
@@ -200,5 +202,6 @@ menu:
   # link to FHIR specs to be checked
     FHIR Spec: https://build.fhir.org/branches/R4B/index.html
     Downloads: downloads.html
+    Copyrights: copyrights.html
     
 FSHOnly: false
