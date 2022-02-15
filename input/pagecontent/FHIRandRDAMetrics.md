@@ -196,15 +196,14 @@ Communities can enforce this requirement by using community FHIR profiles and Im
 <td>Data is accessible through a free access protocol</td>
 <td>Important</td>
 <td>FHIR specifies free access mechanisms to access FHIR resources</td>
-<td>HL7 FHIR specifications are published under Creative Commons "No Rights Reserved" (CC0 ).Please refer to RDA-F1-01M and RDA-F1-01D for the discussion on distinct and identifiable metadata and data FAIR objects</td>
+<td>HL7 FHIR specifications are published under Creative Commons "No Rights Reserved" (CC0). Please refer to RDA-F1-01M and RDA-F1-01D for the discussion on distinct and identifiable metadata and data FAIR objects</td>
 </tr>
 <tr style="border: 1px solid gray; ">
 <td>RDA-A1.2-01D</td>
 <td>Data is accessible through an access protocol that supports authentication and authorisation</td>
 <td>Useful</td>
-<td><p>FHIR is not a security protocol, nor does it define any security related functionality.</p>
-<p>However, FHIR does define exchange protocols and content models that need to be used with various security protocols defined elsewhere.</p></td>
-<td>Please refer to RDA-F1-01M and RDA-F1-01D for the discussion on distinct and identifiable metadata and data FAIR objects</td>
+<td>HL7 FHIR is not 'per se' a security protocol, nor does it define any security related functionality; however it defines exchange protocols and content models (<a href="https://www.hl7.org/fhir/exchange-module.html">https://www.hl7.org/fhir/exchange-module.html</a>) that can be used with various open security protocols such as <a href="https://en.wikipedia.org/wiki/HMAC">HMAC authentication</a>, <a href="https://en.wikipedia.org/wiki/HTTPS">HTTPS</a>, <a href="https://oauth.net/2/">OAuth2</a> or <a href="http://www.hl7.org/fhir/smart-app-launch/">SMART</a> (see e.g. <a href="https://hl7.org/fhir/security.html#http">https://hl7.org/fhir/security.html#http</a> for Communications Security in HL7 FHIR)</td>
+<td>Please refer to RDA-F1-01M and RDA-F1-01D for the discussion on distinct and identifiable metadata and data FAIR objects.</td>
 </tr>
 <tr style="border: 1px solid gray; ">
 <td>RDA-A2-01M</td>

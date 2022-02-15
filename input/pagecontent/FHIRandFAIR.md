@@ -259,9 +259,11 @@ associate metadata.
 HL7 FHIR is not 'per se' a security protocol, nor does it define any
 security related functionality; however it defines exchange protocols
 and content models (<https://www.hl7.org/fhir/exchange-module.html>)
-that can be used with various open security protocols such as** **HMAC
-authentication (<https://en.wikipedia.org/wiki/HMAC>), HTTPS
-(<https://en.wikipedia.org/wiki/HTTPS>) (see
+that can be used with various open security protocols such as** **[HMAC
+authentication](https://en.wikipedia.org/wiki/HMAC),
+[HTTPS](https://en.wikipedia.org/wiki/HTTPS),
+[OAuth2](https://oauth.net/2/) or
+[SMART](http://www.hl7.org/fhir/smart-app-launch/) (see
 e.g. <https://hl7.org/fhir/security.html#http> for Communications
 Security in HL7 FHIR)
 
