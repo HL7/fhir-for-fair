@@ -1,8 +1,10 @@
-The R5 release of FHIR introduces the Citation Resource which is
-structured to support FAIR principles. When the Citation Resource is
-applied to knowledge artifacts (including FHIR Resources), the Citation
-is a distinct digital object containing the metadata about the cited
-artifact.
+The Citation Resource, which is structured to support FAIR principles,
+should be considered Draft (not Trial use) within the R4B specification
+and its content is derived by the currenlty available R5 specification.
+
+When the Citation Resource is applied to knowledge artifacts (including
+FHIR Resources), the Citation is a distinct digital object containing
+the metadata about the cited artifact.
 
 The Citation Resource contains a *citedArtifact* element to clearly
 distinguish data about the cited artifact (metadata of the cited
