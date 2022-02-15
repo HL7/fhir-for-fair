@@ -4,8 +4,18 @@ kinds of study cases as research studies, publications, sharing of
 health data and others (see [Methodology](methodology.html) for more
 details).
 
-In this section a selected set of these real-world cases have been
-summarized:
+A selected set of these real-world cases (listed below) have been
+summarized for exemplary purposes, providing for each of them the
+following information:
+
+1.  A short description of the scenario
+
+2.  A summary of the main findings, gaps and lessons learned.
+
+3.  A description of where and how HL7 FHIR can be or has been used to
+    better support the FAIR principles.
+
+The selected real-world cases are described in the following pages:
 
 1.  The [FAIR4Health Project](FAIR4Health.html)
 
@@ -23,15 +33,3 @@ summarized:
 6.  The [NFDI4Health consortia](NFDI4Health.html)
 
 7.  The [CEDAR](cedar.html)
-
-For each of them the following information has been provided:
-
-1.  A short description of the scenario
-
-2.  A summary of the main findings and gaps that have been identified by
-    performing a FAIRness assessment; or
-
-3.  The lesson learned by the implementation of the FAIR principles
-
-4.  A description of where and how HL7 FHIR can be or has been used to
-    better support the FAIR principles.

@@ -1,45 +1,39 @@
-The concept of FAIR digital object is quite wide and can vary in term of
-granularity and type of data that should be represented. (For a
-definition of a FAIR data object see section 4.1 of the EC
-publication [Turning FAIR into
-reality](https://ec.europa.eu/info/publications/turning-fair-reality_en) and
-Wittenburg, P., Strawn, G., Mons, B. et al.: Digital objects as drivers
-towards convergence in data infrastructures 2019 - [Full
-Text](https://github.com/GEDE-RDA-Europe/GEDE/blob/master/FAIR%20Digital%20Objects/do-fdo-papers/Digital%20Objects%20as%20Drivers%20towards%20Convergence%20in%20Data-b2share.pdf))
+The concept of FAIR digital object is quite wide and can vary in term of
+granularity and type of data that should be represented. (For a
+definition of a FAIR data object see section 4.1 of the EC publication
+Turning FAIR into reality and Wittenburg, P., Strawn, G., Mons, B. et
+al.: Digital objects as drivers towards convergence in data
+infrastructures 2019 - Full Text). It may be a single unit such as a
+coded diagnosis or a collection of machine actionable data (data set).
+It may represent a waveform, an image, a condition, other types of data
+or a combination of them.
 
-A FAIR digital object must accommodate a variety of informational units
-for data, and different levels of granularity. It may be a single unit
-such as a coded diagnosis or a collection of machine actionable data
-(data set). The types of units differ: a waveform, an image, a
-condition, a medication, text, and many other types.
+This implies that their representation with HL7 FHIR resources and
+elements may range from a sinlge element to a set of linked resources.
+(see Figure 1).
 
-An overall mapping plan must accommodate the variety of FAIR data
-objects with associated FHIR resources and elements. (see figure below).
+Similar considerations can be done also for the metadata, metadata can
+be in fact represented by elements belonging to the same resource
+documenting the data and by a set of other linked resources.
 
 <div><img src="metadata-1.png" style="width:55%"/></div>
 
 **Figure** **1 – FAIR Digital Object representation**
 
-Similar considerations can be done also for the metadata, where,
-depending on what the metadata is, the metadata elements can be
-represented within the same resource documenting the data, or by a set
-of linked resources.
-
 <div><img src="metadata-2.png" style="width:55%"/></div>
 
 **Figure** **2 – Mapping FAIR data and metadata**
 
-The logical distinction between metadata and data (both are FAIR DO) is
-a key point; with metadata playing a key role for making data findable,
-accessible, interoperable and reusable. Metadata are usually described
-as the “data about data”, but in practice what is “data” and what is
-“metadata” is a matter of perspective: based on the context, the same
-information can be considered as part of the data or of the metadata.
-This makes even more complex the mapping to the FHIR resources.
+The critical point is however the **actual logical distinction between
+metadata and data** (both are FAIR DO); with metadata playing a key role
+for making data findable, accessible, interoperable and reusable.  
+Metadata are in fact usually described as the "data about data", but in
+practice what is "data" and what is "metadata" is a matter of
+perspective: based on the context, the same information can be in fact
+considered as part of the data or of the metadata.
 
-The figure below shows how information that were part of the metadata in
-the previous example are now part of the data; and how metadata and data
-elements are represented in the same FHIR resource.
+This makes even more complex the mapping of the FAIR DO to the FHIR
+resources.
 
 <div><img src="metadata-3.png" style="width:55%"/></div>
 
@@ -55,7 +49,7 @@ of data, distinct and identifiable FHIR resources can be used to record
 a selected set of metadata elements; but this might not be true for all
 the information that could be considered metadata.
 
-Let's consider for example the following levels of data granularity:
+Let's consider for example the following levels:
 
 1.  **Study Level**: specific to a study, publication, or usage context
     (collection of subject level data).
@@ -74,15 +68,17 @@ figure below) ; this might be not so true for the subject level.
 
 **Figure** **5 – Metadata and data for a data collection.**
 
-HL7 FHIR provides several candidates resources to represent metadata of
+HL7 FHIR provides several candidates resources to represent metadata for
 collection of data (e.g., Bundle, Lists..) and the choice of the
 resource to be used strongly depend on the usage
 context. **Library,** **Citation** and **ResearchStudy**, seem to be
 the most promising resources to better support the “rich metadata” FAIR
-requirement; however not all of them are available in the current FHIR
-Version. Furthermore, due to their low FHIR maturity level, they may be
-subject to non-negligible changes among the different FHIR versions,
-including the way the linkage between metadata and data is realized.
+requirement; however not all of them are available in HL7 FHIR R4.
+Furthermore, since most of them have a low [FHIR maturity
+level](https://www.hl7.org/fhir/versions.html#maturity), they are
+subject to possible non-negligible changes, including the way the
+linkage between metadata (i.e. the resource itself) and data (i.e. the
+referred resources) is realized.
 
 The kinds of data objects that the metadata may refer to can be:
 
@@ -108,7 +104,7 @@ It’s worth to mention that FHIR specifies a dedicated resources
 “metadata”.
 
 As described above, at the subject level, the boundary between metadata
-and data is not always so sharp. In the example below derived form the
+and data is not always so sharp. In the example below derived from the
 [Ninfea](https://confluence.hl7.org/display/SOA/NInFEA) real world case
 is shown for example how the gestational week or the mother height and
 weight, might be considered metadata for the signals, but also patient
@@ -136,5 +132,5 @@ the context of this problem (the metadata).
 In case of *non-FHIR data objects* or mixed cases (*FHIR and non-FHIR
 objects*) implementers should evaluate the feasibility and the
 cost/benefit of transforming these objects (completely or partially) in
-FHIR instances; and/or creating FHIR resources (e.g. DocumentManifest)
+FHIR instances; and/or creating FHIR resources (e.g., DocumentManifest)
 to document some metadata information.

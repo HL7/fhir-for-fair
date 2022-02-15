@@ -14,19 +14,19 @@ more details.
 Hereafter it is summarized how these HL7 FHIR identifiers fulfil the
 characteristics required by the FAIR principles.
 
-#### Location URL based on the resource id ("logical id")
+### Location URL based on the resource id ("logical id")
 
-**Examples:** \<id value="23"/\> (Logical ID) //
+Examples: \<id value="23"/\> (Logical ID) //
 <http://test.fhir.org/r4/Patient/23> (Location URL)
 
-**FAIR object ID**: https://test.fhir.org/r4/Patient/23
+FAIR object ID: https://test.fhir.org/r4/Patient/23
 
 <table style="border-color: #000000; width:80 1px solid gray;">
 <thead>
 <tr style="border: 1px solid gray; background-color: #E5E4E2;">
-<th><strong>Global and Unique</strong></th>
-<th><strong>Persistent</strong></th>
-<th><strong>Resolvable by machine </strong></th>
+<th>Global and Unique</th>
+<th>Persistent</th>
+<th>Resolvable by machine </th>
 </tr>
 </thead>
 <tbody>
@@ -38,13 +38,13 @@ characteristics required by the FAIR principles.
 <p>Since the server URL is globally unique also the location URL is globally unique</p></td>
 <td><p>This is under the organization responsibility.</p>
 <p>That is, the organization shall assure that the server end-point is 'always' resolvable. This may be done assuring that the end point doesn't change or by using proxy/redirect mechanisms.</p></td>
-<td><p>In the FHIR REST paradigm this is true, that is the location URLs shall point to a <a href="https://www.hl7.org/fhir/http.html"><span class="underline">FHIR RESTful server</span></a>.</p>
+<td><p>In the FHIR REST paradigm this is true, that is the location URLs shall point to a <a href="https://www.hl7.org/fhir/http.html">FHIR RESTful server</a>.</p>
 <p>When FHIR resources are used within other paradigms, e.g. they are exchanged by using IHE XD*/XC* transaction or OMG RLUS services, this may not be true.</p></td>
 </tr>
 </tbody>
 </table>
 
-##### Notes
+#### Notes
 
 This resource identifier changes if the server end-point changes.
 
@@ -57,9 +57,7 @@ resource references.
 PRO:
 
   - the location URL can be used to access the resources via standard
-    FHIR API
-    (e.g. GET [<span class="underline">http://test.fhir.org/r4/Patient/23</span>](http://test.fhir.org/r4/Patient/23) 
-    )
+    FHIR API (e.g. GET <http://test.fhir.org/r4/Patient/23>  )
 
   - is the 'natural' way to uniquely identify resources in FHIR and no
     addition effort is required
@@ -75,7 +73,7 @@ If the organization doesn't guarantee the persistency of the server end
 point the location URL is not persistent. (but this true for any
 registry of identifiers..)
 
-#### Business identifier
+### Business identifier
 
 **Examples:**
 
@@ -121,7 +119,7 @@ value="[<span class="underline">https://doi.org</span>](https://doi.org/)"
 </tbody>
 </table>
 
-##### Notes
+#### Notes
 
 The business identifier chosen shall be unique and global.
 
@@ -157,7 +155,7 @@ CONTRA:
 
   - a call as GET https://$system/$value is not a FHIR API call
 
-#### Canonical url
+### Canonical url
 
 **Example:** \<valueSet
 value="http://hl7.org/fhir/ValueSet/my-valueset"/\>
@@ -181,7 +179,7 @@ value="http://hl7.org/fhir/ValueSet/my-valueset"/\>
 </tbody>
 </table>
 
-##### Notes
+#### Notes
 
 PRO:
 
@@ -195,7 +193,7 @@ CONTRA:
     end-point is not guaranteed, unless a redirect/proxy solution is
     applied as for the point 1.
 
-#### Additional Notes
+### Additional Notes
 
 1.  In a FHIR environment, the first one is the easiest to implement 
 
