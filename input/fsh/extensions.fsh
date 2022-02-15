@@ -23,16 +23,6 @@ Description: "This extension may be used to provide Copyright and  Licence infor
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Extension: ExtPersistentUrl
-Id:   persistentUrl
-Title:  "Persistent URL extension"
-Description: "This extension enanches non-canonical resources with a persistent identifier (a kind of canonical url) to better support the FAIR requirement to have Globally Unique, Persistent and Resolvable Identifiers"
-
-// publisher, contact, and other metadata could be defined here using caret syntax (omitted)
-* value[x] only url
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 Extension: ExtRelatedContent
 Id:   library-relatedContent
 Title:  "RelatedArtifact (Library)"
@@ -44,7 +34,18 @@ Description: "This extension allows Library to provide information about Related
 * value[x] only RelatedArtifactF4F
 
 
-/*== COMMENTED for the time being 
+/*== COMMENTED 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Extension: ExtPersistentUrl
+Id:   persistentUrl
+Title:  "Persistent URL extension"
+Description: "This extension enanches non-canonical resources with a persistent identifier (a kind of canonical url) to better support the FAIR requirement to have Globally Unique, Persistent and Resolvable Identifiers"
+
+// publisher, contact, and other metadata could be defined here using caret syntax (omitted)
+* value[x] only url
+
 
 
 === */

@@ -45,7 +45,7 @@ InstanceOf: ResearchStudyF4F
 """
 
 
-* extension[url].valueUrl = "https://example.org/registry/f4h-study-2b"
+// * extension[url].valueUrl = "https://example.org/registry/f4h-study-2b"
 * extension[copyright].valueMarkdown = "Fair4Health H2020 Project"
 // JUST AN EXAMPLE
 * extension[context][0].valueUsageContext.code = $example#number-of-patients "Total number of patients"
@@ -56,6 +56,8 @@ InstanceOf: ResearchStudyF4F
 // JUST AN EXAMPLE
 * extension[context][+].valueUsageContext.code = $example#algorithm "AI Algorithm"
 * extension[context][=].valueUsageContext.valueCodeableConcept.text = "Support Vector Machine (SVM), Logistic Regression, Decision Trees, Random Forest, Gradient Boosted Trees"
+* identifier.system = $uri
+* identifier.value = "https://example.org/registry/f4h-study-2b"
 * title = "FAIR4Health Study 2: 30-days readmission risk in COPD patients"
 * status = #active
 * primaryPurposeType = $research-study-prim-purp-type#health-services-research

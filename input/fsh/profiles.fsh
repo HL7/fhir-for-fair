@@ -57,10 +57,11 @@ Description: "This profile defines how to use the ResearchStudy resource to conv
 //-------------------------------------------------------------------------------------------
 
 * extension contains 
-	ExtPersistentUrl named url 0..1 
-	and ExtCopyright named copyright 0..1
+	// ExtPersistentUrl named url 0..1 and 
+	ExtCopyright named copyright 0..1
 	and ExtContext named context 0..*
-* extension[url]
+
+// * extension[url]
 * extension[copyright]
 * extension[context]
 * identifier MS
