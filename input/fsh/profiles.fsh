@@ -35,6 +35,16 @@ Description: "This profile defines how to use the Library resource to convey met
 * extension[relatedContent]
 * url MS
 * identifier MS
+* identifier ^slicing.discriminator[0].type = #value
+* identifier ^slicing.discriminator[=].path = "system"
+* identifier ^slicing.rules = #open
+* identifier contains
+    url 0..* MS
+* identifier[url] ^short = "GUPRI (uri)"
+* identifier[url] ^definition = "Globally Unique, Persistent and Resolvable Identifier"
+* identifier[url].system = $uri
+* identifier[url].value ^short = "uri"
+
 * name MS
 * title MS
 * status MS
@@ -65,6 +75,17 @@ Description: "This profile defines how to use the ResearchStudy resource to conv
 * extension[licenceTerm]
 * extension[context]
 * identifier MS
+* identifier ^slicing.discriminator[0].type = #value
+* identifier ^slicing.discriminator[=].path = "system"
+* identifier ^slicing.rules = #open
+* identifier contains
+    url 0..*
+* identifier[url] ^short = "GUPRI (uri)"
+* identifier[url] ^definition = "Globally Unique, Persistent and Resolvable Identifier"
+* identifier[url].system = $uri
+* identifier[url].value ^short = "uri"
+
+
 * title MS
 * status  MS
 * primaryPurposeType and relatedArtifact MS
@@ -74,11 +95,52 @@ Description: "This profile defines how to use the ResearchStudy resource to conv
 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Profile:  ListF4F
+Parent:   List
+Id:       List-uv-f4f
+Title:    "List (Subject Level Medatata)"
+Description: "This profile defines how to use the List resource to convey subject level metadata information for a FAIR collection of data by using HL7 FHIR"
+
+//-------------------------------------------------------------------------------------------
+* extension contains 
+	ExtCopyright named copyright 0..1 and 
+	ExtLicenceTerm named licenceTerm 0..1 and
+	ExtSubjectOther named subjectOther 0..1 and
+	ExtClassifier named classifier 0..*
+	
+* extension[copyright]
+* extension[licenceTerm]
+* extension[subjectOther]
+* extension[classifier]
+
+* identifier MS
+* identifier ^slicing.discriminator[0].type = #value
+* identifier ^slicing.discriminator[=].path = "system"
+* identifier ^slicing.rules = #open
+* identifier contains
+    url 0..*
+* identifier[url] ^short = "GUPRI (uri)"
+* identifier[url] ^definition = "Globally Unique, Persistent and Resolvable Identifier"
+* identifier[url].system = $uri
+* identifier[url].value ^short = "uri"
+
+
+* status ^short = "current | retired | entered-in-error"
+* subject ^short = "Subject of the listed resources"
+* code ^short = "What the purpose of this list is"
+* date MS
+* source MS
+* note ^short = "Comments about the list"
+* entry.item ^short = "A reference to the listed resource."
+
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  DocumentManifestF4F
 Parent:   DocumentManifest
 Id:       DocumentManifest-uv-f4f
 Title:    "DocumentManifest (Subject Level Medatata)"
-Description: "This profile defines how to use the DocumentManifest resource to convey metadata information for a FAIR collection of data at the subject level realized by using HL7 FHIR"
+Description: "This profile defines how to use the DocumentManifest resource to convey subject level metadata information for a FAIR collection of data by using HL7 FHIR"
 
 //-------------------------------------------------------------------------------------------
 * extension contains 
@@ -95,10 +157,10 @@ Description: "This profile defines how to use the DocumentManifest resource to c
 * masterIdentifier MS
 * identifier MS
 * status MS
-// * subject MS 
+* subject ^short = "Subject of the listed resources"
 * created MS
 * author MS
-* recipient 0..
+// * recipient 0..
 * description MS
 * content MS
 * related MS
