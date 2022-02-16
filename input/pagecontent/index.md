@@ -1,7 +1,7 @@
-
+<!---
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-<!---
+
 	<blockquote class="stu-note">
 		<p>Readers should be aware that this version of the guide is based on a <b>not yet published FHIR version</b> (HL7 FHIR 4b), with all the consequences of this.</p>
 		<p>This choice has been made to take advantage of the new capabilities offered by the Evidence-Based Medicine resources, including Citation.</p>
