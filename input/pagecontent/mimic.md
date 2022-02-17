@@ -1,9 +1,14 @@
-### Overview
+### Introduction
+#### Scope
 
-The MIMIC-IV-ED (MIMIC-ED)
-(<https://physionet.org/content/mimic-iv-ed/1.0/>) dataset is a module
-of the MIMIC-IV (<https://physionet.org/content/mimiciv/0.4/>) dataset,
-the latter of which is published in August 2020 and contains clinical
+The scope of this real-world case is to implement HL7 FHIR for the MIMIC-IV-ED (MIMIC-ED)
+(<https://physionet.org/content/mimic-iv-ed/1.0/>) dataset and assess the level of FAIRness before and after implementation. By doing so, this case contributes to: 1) the MIMIC-ED community by providing an HL7 FHIR model of the data and examplar implemention, and 2) the FAIR community by providing knowledge about what parts of FAIR can be addressed, in this particular case, when choosing HL7 FHIR to implement the principles. The lessons learned here could be applied to other cases where the implementation of the FAIR principles using HL7 FHIR is desirable.
+
+
+#### Data
+
+MIMIC-ED is a module of the MIMIC-IV (<https://physionet.org/content/mimiciv/0.4/>) dataset,
+the latter of which was published in August 2020 and contains clinical
 data on hospital stays sourced from hospital information systems.
 MIMIC-ED, published in June 2021, contains emergency department (ED)
 admissions at the Beth Israel Deaconess Medical Center (Boston, MA, USA)
@@ -12,9 +17,9 @@ contains de-identified data from 448,972 ED stays. The dataset is made
 available freely via PhysioNet
 ([https://physionet.org/](https://physionet.org/content/mimic-iv-ed/1.0/)),
 a repository for medical research data, and is intended for both
-research and educational purposes.
-
-#### Data
+research and educational purposes. PhysioNet distributes the data to its credentialed users that, after signing a
+data use agreement, can download the raw data (CSV) and/or access the
+data through services such as the Google Cloud Platform.
 
 MIMIC-ED follows a star-like structure (Figure 1) around
 the *edstays *table, which contains two identifiers through which the
@@ -34,37 +39,21 @@ MIMIC-ED page at PhysioNet.
   - Data (ZIP file, when access is
     provided): <https://physionet.org/content/mimic-iv-ed/get-zip/1.0/>
 
-<div><img src="mimic-1.png" style="width:55%"/></div>
+<div><img src="mimic-1.png" style="width:30%"/></div>
 
 **Figure 1.** *MIMIC-ED table structure. *
 
-#### **Objective and scenario**
 
-MIMIC-ED can be used for educational and research purposes. PhysioNet
-distributes the data to its credentialed users that, after signing a
-data use agreement, can download the raw data (CSV) and/or access the
-data through services such as the Google Cloud Platform. The objective
-of this exercise is to create an HL7 FHIR version of MIMIC-ED and assess the
-data FAIRness before and after implementing HL7 FHIR. For the FAIRness
-assessment, we use the [RDA FAIR Data Maturity
-Indicators](https://confluence.hl7.org/x/rJw7Bg). By doing so, we can 1)
-contribute to the MIMIC-ED community by creating an HL7 FHIR model of the
-data and providing an exemplar implementation of an HL7 FHIR server that can
-serve MIMIC-ED data, and 2) showing what parts of FAIR can be addressed
-in this particular case when using HL7 FHIR. The lessons learned can be used
-for other cases where the implementation of the FAIR principles using HL7
-FHIR is desirable.
+### Initial FAIRness assessment
 
-### Initial assessment of FAIRness using the RDA FAIR indicators
-
-We assessed the FAIRness of MIMIC-ED before the implementation of HL7 FHIR.
+The [RDA FAIR Data Maturity Indicators](https://confluence.hl7.org/x/rJw7Bg) were used to assess FAIRness. 
+First, FAIRness of MIMIC-ED was assessed before the implementation of HL7 FHIR.
 In other words, the FAIRness of MIMIC-ED as it is being distributed by
-PhysioNet. In summary, MIMIC-ED passed most (except one) indicators for Findability
+PhysioNet. MIMIC-ED passed most (except one) indicators for Findability
 and Accessibility. The one indicator that it did not pass is the
 requirement for metadata to be available when the data is no longer
-available, we can assume this is true but it has not been specified by
-PhysioNet. When we look at Interoperability and Reusability we can see a
-clear use case for using HL7 FHIR. MIMIC-ED does not use any FAIR-compliant
+available; this can assumed to be true, but has not been specified by
+PhysioNet. Interoperability and Reusability were only partly implemented. MIMIC-ED does not use any FAIR-compliant
 vocabularies for annotating its data semantics, nor does it comply with
 a standard data model. Hence, implementing HL7 FHIR would probably
 contribute to the Interoperability and Reusability aspects of FAIR in
@@ -143,11 +132,12 @@ license (PhysioNet license, free-text)</p></li>
 </tbody>
 </table>
 
+
 ### FHIR implementation
 
-By using HL7 FHIR we want to improve the
+Using HL7 FHIR to implement the FAIR principles should improve the
 machine-readability/interoperability/FAIRness of the MIMIC-ED dataset.
-We took the following steps. 
+The following steps were performed. 
 
   - Model the data and metadata conforming the HL7 FHIR data model (using
     the Patient, Encounter, Condition, MedicationStatement,
@@ -160,13 +150,15 @@ We took the following steps. 
     stays of patient X” or “which patients were discharged from the ED
     with diagnose Y”
 
-<div><img src="mimic-2.png" style="width:55%"/></div>
+<div><img src="mimic-2.png" style="width:30%"/></div>
 
-**Figure 2.** *Exemplar implementation of an HL7 FHIR facade for serving
+**Figure 2.** Exemplar implementation of an HL7 FHIR facade for serving
 MIMIC-ED data. *
 
-### Post-FHIR assessment of FAIRness
-We assessed the FAIRness of MIMIC-ED again after modeling the (meta)data as HL7 FHIR resources and setting up an HL7 FHIR facade server. The goal of this assessment is to help identify where HL7 FHIR improves or does not improve FAIRness, and to formulate best practices and lessons learned. Important note: the indicators RDA-I3-02M and RDA-I3-02D ((meta)data includes (qualified) references to other data) were considered to be 'not applicable' for the post assessment, as those were not implemented despite that HL7 FHIR provides the tools to satisfy these indicators.
+
+### FAIRness assessment after implementation
+
+FAIRness of MIMIC-ED was assessed once again after modeling the (meta)data as HL7 FHIR resources and setting up an HL7 FHIR facade server. The goal of this assessment was to help identify where the implemented solution does or does not improve FAIRness and to formulate best practices and lessons learned. Important note: the indicators RDA-I3-02M and RDA-I3-02D ((meta)data includes (qualified) references to other data) were considered to be 'not applicable' for the post assessment, as those were not implemented despite that HL7 FHIR provides the tools to satisfy these indicators.
 
 **Table 2. ***FAIRness assessment of MIMIC-ED after implementing
 HL7 FHIR. *
@@ -237,8 +229,10 @@ license (PhysioNet license, free-text)</p></li>
 </tbody>
 </table>
 
-#### **Lessons learned**
-Overall, using HL7 FHIR for expressing and distributing the data in MIMIC-ED improves the interoperability and reusability and poses some extra challenges in terms of findability and accessibility. Findability requires ample metadata that is offered in such a way that it can be harvested and indexed. Some of the metadata that PhysioNet [publishes](https://physionet.org/content/mimic-iv-ed/1.0/) for MIMIC-ED became redundant, as all HL7 FHIR resources are self-descriptive. For instance, when using a MedicationStatement resource it is not necessary to seperately describe that there is data about medication consumed by a patient, as this information is captured in the definition and scope of the resource. Other metadata, such as author information, provenance, license, and access information, have to be captured in separete resources such as Library. Metadata discoverability in challenging when only using HL7 FHIR, as details on how to reach an HL7 FHIR server should be published outside of that server anyway. Hence, it is recommended to keep an indexable, publicly available, page to expose such metadata. The PhysioNet repository is a good example here. Such a page would also be necessary to satisfy indicators RDA-A1-02M and RDA-A1-02D (manual access to (meta)data). In short:
+
+#### Lessons learned
+
+Overall, the used implementation of HL7 FHIR for expressing and distributing MIMIC-ED data improves the interoperability and reusability and poses some extra challenges in terms of findability and accessibility. Findability requires ample metadata that is offered in such way it can be harvested and indexed. Some of the metadata that PhysioNet [publishes](https://physionet.org/content/mimic-iv-ed/1.0/) for MIMIC-ED became redundant, as all HL7 FHIR resources are self-descriptive. For instance, when using a MedicationStatement resource it is not necessary to seperately describe that there is data about medication consumed by a patient, as this information is captured in the definition and scope of the resource. Other resource-level metadata, such as author information, provenance, license, and access information, have to be captured in separate resources such as Library. Metadata discoverability is challenging when only using HL7 FHIR, as details on how to reach an HL7 FHIR server should be published outside of that server anyway. Hence, it is recommended to keep an indexable, publicly available, page to expose such metadata. The PhysioNet repository is a good example here. Such a page would also be necessary to satisfy indicators RDA-A1-02M and RDA-A1-02D (manual access to (meta)data). In short:
 
   - To satisfy indicator RDA-F4-01M (metadata discoverability), using a separate public repository for certain metadata is recommended.
 
