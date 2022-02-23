@@ -219,7 +219,7 @@ Partly implemented</td>
 already assumed to have access to an HL7 FHIR server</p></li>
 </ul></td>
 <td><ul>
-<li><p>No reference to other (meta)data, but could be added using HL7 FHIR</p></li>
+<li><p>No reference to other (meta)data in this example, but references could be added using HL7 FHIR</p></li>
 </ul></td>
 <td><ul>
 <li><p>No standard or machine-understandable reuse<br />
