@@ -26,9 +26,11 @@ contact:
         value: http://www.hl7.org/Special/committees/soa
 description: The FHIR for FAIR - FHIR Implementation Guide aims to provide guidance on how HL7 FHIR can be used for supporting FAIR health data implementation and assessment. 
 license: CC0-1.0
-# fhirVersion: 4.1.0
+
+fhirVersion: 4.3.0-snapshot1
+
 # fhirVersion: 4.0.1
-fhirVersion: 4.1.0
+# fhirVersion: 4.1.0
 
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
@@ -155,6 +157,8 @@ pages:
     title: The Medical Information Mart for Intensive Care IV - Emergency Department (MIMIC-IV-ED, v1.0) dataset
   NFDI4Health.md:
     title: The NFDI4Health consortia
+  PHT.md:
+    title: The Personal Health Train
   cedar.md:
     title: Center for Evidence and Practice Improvement (CEPI) Evidence Discovery and Retrieval (CEDAR) - Making evidence more FAIR
   downloads.html:
@@ -191,6 +195,7 @@ menu:
     Leipzig Health Atlas (LHA): leipzigHealthAtlas.html 
     NFDI4Health: NFDI4Health.html  
     CEDAR: cedar.html
+    Personal Health Train: PHT.html    
   Guidelines: 
     General recommendations: recommendations.html
     Implementing FAIR principles: FHIRandFAIR.html    

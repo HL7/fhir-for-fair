@@ -4,7 +4,8 @@ A frequent problem in medical research are legal restrictions regarding the acce
 
 It would be far more convenient and secure if data requests were executed locally on the data and the data did not have to travel to the evaluators. This is the principle idea of the Personal Health Train. The metaphor is intentional: the research hypothesis travels from station (data-holding institution) to station in machine-executable form like a train. At each station, the local query is executed or a statistical model is trained. After that, the train travels on, but the data does not leave the location, only aggregated information. Of course, such a concept makes hard demands on standards and security. Execution is always the responsibility of the local site, only signed algorithms are used, and transmission paths and access are secured. But the simplicity of integrating a new site is also important in real life. Data-holding centers cannot build an dedicated infrastructure for every new use case.
 
-<img src="PHT-1.png" />
+<div><img src="PHT-1.png" width="70%" /><br>Figure 1 - The Personal Health Train</div>
+<br>
 
 The figure shows an overview of the PHT infrastructure at an abstract level.  The central service coordinates the analysis train from station to station. Each station retrieves the train from a special repository in the Central Service and performs the analysis after decryption. After saving the results (red dots), the train is sent back to the Central Service, and the same process occurs for the following stations until the last station. 
 
