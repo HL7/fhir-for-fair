@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Tue, Mar 8, 2022 19:47+0000 for FHIR v4.6.0 
+  Generated on Wed, Mar 9, 2022 11:10+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -6411,6 +6411,48 @@ Normal practice is to use the 'mo' code as a calendar month when calculating the
          <xs:attribute name="value" type="EventTimingEnum" use="optional"/>
        </xs:extension>
      </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ExtendedContactDetail">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Specifies contact information for a specific purpose over a period of time, might be handled/monitored by a specific named person or organization.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have a value for at least one of the defined elements, an @id referenced from the Narrative, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="DataType">
+        <xs:sequence>
+          <xs:element name="purpose" type="CodeableConcept" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The purpose/type of contact.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="name" type="HumanName" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The name of an individual to contact, some types of contact detail are usually blank.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="telecom" type="ContactPoint" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The contact details application for the purpose defined.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="address" type="Address" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Address for the contact.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="organization" type="Reference" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">This contact detail is handled/monitored by a specific organization.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="period" type="Period" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Period that this contact was valid for usage.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="ProdCharacteristic">
     <xs:annotation>
@@ -27069,6 +27111,11 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">If there is a photo/symbol associated with this HealthcareService, it may be included here to facilitate quick identification of the service in a list.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="contact" minOccurs="0" maxOccurs="unbounded" type="ExtendedContactDetail">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The contact details of communication devices available relevant to the specific HealthcareService. This can include addresses, phone numbers, fax numbers, mobile numbers, email addresses and web sites.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="telecom" minOccurs="0" maxOccurs="unbounded" type="ContactPoint">
             <xs:annotation>
               <xs:documentation xml:lang="en">List of contacts related to this specific healthcare service.</xs:documentation>
@@ -30809,9 +30856,9 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The geographic region in which a health insurance product's benefits apply.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="contact" type="InsurancePlan.Contact" minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="contact" minOccurs="0" maxOccurs="unbounded" type="ExtendedContactDetail">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The contact for the health insurance product for a certain purpose.</xs:documentation>
+              <xs:documentation xml:lang="en">The contact details of communication devices available relevant to the specific Insurance Plan/Product. This can include addresses, phone numbers, fax numbers, mobile numbers, email addresses and web sites.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="endpoint" minOccurs="0" maxOccurs="unbounded" type="Reference">
@@ -30832,37 +30879,6 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           <xs:element name="plan" type="InsurancePlan.Plan" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Details about an insurance plan.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="InsurancePlan.Contact">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">Details of a Health Insurance product/plan provided by an organization.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="purpose" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates a purpose for which the contact can be reached.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="name" minOccurs="0" maxOccurs="1" type="HumanName">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A name associated with the contact.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="telecom" minOccurs="0" maxOccurs="unbounded" type="ContactPoint">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A contact detail (e.g. a telephone number or an email address) by which the party may be contacted.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="address" minOccurs="0" maxOccurs="1" type="Address">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Visiting or postal addresses for the contact.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -31961,9 +31977,14 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">Indicates the type of function performed at the location.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="contact" minOccurs="0" maxOccurs="unbounded" type="ExtendedContactDetail">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The contact details of communication devices available at the location. This can include addresses, phone numbers, fax numbers, mobile numbers, email addresses and web sites.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="telecom" minOccurs="0" maxOccurs="unbounded" type="ContactPoint">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites.</xs:documentation>
+              <xs:documentation xml:lang="en">Deprecated - use contact.telecom.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="address" minOccurs="0" maxOccurs="1" type="Address">
@@ -32724,6 +32745,11 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
       <xs:enumeration value="Expression">
         <xs:annotation>
           <xs:documentation xml:lang="en">Expression</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ExtendedContactDetail">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">ExtendedContactDetail</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="Extension">
@@ -40101,6 +40127,11 @@ For resource issues, this will be a simple XPath limited to element names, repet
               <xs:documentation xml:lang="en">A list of alternate names that the organization is known as, or was known as in the past.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="contact" minOccurs="0" maxOccurs="unbounded" type="ExtendedContactDetail">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The contact details of communication devices available relevant to the specific Organization. This can include addresses, phone numbers, fax numbers, mobile numbers, email addresses and web sites.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="telecom" minOccurs="0" maxOccurs="unbounded" type="ContactPoint">
             <xs:annotation>
               <xs:documentation xml:lang="en">A contact detail for the organization.</xs:documentation>
@@ -40116,45 +40147,9 @@ For resource issues, this will be a simple XPath limited to element names, repet
               <xs:documentation xml:lang="en">The organization of which this organization forms a part.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="contact" type="Organization.Contact" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Contact for the organization for a certain purpose.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="endpoint" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Technical endpoints providing access to services operated for the organization.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="Organization.Contact">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="purpose" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates a purpose for which the contact can be reached.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="name" minOccurs="0" maxOccurs="1" type="HumanName">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A name associated with the contact.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="telecom" minOccurs="0" maxOccurs="unbounded" type="ContactPoint">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A contact detail (e.g. a telephone number or an email address) by which the party may be contacted.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="address" minOccurs="0" maxOccurs="1" type="Address">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Visiting or postal addresses for the contact.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -42435,6 +42430,11 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           <xs:element name="healthcareService" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The list of healthcare services that this worker provides for this role's Organization/Location(s).</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="contact" minOccurs="0" maxOccurs="unbounded" type="ExtendedContactDetail">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The contact details of communication devices available relevant to the specific PractitionerRole. This can include addresses, phone numbers, fax numbers, mobile numbers, email addresses and web sites.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="telecom" minOccurs="0" maxOccurs="unbounded" type="ContactPoint">
@@ -51796,6 +51796,11 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
       <xs:enumeration value="Expression">
         <xs:annotation>
           <xs:documentation xml:lang="en">Expression</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ExtendedContactDetail">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">ExtendedContactDetail</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="Extension">
