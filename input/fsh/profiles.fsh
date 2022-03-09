@@ -30,32 +30,31 @@ Id:       Library-uv-f4f
 Title:    "Library (Study Level Medatata)"
 Description: "This profile defines how to use the Library resource to convey metadata information for a FAIR dataset realized by using HL7 FHIR. An extension is used to allow to refer as "
 //-------------------------------------------------------------------------------------------
+* extension contains 	
+	ExtLicenceTerm named licenceTerm 0..1	
+	and ExtRelatedContent named relatedContent 0..*
+	and ExtSubjectOther named subjectOther 0..1
+	and ExtClassifier named classifier 0..*
 
-* extension contains ExtRelatedContent named relatedContent 0..* 
+* extension[licenceTerm]
 * extension[relatedContent]
-* url MS
-* identifier MS
-* identifier ^slicing.discriminator[0].type = #value
-* identifier ^slicing.discriminator[=].path = "system"
-* identifier ^slicing.rules = #open
-* identifier contains
-    url 0..* MS
-* identifier[url] ^short = "GUPRI (uri)"
-* identifier[url] ^definition = "Globally Unique, Persistent and Resolvable Identifier"
-* identifier[url].system = $uri
-* identifier[url].value ^short = "uri"
+* extension[subjectOther]
+* extension[classifier]
 
-* name MS
-* title MS
-* status MS
-* type MS
-* copyright MS
-* purpose MS
+* url ^short = "Canonical identifier for this library, represented as a URI (globally unique)."
+* identifier ^short = "Additional identifier for the library"
+* name ^short = "Name for this library (computer friendly)."
+* title ^short = "Name for this library (human friendly)."
+* status ^short = "draft | active | retired |unknown"
+* type ^short = "logic-library | model-definition | asset-collection |module-definition"
+* subject[x] ^short = "Type of subject the library content is focused on"
+* copyright ^short = "Use and/or publishing restrictions."
+* purpose ^short = "Why this library is defined."
 * relatedArtifact only RelatedArtifactF4F
 // * content MS 
 // * content 1..* 
 // * content only AttachmentF4F
-* content.url 1.. MS
+* content.url 1.. 
 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -74,7 +73,7 @@ Description: "This profile defines how to use the ResearchStudy resource to conv
 * extension[copyright]
 * extension[licenceTerm]
 * extension[context]
-* identifier MS
+// * identifier MS
 * identifier ^slicing.discriminator[0].type = #value
 * identifier ^slicing.discriminator[=].path = "system"
 * identifier ^slicing.rules = #open
@@ -86,13 +85,12 @@ Description: "This profile defines how to use the ResearchStudy resource to conv
 * identifier[url].value ^short = "uri"
 
 
-* title MS
-* status  MS
-* primaryPurposeType and relatedArtifact MS
+* title ^short = "Name for this study."
+* status  ^short = "The current state of the study."
+* primaryPurposeType ^short = "A classification of the intent of the study."
 * relatedArtifact only RelatedArtifactF4F
-* description MS
-* objective MS
-
+* description ^short = "What this is study doing."
+* objective ^short = "A goal for the study."
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  ListF4F
@@ -113,7 +111,7 @@ Description: "This profile defines how to use the List resource to convey subjec
 * extension[subjectOther]
 * extension[classifier]
 
-* identifier MS
+// * identifier MS
 * identifier ^slicing.discriminator[0].type = #value
 * identifier ^slicing.discriminator[=].path = "system"
 * identifier ^slicing.rules = #open
@@ -128,8 +126,8 @@ Description: "This profile defines how to use the List resource to convey subjec
 * status ^short = "current | retired | entered-in-error"
 * subject ^short = "Subject of the listed resources"
 * code ^short = "What the purpose of this list is"
-* date MS
-* source MS
+* date ^short = "When the list was prepared."
+* source ^short = "Who and/or what defined the list contents (aka Author)."
 * note ^short = "Comments about the list"
 * entry.item ^short = "A reference to the listed resource."
 
@@ -154,16 +152,17 @@ Description: "This profile defines how to use the DocumentManifest resource to c
 * extension[subjectOther]
 * extension[classifier]
 
-* masterIdentifier MS
-* identifier MS
-* status MS
+* masterIdentifier ^short = "Unique Identifier for the set of Items in manifest"
+* identifier ^short = "Other identifiers for the manifest."
+* status ^short = "current | superseded |entered-in-error"
 * subject ^short = "Subject of the listed resources"
-* created MS
-* author MS
+* created ^short = "When this document manifest created."
+* author ^short = "Who and/or what authored the DocumentManifest."
 // * recipient 0..
-* description MS
-* content MS
-* related MS
+* description ^short = "Human-readable description (title)."
+* content ^short = "Items in manifest."
+* related.identifier ^short = "Identifiers of things that are related."
+* related.ref	^short = "Related Resource."
 
 /*========== BEGIN COMMENT 
 
