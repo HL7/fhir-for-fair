@@ -34,8 +34,8 @@ Description: "This extension may be used to provide machine-processable Licence 
 
 Extension: ExtRelatedContent
 Id:   library-relatedContent
-Title:  "RelatedArtifact (Library)"
-Description: "This extension allows Library to provide information about RelatedArtifact"
+Title:  "Content as RelatedArtifact (Library)"
+Description: "This extension allows Library to provide information about content as RelatedArtifact. In the current FHIR version content is an Attachment."
 
 * ^context[0].type = #fhirpath
 * ^context[=].expression = "Library"
@@ -59,15 +59,6 @@ Description: "This extension allows to assign this resource to an organizing sch
 
 // publisher, contact, and other metadata could be defined here using caret syntax (omitted)
 * value[x] only CodeableConcept
-
-
-/*== COMMENTED 
-
-
-
-
-
-=== */
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -114,5 +105,6 @@ Description: "This extension enanches the current RelatedArtifact data type allo
 // * ^context[=].expression = "RelatedArtifact"
 
 // * extension contains resourceReference 0..1
+* value[x] only Reference
 * value[x] only Reference(Resource)
 

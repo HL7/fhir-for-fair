@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Mar 9, 2022 11:10+0000 for FHIR v4.6.0 
+  Generated on Wed, Mar 9, 2022 22:08+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -8781,6 +8781,11 @@ The duration (usually in minutes) could also be provided to indicate the length 
           <xs:element name="basedOn" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Allows tracing of authorizatino for the events and tracking whether proposals/recommendations were acted upon.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="patient" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The patient element is available to enable deterministic tracking of activities that involve the patient as the subject of the data used in an activity.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="encounter" minOccurs="0" maxOccurs="1" type="Reference">
@@ -23995,12 +24000,12 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">A copyright statement relating to the resource and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the resource.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="approvalDate" minOccurs="0" maxOccurs="1" type="dateTime">
+          <xs:element name="approvalDate" minOccurs="0" maxOccurs="1" type="date">
             <xs:annotation>
               <xs:documentation xml:lang="en">The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="lastReviewDate" minOccurs="0" maxOccurs="1" type="dateTime">
+          <xs:element name="lastReviewDate" minOccurs="0" maxOccurs="1" type="date">
             <xs:annotation>
               <xs:documentation xml:lang="en">The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.</xs:documentation>
            </xs:annotation>
@@ -36972,7 +36977,7 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
               <xs:documentation xml:lang="en">Indicates what types of messages may be sent as an application-level response to this message.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="graph" minOccurs="0" maxOccurs="unbounded" type="canonical">
+          <xs:element name="graph" minOccurs="0" maxOccurs="1" type="canonical">
             <xs:annotation>
               <xs:documentation xml:lang="en">Canonical reference to a GraphDefinition. If a URL is provided, it is the canonical reference to a [GraphDefinition](graphdefinition.html) that it controls what resources are to be added to the bundle when building the document. The GraphDefinition can also specify profiles that apply to the various resources.</xs:documentation>
            </xs:annotation>
@@ -42783,6 +42788,11 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           <xs:element name="basedOn" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Allows tracing of authorizatino for the events and tracking whether proposals/recommendations were acted upon.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="patient" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The patient element is available to enable deterministic tracking of activities that involve the patient as the subject of the data used in an activity.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="encounter" minOccurs="0" maxOccurs="1" type="Reference">
