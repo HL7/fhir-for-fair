@@ -41,60 +41,63 @@ section). The overall assessment at the study level, is that arguably
 all essential FAIR assessment criteria are met, which is no surprise
 given the fact that the dataset is provided as part of Physionet, which
 is supported by a strong international community. However, we have
-identified areas for improvement especially with regard to
-interoperability which will benefit from application of the FHIR
-standards. Furthermore, the FHIR standards enable more detailed
-representation of FAIR metadata at the anonymised patient level for
-method and context which is currrently limited to the full text of the
-publication (HTML and PDF formats), which is not readily readable by
-machine. Making data FAIR is an interative process guided by the
-priority of the RDA maturity indicators. Optimal level of FAIRness
-should be determined by understanding the requirements of the community
-(rather than perfection\!). Here we we are going to show what is
-possible using the current FHIR standards, how these can bring unique
-and greatest value and how FHIR-based solutions compare to alternative
-technical options for FAIR Implementation.
+identified areas for improvement especially regarding interoperability
+which will benefit from application of the HL7 FHIR standards.
 
-### NinFEA: FHIR enabled FAIR improvements
+Furthermore, the HL7 FHIR standards enable more detailed representation
+of FAIR metadata at the anonymised patient level for method and context
+which is currently limited to the full text of the publication (HTML and
+PDF formats), which is not readily readable by machine. Making data FAIR
+is an iterative process guided by the priority of the RDA maturity
+indicators. Optimal level of FAIRness should be determined by
+understanding the requirements of the community (rather than
+perfection\!). Here we we are going to show what is possible using the
+current HL7 FHIR standards, how these can bring unique and greatest
+value and how HL7 FHIR-based solutions compare to alternative technical
+options for FAIR Implementation.
 
-Taking a curator approach, we looked more closely at the features that
-would improve FAIR implementation even further for this NInFEA dataset.
-Notably, significant effort has been invested on preparing the data set.
-What FAIR improvents could be made by utilisation of the FHIR standards?
-Can the metadata be enhanced in a FAIR manner at the study and patient
-levels?
+### NinFEA: HL7 FHIR enabled FAIR improvements
 
-Several observations were made during the initial FAIR assessment:
+Taking a curator approach, the features that the utilisation of the HL7
+FHIR standards would improve FAIR implementation have been analysed,
+even further for this NInFEA dataset. As well as how metadata could be
+enhanced in a FAIR manner at the study and patient levels.
+
+Observations made during the initial FAIR assessment:
 
 1.  The metadata provided for the data set can be further extended, by
-    harnessing the full text of the open source paper
+    harnessing the full text of the open-source paper
     (<https://doi.org/10.1038/s41597-021-00811-3>).
 
 2.  Richer metadata would facilitate future reuse of the dataset to
     maximise it's value which is the major motivation for making data
     FAIR.
 
-3.  What brings unique and greatest value for enriching the metadata
-    using the HL7 FHIR standards? How can FHIR enhancement to make the
-    metadata more FAIR be scaled through automation?
+> Recommendations for FAIR data improvement enabled by HL7 FHIR:
 
-4.  Developing FHIR resources and storing the data set in a FHIR server
-    would allow easier access to more researchers, further pushing the
-    envelope for interoperability, going beyond Physionet.
+1.  > Enriching the metadata using the HL7 FHIR standards is likely to
+    > bring unique and greatest value. HL7 FHIR enhancement to make the
+    > metadata more FAIR could be scaled through automation.
 
-5.  Information on data provenance and licence would be included in the
-    metadata with a machine readable header on the FHIR server.
+2.  > Developing HL7 FHIR resources and storing the data set in a HL7
+    > FHIR server would allow easier access to more researchers, further
+    > pushing the envelope for interoperability, going beyond Physionet.
 
-6.  Publishing the structure and elements of the data and metadata
-    provides richer support for the work done, therby building best
-    practices.
+3.  > Information on data provenance and license would be included in
+    > the metadata with a machine-readable header on the HL7 FHIR
+    > server.
+
+4.  > Publishing the structure and elements as FAIRified data and
+    > metadata provides richer support for the work done, thereby
+    > building best practices.
 
 Overall, the purpose of application for the dataset should drive finding
 the optimal balance between acceptable cost and richness of metadata. We
 have started this from the study level, provided already by Physionet
-and enriched further from the full text paper, which is an open source
-publication. We will explore the library FHIR resource
-(<https://www.hl7.org/fhir/library.html>) to follow-up on the intial
-FAIR assessment, as noted in the list of observations. Other technical
-options using the FHIR standards will be considered and explored as
-well.
+and enriched further from the full text paper, which is an open-source
+publication. We will explore the library HL7 FHIR resource
+([https://www.hl7.org/HL7
+FHIR/library.html](https://www.hl7.org/fhir/library.html)) to follow-up
+on the initial FAIR assessment, as noted in the list of observations.
+Other technical options using the HL7 FHIR standards will be considered
+and explored as well.
