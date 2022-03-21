@@ -34,16 +34,3 @@ During the development of the C-FAIR Tool, the CEDAR team leveraged work from th
 
 The CEDAR API uses the FHIR Citation Resource to represent and share information about indexed artifacts from the CEPI repositories. The C-FAIR Tool criteria were also created to incorporate aspects of the Citation Resource. For example, C-FAIR Tool criterion F2.1 lists metadata elements that are included as data elements in the Citation Resource. The scope of the Citation Resource aligns well with the mission of improving FAIRness, which is why we aligned the CEDAR API and C-FAIR Tool to the Citation Resource.
 
-
-### Acknowledgement
-
-This technical data was produced for the U.S. Government under Contract Number 75FCMC18D0047, Task Order 75Q80120F80008 and is subject to Federal Acquisition Regulation Clause 52.227-17, Rights in Data-General.
-
-No other use other than that granted to the U.S. Government, or to those acting on behalf of the U.S. Government under that Clause is authorized without the express written permission of The MITRE Corporation. 
-
-For further information, please contact The MITRE Corporation, Contracts Management Office, 7515 Colshire Drive, McLean, VA 22102-7539, (703) 983-3000. © 2021 The MITRE Corporation.  
-
-Approved for Public Release, case no. 22-0134
-
-©2022 The MITRE Corporation. All Rights Reserved.
-

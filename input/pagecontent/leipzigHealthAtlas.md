@@ -24,25 +24,24 @@ colorectal and breast cancer, among others. The target audience includes
 clinicians, epidemiologists, geneticists, pathologists,
 biostatisticians, and digital patient model developers. The LHA is
 publicly available - some content subject to legal access restrictions -
-at <https://www.health-atlas.de>.
+at https://www.health-atlas.de.
 
 ### Technical background
 
 The architecture of the LHA portal is based on the freely available
 software [SEEK](https://fair-dom.org/platform/seek/). Additional tools
-for hypothesis generation ([i2b2](https://www.i2b2.org/)), visualization
+for hypothesis generation (i2b2), visualization
 ([tranSMART](https://transmartfoundation.org/)), interactive modeling
 for risk assessment (based on [R-Studio
 Shiny](https://shiny.rstudio.com/)) or deployment
-([Docker](https://www.docker.com/)/[Kubernetes](https://kubernetes.io/))
-are offered on a case-by-case basis. Before making datasets available,
-it is necessary to curate the data and metadata, obtain permissions from
-the data owners, consider the required privacy criteria, and assign
-semantic tags for better discoverability. In the course of data
-extraction, contractual and technical access procedures must be
-established and implemented.
+(Docker/[Kubernetes](https://kubernetes.io/)) are offered on a
+case-by-case basis. Before making datasets available, it is necessary to
+curate the data and metadata, obtain permissions from the data owners,
+consider the required privacy criteria, and assign semantic tags for
+better discoverability. In the course of data extraction, contractual
+and technical access procedures must be established and implemented.
 
-### Example clinical trial ([HNSCC](https://www.health-atlas.de/studies/33) study)
+### Example clinical trial (HNSCC study)
 
 The HNSCC study is an observational cohort study that characterizes head
 and neck squamous cell carcinomas (HNSCC) with different HPV16 DNA and
@@ -102,7 +101,3 @@ distributed *Local Data Access Points* within the framework of the
 (NFDI4Health)](https://www.nfdi4health.de/en/). Furthermore, the concept
 will be established in the SMITH consortium of the Medical Informatics
 Initiative for making research data available.
-
-**Acknowledgement**: The LHA project was funded by the
-[BMBF](https://www.bmbf.de/bmbf/en/) program i:DSem (Integrative Data
-Semantics for Systems Medicine, funding code 031L0026).

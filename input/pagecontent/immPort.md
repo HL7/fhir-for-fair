@@ -3,9 +3,9 @@
 #### Introduction:
 
 The Immunology Database and Analysis Portal (ImmPort)
-( <https://www.immport.org/home>) repository aims to be a trustworthy
+( <https://www.immport.org/home>) repository aims to be a trustworthy
 data resources as an essential component of the research enterprise
-focusing on immunological research.  ImmPort offers support to the
+focusing on immunological research.  ImmPort offers support to the
 community by providing resources including secure, reliable, and
 scalable computing systems and infrastructure to operate the data
 repository; long term archival and data preservation; integration and
@@ -26,9 +26,9 @@ openly available for reuse
 
 #### Clinical trial datasets for use:
 
-  - Use case 1: Dataset with clinical data elements: 
+  - Use case 1: Dataset with clinical data elements: 
     
-      - [SDY1544](https://www.dev.immport.org/shared/study/SDY1544) -
+      - [SDY1544](https://www.dev.immport.org/shared/study/SDY1544) -
         LEA29Y (Belatacept) Emory Edmonton Protocol (LEEP) (CIT-04) and
         Extended Follow Up after Islet Transplantation in Type 1
         Diabetes (CIT-08)
@@ -37,9 +37,9 @@ openly available for reuse
     
       - Dataset has demographic and clinical information.
 
-  - Use case 2: Dataset with clinical and mechanistic data elements: 
+  - Use case 2: Dataset with clinical and mechanistic data elements: 
     
-      - [SDY998](https://www.immport.org/shared/study/SDY998) - AMP
+      - [SDY998](https://www.immport.org/shared/study/SDY998) - AMP
         Rheumatoid Arthritis Phase 1
     
       - Dataset has demographic and clinical information along with
@@ -50,24 +50,24 @@ openly available for reuse
         1.  Methods for high-dimensional analysis of cells dissociated
             from cryopreserved synovial tissue, Arthritis research &
             therapy, 2018, 20(1), 139,
-            PMID: [29996944](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=29996944)
+            PMID: [29996944](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=29996944)
         
         2.  Defining inflammatory cell states in rheumatoid arthritis
             joint synovial tissues by integrating single-cell
             transcriptomics and mass cytometry, Nature Immunology, 2019,
             20(7), 928-942,
-            PMID: [31061532](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=31061532)
+            PMID: [31061532](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=31061532)
         
         3.  HBEGF+ macrophages in rheumatoid arthritis induce fibroblast
             invasiveness, Science translational medicine, 2019, 11,
-            491, [31068444](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=31068444)
+            491, [31068444](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=31068444)
         
         4.  PD-1hiCXCR5- T peripheral helper cells promote B cell
             responses in lupus via MAF and IL-21, JCI insight, 2019, 4,
-            20, [31536480](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=31536480)
+            20, [31536480](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=31536480)
 
 Machine readable data is available via ImmPort
-API: <https://docs.immport.org/#API/DataQueryAPI/dataqueryapi/>
+API: <https://docs.immport.org/#API/DataQueryAPI/dataqueryapi/>
 
 #### Scenario:
 
@@ -89,14 +89,14 @@ API: <https://docs.immport.org/#API/DataQueryAPI/dataqueryapi/>
 
 To understand the FAIRness of this resource prior to the implementation
 of FHIR, we mapped the RDA FAIR indicators to the ImmPort resource at
-the study level using two datasets defined above.
+the study level using two datasets defined above (https://tinyurl.com/ImmPortFHIRMapping).
 
 Dataset SDY1544 is a clinical trial study with no associated study files
 and no mechanistic data, and dataset SDY998 is a clinical research study
 with associated study files and mechanistic data such as RNAseq, CyTOF
-(mass cytometry) and flow cytometry.  In summary, ImmPort as a resource
+(mass cytometry) and flow cytometry.  In summary, ImmPort as a resource
 is relatively FAIR and, as such, satisfied most of the indicators for
-the findability (7/7) and accessibility (11/11).  For interoperability
+the findability (7/7) and accessibility (11/11).  For interoperability
 and reusability, the studies satisfied 7/12 and 7/10 indicators,
 respectively.
 
@@ -108,7 +108,6 @@ respectively.
 <th>Accessible</th>
 <th>Interoperable</th>
 <th>Reusable</th>
-<th>Comments</th>
 </tr>
 </thead>
 <tbody>
@@ -133,17 +132,17 @@ respectively.
 
 ### Mapping of ImmPort metadata into FHIR resources
 
+The study level metadata of the two datasets mentioned above were mapped to FHIR resources (https://tinyurl.com/ImmPortFHIRMapping); primarily the ResearchStudy resource. Additional resources that are of utility to map some metadata elements are Citation resource and Group resource. Of note, version 5 of the ResearchStudy resource proved to map better to ImmPort study level metadata than the current version 4 or version 4b.
+
 In an effort outside of this implementation guide, ImmPort has planned
 to improve its interoperability by mapping the FHIR resources to the
-ImmPort data model.  In addition, ImmPort clinical data will also be
-transformed and disseminated in the FHIR format.  After the FHIR
+ImmPort data model.  In addition, ImmPort clinical data will also be
+transformed and disseminated in the FHIR format.  After the FHIR
 implementation and data transformation, it is expected that ImmPort will
 see an improvement in the interoperability and reusability category,
 which is consistent to the assessments from other scenarios in this
-implementation guide.
+implementation guide. 
 
-### References
+### FHIR implementation and FAIRness
 
-FAIR Data Maturity Model Working Group (2020). FAIR Data Maturity Model:
-specification and guidelines. Research Data Alliance. DOI:
-10.15497/RDA00050
+The FHIR implementation of ImmPort has the potential to improve the interoperability of the data. This is likely to be manifested at the more granular level of subjects within the study. Since the study level metadata for ImmPort datasets were already FAIR compliant to a large extent, there were no obvious changes in the extent of FAIRness.

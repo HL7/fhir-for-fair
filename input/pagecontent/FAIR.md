@@ -47,10 +47,10 @@ F4: Metadata and data are registered or indexed in a searchable resource
 A1: Metadata and data are retrievable by each of their identifiers using
 a standardised communication protocol
 
-\&nbsp;\&nbsp;\&nbsp;\&nbsp;A1.1: The protocol is open, free and
+&nbsp;&nbsp;&nbsp;&nbsp;A1.1: The protocol is open, free and
 universally implementable
 
-\&nbsp;\&nbsp;\&nbsp;\&nbsp;A1.2: The protocol allows for an
+&nbsp;&nbsp;&nbsp;&nbsp;A1.2: The protocol allows for an
 authentication and authorisation, where necessary
 
 A2: Metadata should be accessible even when the data is no longer
@@ -71,11 +71,11 @@ data
 R1: Metadata and data are richly described with a plurality of accurate
 and relevant attributes
 
-\&nbsp;\&nbsp;\&nbsp;\&nbsp;R1.1: Metadata and data are released with a
+&nbsp;&nbsp;&nbsp;&nbsp;R1.1: Metadata and data are released with a
 clear and accessible data usage license
 
-\&nbsp;\&nbsp;\&nbsp;\&nbsp;R1.2: Metadata and data are associated with
+&nbsp;&nbsp;&nbsp;&nbsp;R1.2: Metadata and data are associated with
 detailed provenance
 
-\&nbsp;\&nbsp;\&nbsp;\&nbsp;R1.3: Metadata and data meet domain-relevant
+&nbsp;&nbsp;&nbsp;&nbsp;R1.3: Metadata and data meet domain-relevant
 community standards
