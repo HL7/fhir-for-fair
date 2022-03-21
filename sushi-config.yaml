@@ -127,8 +127,6 @@ pages:
     title: Immunology Database and Analysis Portal
   FAIR4Health.md:
     title: FAIR4Health Project
-  benefitResearch.md:
-    title: Benefits for research studies
   leipzigHealthAtlas.md:
     title: Leipzig Health Atlas (LHA)
   terminology.md:
@@ -181,8 +179,7 @@ menu:
     About this version: aboutThisVersion.html
     Methodology: methodology.html
     FAIR Guiding Principles: FAIR.html
-    RDA Indicators: RDAMetrics.html
-    Benefits: benefitResearch.html    
+    RDA Indicators: RDAMetrics.html   
     Metadata and Data: metadata.html
     Identifiers: FHIRidentifiers.html     
     Deployment: deployment.html  
