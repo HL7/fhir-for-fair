@@ -3,7 +3,7 @@ InstanceOf: DocumentManifestF4F
 Usage: #example
 
 * extension[copyright].valueMarkdown = "(c) Best FAIR organization"
-* extension[licenceTerm].valueCodeableConcept = https://creativecommons.org/licenses#"CC BY-NC"
+* extension[licenceCodeable].valueCodeableConcept = https://creativecommons.org/licenses#"CC BY-NC"
 * masterIdentifier.system =	$uri
 * masterIdentifier.value = "https://example.org/registry/persistentID"
 * subject = Reference(Patient/example-f4f-patient)

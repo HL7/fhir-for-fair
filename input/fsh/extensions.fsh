@@ -1,4 +1,5 @@
 
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Extension: ExtContext
@@ -23,12 +24,21 @@ Description: "This extension may be used to provide Copyright information about 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Extension: ExtLicenceTerm
-Id:   licenceTerm
-Title:  "Licence Terms"
+Extension: ExtLicenceCodeable
+Id:   licenceCodeable
+Title:  "Licence Terms: CodeableConcept"
 Description: "This extension may be used to provide machine-processable Licence information about the set of data described by this resource"
 
 * value[x] only CodeableConcept 
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Extension: ExtLicenceAttachment
+Id:   licenceAttachment
+Title:  "Licence Terms: Attachment"
+Description: "This extension may be used to provide detailed Licence information about the set of data described by this resource"
+
+* value[x] only Attachment 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

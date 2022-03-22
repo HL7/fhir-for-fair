@@ -31,12 +31,14 @@ Title:    "Library (Study Level Medatata)"
 Description: "This profile defines how to use the Library resource to convey metadata information for a FAIR dataset realized by using HL7 FHIR. An extension is used to allow to refer as "
 //-------------------------------------------------------------------------------------------
 * extension contains 	
-	ExtLicenceTerm named licenceTerm 0..1	
+	ExtLicenceCodeable named licenceCodeable 0..1
+	and ExtLicenceAttachment named licenceAttachment 0..1		
 	and ExtRelatedContent named relatedContent 0..*
 	and ExtSubjectOther named subjectOther 0..1
 	and ExtClassifier named classifier 0..*
 
-* extension[licenceTerm]
+* extension[licenceCodeable]
+* extension[licenceAttachment]
 * extension[relatedContent]
 * extension[subjectOther]
 * extension[classifier]
@@ -66,13 +68,17 @@ Description: "This profile defines how to use the ResearchStudy resource to conv
 //-------------------------------------------------------------------------------------------
 
 * extension contains 
-	ExtCopyright named copyright 0..1 and 
-	ExtLicenceTerm named licenceTerm 0..1
+	ExtCopyright named copyright 0..1
+	and ExtLicenceAttachment named licenceAttachment 0..1	
+	and ExtLicenceCodeable named licenceCodeable 0..1
 	and ExtContext named context 0..*
 
 * extension[copyright]
-* extension[licenceTerm]
+* extension[licenceCodeable]
+* extension[licenceAttachment]
 * extension[context]
+
+
 // * identifier MS
 * identifier ^slicing.discriminator[0].type = #value
 * identifier ^slicing.discriminator[=].path = "system"
@@ -101,13 +107,15 @@ Description: "This profile defines how to use the List resource to convey subjec
 
 //-------------------------------------------------------------------------------------------
 * extension contains 
-	ExtCopyright named copyright 0..1 and 
-	ExtLicenceTerm named licenceTerm 0..1 and
-	ExtSubjectOther named subjectOther 0..1 and
-	ExtClassifier named classifier 0..*
+	ExtCopyright named copyright 0..1 
+	and ExtLicenceCodeable named licenceCodeable 0..1
+	and ExtLicenceAttachment named licenceAttachment 0..1
+	and ExtSubjectOther named subjectOther 0..1
+	and ExtClassifier named classifier 0..*
 	
 * extension[copyright]
-* extension[licenceTerm]
+* extension[licenceCodeable]
+* extension[licenceAttachment]
 * extension[subjectOther]
 * extension[classifier]
 
@@ -142,13 +150,15 @@ Description: "This profile defines how to use the DocumentManifest resource to c
 
 //-------------------------------------------------------------------------------------------
 * extension contains 
-	ExtCopyright named copyright 0..1 and 
-	ExtLicenceTerm named licenceTerm 0..1 and
-	ExtSubjectOther named subjectOther 0..1 and
-	ExtClassifier named classifier 0..*
+	ExtCopyright named copyright 0..1 
+	and ExtLicenceCodeable named licenceCodeable 0..1
+	and ExtLicenceAttachment named licenceAttachment 0..1
+	and ExtSubjectOther named subjectOther 0..1
+	and ExtClassifier named classifier 0..*
 	
 * extension[copyright]
-* extension[licenceTerm]
+* extension[licenceCodeable]
+* extension[licenceAttachment]
 * extension[subjectOther]
 * extension[classifier]
 

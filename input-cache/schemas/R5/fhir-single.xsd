@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Sat, Mar 19, 2022 20:10+0000 for FHIR v4.6.0 
+  Generated on Tue, Mar 22, 2022 06:08+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -1492,12 +1492,6 @@
           <xs:documentation xml:lang="en">ChargeItemDefinition</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="Citation">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Citation</xs:documentation>
-          <xs:documentation xml:lang="en">Citation</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="ConditionDefinition">
         <xs:annotation>
           <xs:documentation xml:lang="en">ConditionDefinition</xs:documentation>
@@ -1672,6 +1666,12 @@
           <xs:documentation xml:lang="en">ChargeItem</xs:documentation>
           <xs:documentation xml:lang="es">CargoDeItem</xs:documentation>
           <xs:documentation xml:lang="zh">收费项目</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Citation">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Citation</xs:documentation>
+          <xs:documentation xml:lang="en">Citation</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="Claim">
@@ -3228,12 +3228,6 @@
           <xs:documentation xml:lang="en">ChargeItemDefinition</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="Citation">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Citation</xs:documentation>
-          <xs:documentation xml:lang="en">Citation</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="ConditionDefinition">
         <xs:annotation>
           <xs:documentation xml:lang="en">ConditionDefinition</xs:documentation>
@@ -3408,6 +3402,12 @@
           <xs:documentation xml:lang="en">ChargeItem</xs:documentation>
           <xs:documentation xml:lang="es">CargoDeItem</xs:documentation>
           <xs:documentation xml:lang="zh">收费项目</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Citation">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Citation</xs:documentation>
+          <xs:documentation xml:lang="en">Citation</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="Claim">
@@ -4944,12 +4944,6 @@
           <xs:documentation xml:lang="en">ChargeItemDefinition</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="Citation">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Citation</xs:documentation>
-          <xs:documentation xml:lang="en">Citation</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="ConditionDefinition">
         <xs:annotation>
           <xs:documentation xml:lang="en">ConditionDefinition</xs:documentation>
@@ -5124,6 +5118,12 @@
           <xs:documentation xml:lang="en">ChargeItem</xs:documentation>
           <xs:documentation xml:lang="es">CargoDeItem</xs:documentation>
           <xs:documentation xml:lang="zh">收费项目</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Citation">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Citation</xs:documentation>
+          <xs:documentation xml:lang="en">Citation</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="Claim">
@@ -15693,7 +15693,7 @@ into another (possibly the same) biological entity.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="MetadataResource">
+      <xs:extension base="DomainResource">
         <xs:sequence>
           <xs:element name="url" minOccurs="0" maxOccurs="1" type="uri">
             <xs:annotation>
