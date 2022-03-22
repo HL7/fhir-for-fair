@@ -1,6 +1,10 @@
 Instance: ninfea-1
 InstanceOf: Library
 Usage: #example
+
+* extension[classifier].valueCodeableConcept = http://example.org#antenatal-cardiology "Antenatal cardiology"
+* extension[subjectOther].valueReference.display = "Example of other subject"
+
 * identifier.system = "https://doi.org"
 * identifier.value = "10.13026/c4n5-3b04"
 * name = "NInFEA"
@@ -46,7 +50,10 @@ Usage: #example
 * relatedArtifact[=].citation = "Sulas E, Ortu E, Raffo L, Urru M, Tumbarello R, Pani D, Automatic Recognition of Complete Atrioventricular Activity in Fetal Pulsed-Wave Doppler Signals, 2018 40th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), Honolulu, HI, 2018, pp. 917-920, doi: 10.1109/EMBC.2018.8512329."
 * relatedArtifact[=].url = "https://doi.org/10.1109/EMBC.2018.8512329"
 
-* relatedArtifact[+].type = #citation
+* relatedArtifact[+].extension[relatedArtifactClassifier].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/citation-artifact-classifier#fhir-resource
+* relatedArtifact[=].extension[relatedArtifactType].valueCodeableConcept = http://hl7.org/fhir/uv/fhir-for-fair/CodeSystem/related-artifact-type#supported-with
+
+* relatedArtifact[=].type = #citation
 * relatedArtifact[=].label = "FHIR Resource"
 * relatedArtifact[=].display = "FEvIR platform"
 * relatedArtifact[=].citation = "Example of FHIR R5 Citation Resource describing the NinFea metadata"

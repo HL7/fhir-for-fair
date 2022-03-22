@@ -86,6 +86,10 @@ resources:
  DocumentManifest/example-f4f-manifest:
    name: Subject Level Data Collection (DocumentManifest)
    description: Example of usage of the DocumentManifest resource to describe subject level metadata. 
+   
+ List/example-f4f-list:
+   name: Subject Level Data Collection (List)
+   description: Example of usage of the List resource to describe subject level metadata. 
 
  Condition/example-f4f-condition:
    name: Sample used by the Subject Level Collection (Condition)
