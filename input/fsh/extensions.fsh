@@ -57,7 +57,7 @@ Description: "This extension allows Library to provide information about content
 Extension: ExtSubjectOther
 Id:   subjectOther
 Title:  "Other Subjects"
-Description: "This extension allows to record kinds of subjects that are not currently supported by some resources (e.g.,DocumentManifest limited to Patient | Practitioner | Group | Device for )"
+Description: "This extension allows to record kinds of subjects that are not currently supported by some resources (e.g.,DocumentManifest limited to Patient, Practitioner, Group, Device for )"
 
 // publisher, contact, and other metadata could be defined here using caret syntax (omitted)
 * value[x] only Reference
