@@ -13,11 +13,19 @@
   "current" : true
  },
     {
+      "version": "1.0.0", 
+      "desc": "STU 1",
+      "path": "http://hl7.org/fhir/uv/fhir-for-fair/STU1/",
+      "sequence": "STU 1",
+      "fhirversion": "4.1.0",
+      "status": "trial-use"
+    },
+	 {
       "version": "0.1.0",
 	  "date": "2021-12-05",      
       "desc": "STU 1 Ballot 1",
       "path": "http://hl7.org/fhir/uv/fhir-for-fair/2022Jan",
-      "sequence": "STU 1 (FHIR R4b)",
+      "sequence": "STU 1",
       "fhirversion": "4.1.0",
       "status": "ballot"
     }

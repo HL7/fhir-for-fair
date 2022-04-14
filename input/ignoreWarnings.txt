@@ -4,12 +4,10 @@
 # (And include comments like this justifying why)
 
 # Unknown code systems
-Code System URI 'http://terminology.hl7.org/CodeSystem/citation-artifact-classifier' is unknown so the code cannot be validated
 Code System URI 'http://example.org' is unknown so the code cannot be validated
 Code System URI 'http://purl.bioontology.org/ontology/NCBITAXON' is unknown so the code cannot be validated
 Code System URI 'http://www.ebi.ac.uk/efo' is unknown so the code cannot be validated
 Code System URI 'http://radlex.org' is unknown so the code cannot be validated
 Code System URI 'http://purl.obolibrary.org/obo' is unknown so the code cannot be validated
+Code System URI 'https://creativecommons.org/licenses' is unknown so the code cannot be validated
 
-# known 'infrastructural' warning with FHIR 4b (not present if compiled as FHIR R4)
-ValueSet http://hl7.org/fhir/ValueSet/resource-security-category not found by validator
