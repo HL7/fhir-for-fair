@@ -34,7 +34,7 @@ Description: "This profile defines how to use the Library resource to convey met
 	ExtLicenceCodeable named licenceCodeable 0..1
 	and ExtLicenceAttachment named licenceAttachment 0..1		
 	and ExtRelatedContent named relatedContent 0..*
-	and ExtSubjectOther named subjectOther 0..1
+	and ExtSubjectOther named subjectOther 0..*
 	and ExtClassifier named classifier 0..*
 
 * extension[licenceCodeable]
@@ -110,7 +110,7 @@ Description: "This profile defines how to use the List resource to convey subjec
 	ExtCopyright named copyright 0..1 
 	and ExtLicenceCodeable named licenceCodeable 0..1
 	and ExtLicenceAttachment named licenceAttachment 0..1
-	and ExtSubjectOther named subjectOther 0..1
+	and ExtSubjectOther named subjectOther 0..*
 	and ExtClassifier named classifier 0..*
 	
 * extension[copyright]
@@ -153,7 +153,7 @@ Description: "This profile defines how to use the DocumentManifest resource to c
 	ExtCopyright named copyright 0..1 
 	and ExtLicenceCodeable named licenceCodeable 0..1
 	and ExtLicenceAttachment named licenceAttachment 0..1
-	and ExtSubjectOther named subjectOther 0..1
+	and ExtSubjectOther named subjectOther 0..*
 	and ExtClassifier named classifier 0..*
 	
 * extension[copyright]
