@@ -7,7 +7,7 @@
 Profile:  RelatedArtifactF4F
 Parent:   RelatedArtifact
 Id:       RelatedArtifact-uv-f4f
-Title:    "RelatedArtifact (FHIR for FAIR)"
+Title:    "RelatedArtifact [FHIR for FAIR]"
 Description: "This profile enhances the current RelatedArtifact data with the enhancements identified in FHIR R5"
 //-------------------------------------------------------------------------------------------
 
@@ -27,7 +27,7 @@ Description: "This profile enhances the current RelatedArtifact data with the en
 Profile:  LibraryF4F
 Parent:   Library
 Id:       Library-uv-f4f
-Title:    "Library (Study Level Medatata)"
+Title:    "Library [Study Level Medatata]"
 Description: "This profile defines how to use the Library resource to convey metadata information for a FAIR dataset realized by using HL7 FHIR. An extension is used to allow to refer as "
 //-------------------------------------------------------------------------------------------
 * extension contains 	
@@ -63,7 +63,7 @@ Description: "This profile defines how to use the Library resource to convey met
 Profile:  ResearchStudyF4F
 Parent:   ResearchStudy
 Id:       ResearchStudy-uv-f4f
-Title:    "ResearchStudy (Study Level Medatata)"
+Title:    "ResearchStudy [Study Level Medatata]"
 Description: "This profile defines how to use the ResearchStudy resource to convey metadata information for a FAIR collection of data at the study level realized by using HL7 FHIR"
 //-------------------------------------------------------------------------------------------
 
@@ -102,7 +102,7 @@ Description: "This profile defines how to use the ResearchStudy resource to conv
 Profile:  ListF4F
 Parent:   List
 Id:       List-uv-f4f
-Title:    "List (Subject Level Medatata)"
+Title:    "List [Subject Level Medatata]"
 Description: "This profile defines how to use the List resource to convey subject level metadata information for a FAIR collection of data by using HL7 FHIR"
 
 //-------------------------------------------------------------------------------------------
@@ -145,7 +145,7 @@ Description: "This profile defines how to use the List resource to convey subjec
 Profile:  DocumentManifestF4F
 Parent:   DocumentManifest
 Id:       DocumentManifest-uv-f4f
-Title:    "DocumentManifest (Subject Level Medatata)"
+Title:    "DocumentManifest [Subject Level Medatata]"
 Description: "This profile defines how to use the DocumentManifest resource to convey subject level metadata information for a FAIR collection of data by using HL7 FHIR"
 
 //-------------------------------------------------------------------------------------------

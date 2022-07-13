@@ -8,16 +8,17 @@
   "version" : "current",
   "desc" : "Continuous Integration Build (latest in version control)",
   "path" : "http://build.fhir.org/ig/HL7/fhir-for-fair",
-   "fhirversion": "4.1.0",
+   "fhirversion": "4.3.0",
   "status" : "ci-build",
   "current" : true
  },
     {
-      "version": "1.0.0", 
+      "version": "1.0.0",
+      "date": "2022-08-xx",
       "desc": "STU 1",
-      "path": "http://hl7.org/fhir/uv/fhir-for-fair/STU1/",
+      "path": "http://hl7.org/fhir/uv/fhir-for-fair/STU1",
       "sequence": "STU 1",
-      "fhirversion": "4.1.0",
+      "fhirversion": "4.3.0",
       "status": "trial-use"
     },
 	 {

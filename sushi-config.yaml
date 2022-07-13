@@ -27,7 +27,8 @@ contact:
 description: The FHIR for FAIR - FHIR Implementation Guide aims to provide guidance on how HL7 FHIR can be used for supporting FAIR health data implementation and assessment. 
 license: CC0-1.0
 
-fhirVersion: 4.3.0-snapshot1
+fhirVersion: 4.3.0
+# fhirVersion: 4.3.0-snapshot1
 
 # fhirVersion: 4.0.1
 # fhirVersion: 4.1.0
@@ -48,63 +49,63 @@ releaseLabel: STU 1
 resources:
     
  StructureDefinition/Library-uv-f4f:
-   name: Library (Study Level Medatata)	
+   name: Library [Study Level Medatata]	
    description: This profile defines how to use the Library resource to convey metadata information for a FAIR dataset realized by using HL7 FHIR
 
  StructureDefinition/ResearchStudy-uv-f4f:
-   name: ResearchStudy (Study Level Medatata)	
+   name: ResearchStudy [Study Level Medatata]	
    description: This profile defines how to use the ResearchStudy resource to convey metadata information for a FAIR collection of data at the study level realized by using HL7 FHIR
 
  StructureDefinition/DocumentManifest-uv-f4f:
-   name: DocumentManifest (Subject Level Medatata)	
+   name: DocumentManifest [Subject Level Medatata]	
    description: This profile defines how to use the DocumentManifest resource to convey metadata information for a FAIR collection of data at the subject level realized by using HL7 FHIR
 
  Library/ninfea-1:
-   name: Non-invasive foetal electrocardiography example (Library)
+   name: Non-invasive foetal electrocardiography example [Library]
    description: Example of usage of the Library reosurce to describe study level metadata. This example is based on the Non-invasive foetal electrocardiography NInFEA case.
    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
  
  Library/f4h-1:
-   name: FAIR4Health portal (Library)
+   name: FAIR4Health portal [Library]
    description: Example of usage of the Library resource to describe project level metadata. This example is based on the data published by the FAIR4Health project thorugh the https://portal.fair4health.eu/ portal
    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
    
  Library/f4h-lib-1:
-   name: FAIR4Health study case 1 (Library)
+   name: FAIR4Health study case 1 [Library]
    description: Example of usage of the Library resource to describe study level metadata. This example is based on the FAIR4Health study case 1 Identification of multimorbidity patterns and polypharmacy correlation on the risk of mortality in elderly, and demonstrate the reproducibility of research
    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
    
  Library/f4h-lib-2:
-   name: FAIR4Health study case 2 (Library)
+   name: FAIR4Health study case 2 [Library]
    description: Example of usage of the Library resource to describe study level metadata. This example is based on the FAIR4Health study case 2 Develop and pilot an early prediction service for 30-days readmission risk in COPD (Chronic Obstructive Pulmonary Disease) patient
    exampleCanonical: http://hl7.org/fhir/uv/fhir-for-fair/StructureDefinition/Library-uv-f4f
    
  ResearchStudy/f4h-rs-2:
-   name: FAIR4Health study case 2 (ResearchStudy)
+   name: FAIR4Health study case 2 [ResearchStudy]
    description: Example of usage of the ResearchStudy resource to describe study level metadata. This example is based on the FAIR4Health study case 2 Develop and pilot an early prediction service for 30-days readmission risk in COPD (Chronic Obstructive Pulmonary Disease) patient   
    	
  DocumentManifest/example-f4f-manifest:
-   name: Subject Level Data Collection (DocumentManifest)
+   name: Subject Level Data Collection [DocumentManifest]
    description: Example of usage of the DocumentManifest resource to describe subject level metadata. 
    
  List/example-f4f-list:
-   name: Subject Level Data Collection (List)
+   name: Subject Level Data Collection [List]
    description: Example of usage of the List resource to describe subject level metadata. 
 
  Condition/example-f4f-condition:
-   name: Sample used by the Subject Level Collection (Condition)
+   name: Sample used by the Subject Level Collection [Condition]
    description: Example of Condition resource used by the DocumentManifest example.
  
  Patient/example-f4f-patient:
-   name: Sample used by the Subject Level Collection (Patient)
+   name: Sample used by the Subject Level Collection [Patient]
    description: Example of Patient resource used by the DocumentManifest example.
    
  MedicationStatement/example-f4f-medicationStatement-1:
-   name: MedicationStatement Sample used by the Subject Level Collection (1)
+   name: MedicationStatement Sample used by the Subject Level Collection [1]
    description: Example of MedicationStatement resource used by the DocumentManifest example.
    
  MedicationStatement/example-f4f-medicationStatement-2:
-   name: MedicationStatement Sample used by the Subject Level Collection (2)
+   name: MedicationStatement Sample used by the Subject Level Collection [2]
    description: Example of MedicationStatement resource used by the DocumentManifest example. 
 
    

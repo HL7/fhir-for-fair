@@ -1,7 +1,7 @@
 
 ValueSet: VsRelatedArtifactType
 Id: related-artifact-type
-Title: "RelatedArtifactType"
+Title: "RelatedArtifactType [ValueSet]"
 Description: "The type of relationship to the related artifact."
 
 * codes from system CsRelatedArtifactType
@@ -9,7 +9,7 @@ Description: "The type of relationship to the related artifact."
 //=======================================
 CodeSystem: CsRelatedArtifactType
 Id: related-artifact-type
-Title: "RelatedArtifactType"
+Title: "RelatedArtifactType [CodeSystem]"
 Description: "The type of relationship to the related artifact."
 * ^experimental = false
 * ^caseSensitive = true

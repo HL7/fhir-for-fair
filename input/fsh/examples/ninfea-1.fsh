@@ -1,5 +1,5 @@
 Instance: ninfea-1
-InstanceOf: Library
+InstanceOf: LibraryF4F
 Usage: #example
 
 * extension[classifier].valueCodeableConcept = http://example.org#antenatal-cardiology "Antenatal cardiology"
