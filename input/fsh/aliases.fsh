@@ -1,9 +1,10 @@
 Alias: $library-type = http://terminology.hl7.org/CodeSystem/library-type
 Alias: $resource-types = http://hl7.org/fhir/resource-types
-Alias: $NCBITAXON = http://purl.bioontology.org/ontology/NCBITAXON
+// Alias: $NCBITAXON = http://purl.bioontology.org/ontology/NCBITAXON
 Alias: $usage-context-type = http://terminology.hl7.org/CodeSystem/usage-context-type
-Alias: $efo = http://www.ebi.ac.uk/efo
-Alias: $obo = http://purl.obolibrary.org/obo
+// Alias: $efo = http://www.ebi.ac.uk/efo
+// Alias: $obo = http://purl.obolibrary.org/obo
+Alias: $nci-thesaurus  = http://ncithesaurus-stage.nci.nih.gov
 Alias: $sct = http://snomed.info/sct
 Alias: $atc = http://www.whocc.no/atc
 Alias: $ucum = http://unitsofmeasure.org
@@ -13,8 +14,6 @@ Alias: $researchStudy-relatesTo = http://hl7.org/fhir/StructureDefinition/resear
 Alias: $research-study-prim-purp-type = http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type
 Alias: $related-artifact-type = http://hl7.org/fhir/related-artifact-type
 Alias: $citation-artifact-classifier = http://terminology.hl7.org/CodeSystem/citation-artifact-classifier
-
+Alias: $spdx-license = http://hl7.org/fhir/spdx-license
 Alias: $uri = urn:ietf:rfc:3986
-
-
 Alias: $Citation = http://hl7.org/fhir/StructureDefinition/Citation

@@ -3,7 +3,7 @@ InstanceOf: ListF4F
 Usage: #example
 
 * extension[copyright].valueMarkdown = "(c) Best FAIR organization"
-* extension[licenceCodeable].valueCodeableConcept = https://creativecommons.org/licenses#"CC BY-NC"
+* extension[licenceCodeable].valueCodeableConcept = $spdx-license#CC-BY-NC-4.0 "Creative Commons Attribution Non Commercial 4.0 International"
 * extension[licenceAttachment].valueAttachment.url = "https://github.com/fair4health/metadata/blob/main/LICENSE"
 
 * identifier.system =	$uri

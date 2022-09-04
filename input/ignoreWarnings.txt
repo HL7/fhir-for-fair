@@ -5,9 +5,5 @@
 
 # Unknown code systems
 Code System URI 'http://example.org' is unknown so the code cannot be validated
-Code System URI 'http://purl.bioontology.org/ontology/NCBITAXON' is unknown so the code cannot be validated
-Code System URI 'http://www.ebi.ac.uk/efo' is unknown so the code cannot be validated
 Code System URI 'http://radlex.org' is unknown so the code cannot be validated
-Code System URI 'http://purl.obolibrary.org/obo' is unknown so the code cannot be validated
-Code System URI 'https://creativecommons.org/licenses' is unknown so the code cannot be validated
-
+Code System URI 'http://ncithesaurus-stage.nci.nih.gov' is unknown so the code cannot be validated
