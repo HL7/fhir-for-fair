@@ -3,7 +3,7 @@ ValueSet: VsRelatedArtifactType
 Id: related-artifact-type
 Title: "RelatedArtifactType [ValueSet]"
 Description: "The type of relationship to the related artifact."
-
+* ^experimental = false
 * codes from system CsRelatedArtifactType
 
 //=======================================
